@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:src="@drawable/menu_unicard_logo"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:background="?attr/selectableItemBackground" />
+    <Kunicardus.Droid.BaseTextView
+        android:layout_marginLeft="25dp"
+        android:id="@+id/userTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text WelcomeMessage"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:text="ასდ"
+        android:layout_below="@id/logoImg"
+        android:layout_marginBottom="10dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/userTextView"
+        android:background="@drawable/round_button_backgroundCard"
+        android:layout_height="45dp"
+        android:id="@+id/tabCard"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="25dp">
+        <ImageView
+            android:src="@drawable/tabcardwhite"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:id="@+id/imgCard"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitStart"
+            android:layout_centerVertical="true" />
+        <Kunicardus.Droid.BaseTextView
+            android:id="@+id/txtCard"
+            layout_toLeftOf="imgCard"
+            android:layout_width="match_parent"
+            android:textColor="#FFFFFF"
+            android:visibility="visible"
+            android:text="ბარათი"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imgCard"
+            android:gravity="center_vertical" />
+    </RelativeLayout>
+    <ListView
+        android:layout_below="@id/tabCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/menuList"
+        android:divider="#FFDA73"
+        android:dividerHeight="1px" />
+</RelativeLayout>

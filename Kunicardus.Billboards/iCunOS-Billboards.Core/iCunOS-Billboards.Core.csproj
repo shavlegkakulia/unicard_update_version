@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{06E1D96C-2881-4C7E-B518-471F84C5D608}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Kunicardus.Billboards.Core</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>uniboard.core</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>__IOS__;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.8.3\lib\ios-unified\SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\Kunicardus.Billboards.Core\DbModels\Billboard.cs">
+      <Link>DbModels\Billboard.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\DbModels\UserInfo.cs">
+      <Link>DbModels\UserInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Enums\AdvertistmentStatus.cs">
+      <Link>Enums\AdvertistmentStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Helpers\Constants.cs">
+      <Link>Helpers\Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\AdsModel.cs">
+      <Link>Models\AdsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\MenuModel.cs">
+      <Link>Models\MenuModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\UserBalanceModel.cs">
+      <Link>Models\UserBalanceModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\UserInfoModel.cs">
+      <Link>Models\UserInfoModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\UserModel.cs">
+      <Link>Models\UserModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\BaseActionResult.cs">
+      <Link>Models\DTOs\BaseActionResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Request\AuthRequest.cs">
+      <Link>Models\DTOs\Request\AuthRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Request\GetAdvertisementsRequest.cs">
+      <Link>Models\DTOs\Request\GetAdvertisementsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Request\GetUserBalanceRequest.cs">
+      <Link>Models\DTOs\Request\GetUserBalanceRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Request\GetUserInfoRequest.cs">
+      <Link>Models\DTOs\Request\GetUserInfoRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Request\SaveAdvertisementPointsRequest.cs">
+      <Link>Models\DTOs\Request\SaveAdvertisementPointsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Response\AdvertisementModel.cs">
+      <Link>Models\DTOs\Response\AdvertisementModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Response\AuthResponse.cs">
+      <Link>Models\DTOs\Response\AuthResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Response\BillboardsModel.cs">
+      <Link>Models\DTOs\Response\BillboardsModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Response\GetAdvertismentsResponse.cs">
+      <Link>Models\DTOs\Response\GetAdvertismentsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Response\GetBillboardsResponse.cs">
+      <Link>Models\DTOs\Response\GetBillboardsResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Response\GetUserBalanceResponse.cs">
+      <Link>Models\DTOs\Response\GetUserBalanceResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Response\GetUserInfoResponse.cs">
+      <Link>Models\DTOs\Response\GetUserInfoResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Plugins\IConnectivityPlugin.cs">
+      <Link>Plugins\IConnectivityPlugin.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\Abstract\IAdsService.cs">
+      <Link>Services\Abstract\IAdsService.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\Abstract\IAuthService.cs">
+      <Link>Services\Abstract\IAuthService.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\Abstract\IBillboardsService.cs">
+      <Link>Services\Abstract\IBillboardsService.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\Abstract\IUserService.cs">
+      <Link>Services\Abstract\IUserService.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\Concrete\AdsService.cs">
+      <Link>Services\Concrete\AdsService.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\Concrete\AuthService.cs">
+      <Link>Services\Concrete\AuthService.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\Concrete\BillboardsService.cs">
+      <Link>Services\Concrete\BillboardsService.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\Concrete\UserService.cs">
+      <Link>Services\Concrete\UserService.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\SecurityProvider\ICustomSecurityProvider.cs">
+      <Link>Services\SecurityProvider\ICustomSecurityProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\UnicardApiProvider\BillboardsApiBaseRequest.cs">
+      <Link>Services\UnicardApiProvider\BillboardsApiBaseRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\UnicardApiProvider\BillboardsBaseResponse.cs">
+      <Link>Services\UnicardApiProvider\BillboardsBaseResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\UnicardApiProvider\IUnicardApiProvider.cs">
+      <Link>Services\UnicardApiProvider\IUnicardApiProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\UnicardApiProvider\UnicardApiBaseRequest.cs">
+      <Link>Services\UnicardApiProvider\UnicardApiBaseRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\UnicardApiProvider\UnicardApiBaseResponse.cs">
+      <Link>Services\UnicardApiProvider\UnicardApiBaseResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\UnicardApiProvider\UnicardApiNoResponseObject.cs">
+      <Link>Services\UnicardApiProvider\UnicardApiNoResponseObject.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\UnicardApiProvider\UnicardApiProvider.cs">
+      <Link>Services\UnicardApiProvider\UnicardApiProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\ViewModels\AuthViewModel.cs">
+      <Link>ViewModels\AuthViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\ViewModels\BillboardsViewModel.cs">
+      <Link>ViewModels\BillboardsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\ViewModels\HistoryViewModel.cs">
+      <Link>ViewModels\HistoryViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\ViewModels\HomePageViewModel.cs">
+      <Link>ViewModels\HomePageViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\ViewModels\LoginViewModel.cs">
+      <Link>ViewModels\LoginViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\ViewModels\MainViewModel.cs">
+      <Link>ViewModels\MainViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\BillboardsDb.cs">
+      <Link>BillboardsDb.cs</Link>
+    </Compile>
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="..\Kunicardus.Billboards.Core\ViewModels\SettingsViewModel.cs">
+      <Link>ViewModels\SettingsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\ViewModels\AdsListViewModel.cs">
+      <Link>ViewModels\AdsListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\ViewModels\AdvertismentViewModel.cs">
+      <Link>ViewModels\AdvertismentViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\DbModels\BillboardHistory.cs">
+      <Link>DbModels\BillboardHistory.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Request\GetAdvertisementRequest.cs">
+      <Link>Models\DTOs\Request\GetAdvertisementRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Response\GetAdvertisementResponse.cs">
+      <Link>Models\DTOs\Response\GetAdvertisementResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Services\UnicardApiProvider\UnicardApiBaseRequestForMethods.cs">
+      <Link>Services\UnicardApiProvider\UnicardApiBaseRequestForMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Helpers\ExtensionMethods.cs">
+      <Link>Helpers\ExtensionMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\HistoryModel.cs">
+      <Link>Models\HistoryModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Request\GetHistoryRequest.cs">
+      <Link>Models\DTOs\Request\GetHistoryRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Response\GetHistoryResponse.cs">
+      <Link>Models\DTOs\Response\GetHistoryResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Request\AccumulatePointsRequest.cs">
+      <Link>Models\DTOs\Request\AccumulatePointsRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\Kunicardus.Billboards.Core\Models\DTOs\Response\AccumulatePointsResponse.cs">
+      <Link>Models\DTOs\Response\AccumulatePointsResponse.cs</Link>
+    </Compile>
+    <Compile Include="Models\BillboardHistoryModel.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <XamarinComponentReference Include="sqlite-net">
+      <Version>1.0.8.3</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <Version>6.0.8.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

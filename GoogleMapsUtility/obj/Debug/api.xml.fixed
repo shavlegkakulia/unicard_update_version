@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<api>
+  <package name="com.google.maps.android" managedName="Android.Gms.Maps.Utils">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildConfig" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="BuildConfig" static="false" type="com.google.maps.android.BuildConfig" visibility="public"></constructor>
+      <field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="PACKAGE_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;com.google.maps.android&quot;" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="-1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="MathUtil" static="false" visibility="" />
+  </package>
+  <package name="com.google.maps.android.clustering" managedName="Android.Gms.Maps.Utils.Clustering">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ClusterManager.1" static="true" visibility="" />
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ClusterManager.OnClusterClickListener" static="true" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="com.google.maps.android.clustering.ClusterItem" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onClusterClick" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.google.maps.android.clustering.Cluster&lt;T&gt;"></parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ClusterManager.OnClusterInfoWindowClickListener" static="true" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="com.google.maps.android.clustering.ClusterItem" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onClusterInfoWindowClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.google.maps.android.clustering.Cluster&lt;T&gt;"></parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ClusterManager.OnClusterItemClickListener" static="true" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="com.google.maps.android.clustering.ClusterItem" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onClusterItemClick" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ClusterManager.OnClusterItemInfoWindowClickListener" static="true" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="com.google.maps.android.clustering.ClusterItem" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onClusterItemInfoWindowClick" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+    </interface>
+  </package>
+  <package name="com.google.maps.android.clustering.algo" managedName="Android.Gms.Maps.Utils.Clustering.Algo">
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Algorithm" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="com.google.maps.android.clustering.ClusterItem" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="addItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="addItems" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.Collection&lt;T&gt;"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="clearItems" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getClusters" native="false" return="java.util.Set&lt;? extends com.google.maps.android.clustering.Cluster&lt;T&gt;&gt;" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="double"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getItems" native="false" return="java.util.Collection&lt;T&gt;" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="removeItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="GridBasedAlgorithm" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="com.google.maps.android.clustering.ClusterItem" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <implements name="com.google.maps.android.clustering.algo.Algorithm" name-generic-aware="com.google.maps.android.clustering.algo.Algorithm&lt;T&gt;"></implements>
+      <constructor deprecated="not deprecated" final="false" name="GridBasedAlgorithm" static="false" type="com.google.maps.android.clustering.algo.GridBasedAlgorithm" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addItems" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.Collection&lt;T&gt;"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clearItems" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getClusters" native="false" return="java.util.Set&lt;? extends com.google.maps.android.clustering.Cluster&lt;T&gt;&gt;" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="double"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getItems" native="false" return="java.util.Collection&lt;T&gt;" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removeItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="NonHierarchicalDistanceBasedAlgorithm" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="com.google.maps.android.clustering.ClusterItem" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <implements name="com.google.maps.android.clustering.algo.Algorithm" name-generic-aware="com.google.maps.android.clustering.algo.Algorithm&lt;T&gt;"></implements>
+      <constructor deprecated="not deprecated" final="false" name="NonHierarchicalDistanceBasedAlgorithm" static="false" type="com.google.maps.android.clustering.algo.NonHierarchicalDistanceBasedAlgorithm" visibility="public"></constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addItems" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.Collection&lt;T&gt;"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clearItems" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getClusters" native="false" return="java.util.Set&lt;? extends com.google.maps.android.clustering.Cluster&lt;T&gt;&gt;" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="double"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getItems" native="false" return="java.util.Collection&lt;T&gt;" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removeItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="MAX_DISTANCE_AT_ZOOM" static="true" transient="false" type="int" type-generic-aware="int" value="100" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="NonHierarchicalDistanceBasedAlgorithm.1" static="true" visibility="" />
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PreCachingAlgorithmDecorator" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="com.google.maps.android.clustering.ClusterItem" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <implements name="com.google.maps.android.clustering.algo.Algorithm" name-generic-aware="com.google.maps.android.clustering.algo.Algorithm&lt;T&gt;"></implements>
+      <constructor deprecated="not deprecated" final="false" name="PreCachingAlgorithmDecorator" static="false" type="com.google.maps.android.clustering.algo.PreCachingAlgorithmDecorator" visibility="public">
+        <parameter name="p0" type="com.google.maps.android.clustering.algo.Algorithm&lt;T&gt;"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addItems" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.Collection&lt;T&gt;"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clearItems" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getClusters" native="false" return="java.util.Set&lt;? extends com.google.maps.android.clustering.Cluster&lt;T&gt;&gt;" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="double"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getItems" native="false" return="java.util.Collection&lt;T&gt;" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="removeItem" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PreCachingAlgorithmDecorator.PrecacheRunnable" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <constructor deprecated="not deprecated" final="false" name="PreCachingAlgorithmDecorator.PrecacheRunnable" static="false" type="com.google.maps.android.clustering.algo.PreCachingAlgorithmDecorator.PrecacheRunnable" visibility="public">
+        <parameter name="p1" type="int"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+  </package>
+  <package name="com.google.maps.android.clustering.view" managedName="Android.Gms.Maps.Utils.Clustering.View">
+    <interface abstract="true" deprecated="not deprecated" final="false" name="ClusterRenderer" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="com.google.maps.android.clustering.ClusterItem" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onAdd" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onClustersChanged" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.Set&lt;? extends com.google.maps.android.clustering.Cluster&lt;T&gt;&gt;"></parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onRemove" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DefaultClusterRenderer.ViewModifier.1" static="false" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable"></implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+    </class>
+  </package>
+  <package name="com.google.maps.android.geometry" managedName="Android.Gms.Maps.Utils.Geometry">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Bounds" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Bounds" static="false" type="com.google.maps.android.geometry.Bounds" visibility="public">
+        <parameter name="p0" type="double"></parameter>
+        <parameter name="p1" type="double"></parameter>
+        <parameter name="p2" type="double"></parameter>
+        <parameter name="p3" type="double"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.google.maps.android.geometry.Bounds"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.google.maps.android.geometry.Point"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="contains" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="double"></parameter>
+        <parameter name="p1" type="double"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="intersects" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.google.maps.android.geometry.Bounds"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="intersects" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="double"></parameter>
+        <parameter name="p1" type="double"></parameter>
+        <parameter name="p2" type="double"></parameter>
+        <parameter name="p3" type="double"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="maxX" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="maxY" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="midX" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="midY" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="minX" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="minY" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Point" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Point" static="false" type="com.google.maps.android.geometry.Point" visibility="public">
+        <parameter name="p0" type="double"></parameter>
+        <parameter name="p1" type="double"></parameter>
+      </constructor>
+      <field deprecated="not deprecated" final="true" name="x" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="y" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false"></field>
+    </class>
+  </package>
+  <package name="com.google.maps.android.projection" managedName="Android.Gms.Maps.Utils.Projection">
+    <class abstract="false" deprecated="deprecated" extends="com.google.maps.android.geometry.Point" extends-generic-aware="com.google.maps.android.geometry.Point" final="false" name="Point" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Point" static="false" type="com.google.maps.android.projection.Point" visibility="public">
+        <parameter name="p0" type="double"></parameter>
+        <parameter name="p1" type="double"></parameter>
+      </constructor>
+    </class>
+  </package>
+  <package name="com.google.maps.android.quadtree" managedName="Android.Gms.Maps.Utils.Quadtree">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PointQuadTree" static="false" visibility="public">
+      <typeParameters>
+        <typeParameter name="T">
+          <genericConstraints>
+            <genericConstraint type="com.google.maps.android.quadtree.PointQuadTree.Item" />
+          </genericConstraints>
+        </typeParameter>
+      </typeParameters>
+      <constructor deprecated="not deprecated" final="false" name="PointQuadTree" static="false" type="com.google.maps.android.quadtree.PointQuadTree" visibility="public">
+        <parameter name="p0" type="com.google.maps.android.geometry.Bounds"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="PointQuadTree" static="false" type="com.google.maps.android.quadtree.PointQuadTree" visibility="public">
+        <parameter name="p0" type="double"></parameter>
+        <parameter name="p1" type="double"></parameter>
+        <parameter name="p2" type="double"></parameter>
+        <parameter name="p3" type="double"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="add" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="clear" native="false" return="void" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="remove" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="T"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="search" native="false" return="java.util.Collection&lt;T&gt;" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.google.maps.android.geometry.Bounds"></parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="PointQuadTree.Item" static="true" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="getPoint" native="false" return="com.google.maps.android.geometry.Point" static="false" synchronized="false" visibility="public"></method>
+    </interface>
+  </package>
+  <package name="com.google.maps.android.ui" managedName="Android.Gms.Maps.Utils.UI">
+    <class abstract="false" deprecated="not deprecated" extends="android.graphics.drawable.Drawable" extends-generic-aware="android.graphics.drawable.Drawable" final="false" name="BubbleDrawable" static="false" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="BubbleDrawable" static="false" type="com.google.maps.android.ui.BubbleDrawable" visibility="public">
+        <parameter name="p0" type="android.content.res.Resources"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="draw" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.Canvas"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getOpacity" native="false" return="int" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAlpha" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setColor" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setColorFilter" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.ColorFilter"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="BubbleIconFactory" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="BubbleIconFactory" static="false" type="com.google.maps.android.ui.BubbleIconFactory" visibility="public"></constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="IconGenerator" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="IconGenerator" static="false" type="com.google.maps.android.ui.IconGenerator" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAnchorU" native="false" return="float" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAnchorV" native="false" return="float" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="makeIcon" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public"></method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="makeIcon" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setBackground" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.drawable.Drawable"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setColor" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setContentPadding" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+        <parameter name="p1" type="int"></parameter>
+        <parameter name="p2" type="int"></parameter>
+        <parameter name="p3" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setContentRotation" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setContentView" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.view.View"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setRotation" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setStyle" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setTextAppearance" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+        <parameter name="p1" type="int"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setTextAppearance" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="STYLE_BLUE" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="STYLE_DEFAULT" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="STYLE_GREEN" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="STYLE_ORANGE" static="true" transient="false" type="int" type-generic-aware="int" value="7" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="STYLE_PURPLE" static="true" transient="false" type="int" type-generic-aware="int" value="6" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="STYLE_RED" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false"></field>
+      <field deprecated="not deprecated" final="true" name="STYLE_WHITE" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false"></field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.widget.FrameLayout" extends-generic-aware="android.widget.FrameLayout" final="false" name="RotationLayout" static="false" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="RotationLayout" static="false" type="com.google.maps.android.ui.RotationLayout" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+        <parameter name="p1" type="android.util.AttributeSet"></parameter>
+        <parameter name="p2" type="int"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="RotationLayout" static="false" type="com.google.maps.android.ui.RotationLayout" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+        <parameter name="p1" type="android.util.AttributeSet"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="RotationLayout" static="false" type="com.google.maps.android.ui.RotationLayout" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="dispatchDraw" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.Canvas"></parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setViewRotation" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int"></parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.widget.TextView" extends-generic-aware="android.widget.TextView" final="false" name="SquareTextView" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="SquareTextView" static="false" type="com.google.maps.android.ui.SquareTextView" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+        <parameter name="p1" type="android.util.AttributeSet"></parameter>
+        <parameter name="p2" type="int"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="SquareTextView" static="false" type="com.google.maps.android.ui.SquareTextView" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+        <parameter name="p1" type="android.util.AttributeSet"></parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="SquareTextView" static="false" type="com.google.maps.android.ui.SquareTextView" visibility="public">
+        <parameter name="p0" type="android.content.Context"></parameter>
+      </constructor>
+    </class>
+  </package>
+</api>

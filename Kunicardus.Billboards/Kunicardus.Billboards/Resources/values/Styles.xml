@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+<style name="Theme.Splash" parent="android:Theme">
+    <item name="android:windowBackground">@drawable/splash</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>
+  <style name="UnicardTheme" parent="UnicardTheme.Base">
+  </style>
+  <style name="UnicardTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowTranslucentStatus">true</item>
+    <item name="windowActionBar">false</item>
+    <item name="colorPrimary">#E95936</item>
+    <item name="colorPrimaryDark">#db360e</item>
+    <item name="colorAccent">#A5C470</item>
+    <item name="android:imageButtonStyle">@style/ImageButtonStyle</item>
+  </style>
+  <style name="ImageButtonStyle">
+    <item name="android:background">@android:color/transparent</item>
+  </style>
+</resources>

@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Transactions" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Sectors" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Organizations" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Merchants" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.PrizeCategories" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Brands" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.UserTypes" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.CustomerTypes" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.ServiceCenters" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.OnlinePayments" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.User" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.News" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Contacts" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Tran" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.MakePayment" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Order" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.SearchResults" />
+  <xs:element name="GetLastTransactions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="cm" nillable="true" type="q1:CardModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastTransactionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetLastTransactionsResult" nillable="true" type="q2:LastTransactions" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckLastTransaction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="ltm" nillable="true" type="q3:LastTransactionModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckLastTransactionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="CheckLastTransactionResult" nillable="true" type="q4:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCardStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="cm" nillable="true" type="q5:CardModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCardStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetCardStatusResult" nillable="true" type="q6:CardStatusResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitEmailActivation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="eam" nillable="true" type="q7:EmailActivationModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitEmailActivationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="SubmitEmailActivationResult" nillable="true" type="q8:EmailActivationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="cm" nillable="true" type="q9:CityModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetCitiesResult" nillable="true" type="q10:Cities" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistricts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="dm" nillable="true" type="q11:DistrictModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetDistrictsResult" nillable="true" type="q12:Districts" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStreets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="sm" nillable="true" type="q13:StreetModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStreetsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetStreetsResult" nillable="true" type="q14:Streets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaritalStatuses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="msm" nillable="true" type="q15:MaritalStatusModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaritalStatusesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetMaritalStatusesResult" nillable="true" type="q16:MaritalStatuses" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkingAreas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="wam" nillable="true" type="q17:WorkingAreaModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkingAreasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetWorkingAreasResult" nillable="true" type="q18:WorkingAreas" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIncomes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="im" nillable="true" type="q19:IncomeModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIncomesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetIncomesResult" nillable="true" type="q20:Incomes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="um" nillable="true" type="q21:UserModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetUserBalanceResult" nillable="true" type="q22:UserBalanceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserAuthorization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="uam" nillable="true" type="q23:UserAuthorizationModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserAuthorizationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="UserAuthorizationResult" nillable="true" type="q24:UserAuthorizationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRegistration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="rm" nillable="true" type="q25:RegistrationModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserRegistrationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="UserRegistrationResult" nillable="true" type="q26:RegistrationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVirtualCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="um" nillable="true" type="q27:UserModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVirtualCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetVirtualCardResult" nillable="true" type="q28:VirtualCardResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="cpm" nillable="true" type="q29:ChangePasswordModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="ChangePasswordResult" nillable="true" type="q30:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="ci" nillable="true" type="q31:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetClientInfoResult" nillable="true" type="q32:ClientInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientInfoByCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="ci" nillable="true" type="q33:ClientInfoByCard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetClientInfoByCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetClientInfoByCardResult" nillable="true" type="q34:ClientInfoResultByCard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOTP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="som" nillable="true" type="q35:SendOTPModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOTPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="SendOTPResult" nillable="true" type="q36:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitOTP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="som" nillable="true" type="q37:SubmitOTPModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitOTPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="SubmitOTPResult" nillable="true" type="q38:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="rpm" nillable="true" type="q39:ResetPasswordModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="ResetPasswordResult" nillable="true" type="q40:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserNameExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="unm" nillable="true" type="q41:UserNameModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserNameExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="UserNameExistsResult" nillable="true" type="q42:UserNameResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountStatement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="um" nillable="true" type="q43:UserModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountStatementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Transactions" minOccurs="0" name="GetAccountStatementResult" nillable="true" type="q44:TransactionsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgSectors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Sectors" minOccurs="0" name="sm" nillable="true" type="q45:SectorsModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgSectorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Sectors" minOccurs="0" name="GetOrgSectorsResult" nillable="true" type="q46:SectorsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgSubSectors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Sectors" minOccurs="0" name="ss" nillable="true" type="q47:SubSectorsModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgSubSectorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Sectors" minOccurs="0" name="GetOrgSubSectorsResult" nillable="true" type="q48:SubSectorsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrganizations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Organizations" minOccurs="0" name="om" nillable="true" type="q49:OrganizationsModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrganizationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Organizations" minOccurs="0" name="GetOrganizationsResult" nillable="true" type="q50:OrganizationsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Organizations" minOccurs="0" name="om" nillable="true" type="q51:OrganizationModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Organizations" minOccurs="0" name="GetOrgDetailsResult" nillable="true" type="q52:OrganizationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMerchantList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Merchants" minOccurs="0" name="mm" nillable="true" type="q53:MerchantsModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMerchantListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Merchants" minOccurs="0" name="GetMerchantListResult" nillable="true" type="q54:MerchantsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrizeCategoryList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="mb" nillable="true" type="q55:ModelBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrizeCategoryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.PrizeCategories" minOccurs="0" name="GetPrizeCategoryListResult" nillable="true" type="q56:PrizeCategoryResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrizeSubCategoryList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.PrizeCategories" minOccurs="0" name="mm" nillable="true" type="q57:PrizeSubCategoryModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrizeSubCategoryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.PrizeCategories" minOccurs="0" name="GetPrizeSubCategoryListResult" nillable="true" type="q58:PrizeSubCategoryResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="mm" nillable="true" type="q59:ModelBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Brands" minOccurs="0" name="GetBrandListResult" nillable="true" type="q60:BrandsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserTypeList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="mm" nillable="true" type="q61:ModelBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserTypeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.UserTypes" minOccurs="0" name="GetUserTypeListResult" nillable="true" type="q62:UserTypesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerTypeList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="mm" nillable="true" type="q63:ModelBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerTypeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.CustomerTypes" minOccurs="0" name="GetCustomerTypeListResult" nillable="true" type="q64:CustomerTypesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="pm" nillable="true" type="q65:PrizesModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="GetProductListResult" nillable="true" type="q66:PrizesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgSectorsWithSubSectors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Sectors" minOccurs="0" name="sm" nillable="true" type="q67:SectorsModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgSectorsWithSubSectorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Sectors" minOccurs="0" name="GetOrgSectorsWithSubSectorsResult" nillable="true" type="q68:SectorsWithSubsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="pm" nillable="true" type="q69:PrizeByIdModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="GetProductByIdResult" nillable="true" type="q70:PrizeDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceCenterList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.ServiceCenters" minOccurs="0" name="scm" nillable="true" type="q71:ServiceCentersModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceCenterListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.ServiceCenters" minOccurs="0" name="GetServiceCenterListResult" nillable="true" type="q72:ServiceCentersResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlinePaymentInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.OnlinePayments" minOccurs="0" name="opm" nillable="true" type="q73:OnlinePaymentInfoModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOnlinePaymentInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.OnlinePayments" minOccurs="0" name="GetOnlinePaymentInfoResult" nillable="true" type="q74:OnlinePaymentInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuyProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="bpm" nillable="true" type="q75:BuyPrizeModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuyProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="BuyProductResult" nillable="true" type="q76:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeliveryMethods">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="mb" nillable="true" type="q77:ModelBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeliveryMethodsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetDeliveryMethodsResult" nillable="true" type="q78:DeliveryMethods" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPhone">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="unm" nillable="true" type="q79:UserNameModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPhoneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetUserPhoneResult" nillable="true" type="q80:UserPhoneResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductPriceRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="prm" nillable="true" type="q81:PrizePriceRangesModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductPriceRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="GetProductPriceRangeResult" nillable="true" type="q82:PrizePriceRangesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrizeTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="mb" nillable="true" type="q83:ModelBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrizeTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="GetPrizeTypesResult" nillable="true" type="q84:PrizeTypesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSimilarProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="spm" nillable="true" type="q85:SimilarProductsModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSimilarProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="GetSimilarProductsResult" nillable="true" type="q86:PrizesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.User" minOccurs="0" name="uim" nillable="true" type="q87:UserIdModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.News" minOccurs="0" name="GetNewsListResult" nillable="true" type="q88:NewsResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewsById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.News" minOccurs="0" name="nim" nillable="true" type="q89:NewsIdModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewsByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.News" minOccurs="0" name="GetNewsByIdResult" nillable="true" type="q90:NewsByIdResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="mb" nillable="true" type="q91:ModelBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Contacts" minOccurs="0" name="GetContactInfoResult" nillable="true" type="q92:ContactInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BonusAccumulation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Tran" minOccurs="0" name="mtm" nillable="true" type="q93:MakeTranModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BonusAccumulationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="BonusAccumulationResult" nillable="true" type="q94:BonusAccumulationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="cm" nillable="true" type="q95:CardModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAccountInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="GetAccountInfoResult" nillable="true" type="q96:AccountInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMerchantAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Merchants" minOccurs="0" name="mtm" nillable="true" type="q97:MerchantsModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMerchantAddressesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Merchants" minOccurs="0" name="GetMerchantAddressesResult" nillable="true" type="q98:MerchantsAddresesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="uuim" nillable="true" type="q99:UpdateUserInfoModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="UpdateUserInfoResult" nillable="true" type="q100:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MakePayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.MakePayment" minOccurs="0" name="mpm" nillable="true" type="q101:MakePaymentModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MakePaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.MakePayment" minOccurs="0" name="MakePaymentResult" nillable="true" type="q102:MakePaymentResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMerchantsByDevice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Merchants" minOccurs="0" name="mdm" nillable="true" type="q103:MerchantsByDeviceModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMerchantsByDeviceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Merchants" minOccurs="0" name="GetMerchantsByDeviceResult" nillable="true" type="q104:MerchantsByDeviceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTempOffers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="mb" nillable="true" type="q105:ModelBase" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTempOffersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" minOccurs="0" name="GetTempOffersResult" nillable="true" type="q106:PrizesResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Order" minOccurs="0" name="oir" nillable="true" type="q107:OrderInfoModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrderInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Order" minOccurs="0" name="GetOrderInfoResult" nillable="true" type="q108:OrderInfoResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Search">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.SearchResults" minOccurs="0" name="srm" nillable="true" type="q109:SearchResultModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.SearchResults" minOccurs="0" name="SearchResult" nillable="true" type="q110:SearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MerchantAuthorization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="mam" nillable="true" type="q111:MerchantAuthorizationModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MerchantAuthorizationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="MerchantAuthorizationResult" nillable="true" type="q112:UserAuthorizationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfirmOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Order" minOccurs="0" name="com" nillable="true" type="q113:ConfirmOrderModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConfirmOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="ConfirmOrderResult" nillable="true" type="q114:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EBSendTokenAndBookCard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="ci" nillable="true" type="q115:CardInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EBSendTokenAndBookCardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="EBSendTokenAndBookCardResult" nillable="true" type="q116:TokenIdResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EBSubmitAndRegister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="ciwt" nillable="true" type="q117:CardInfoWithToken" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EBSubmitAndRegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="EBSubmitAndRegisterResult" nillable="true" type="q118:CardResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResendActivationEmail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="unm" nillable="true" type="q119:UserNameModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResendActivationEmailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" minOccurs="0" name="ResendActivationEmailResult" nillable="true" type="q120:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BonusAccumulationByUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.MakePayment" minOccurs="0" name="mpm" nillable="true" type="q121:BonusAccumulationByUserModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BonusAccumulationByUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.MakePayment" minOccurs="0" name="BonusAccumulationByUserResult" nillable="true" type="q122:BonusAccumulationByUserResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="MainPage" xml:space="preserve">
+	    <value>მთავარი გვერდი</value>
+	    <comment></comment>
+	</data>
+	<data name="Hello" xml:space="preserve">
+	    <value>მოგესალმებით</value>
+	    <comment></comment>
+	</data>
+	<data name="Card" xml:space="preserve">
+	    <value>ბარათი</value>
+	    <comment></comment>
+	</data>
+	<data name="Main" xml:space="preserve">
+	    <value>მთავარი</value>
+	    <comment></comment>
+	</data>
+	<data name="MyPage" xml:space="preserve">
+	    <value>ჩემი გვერდი</value>
+	    <comment></comment>
+	</data>
+	<data name="WhereToSpend" xml:space="preserve">
+	    <value>რაში დავხარჯო</value>
+	    <comment></comment>
+	</data>
+	<data name="AroundMe" xml:space="preserve">
+	    <value>ჩემ გარშემო</value>
+	    <comment></comment>
+	</data>
+	<data name="Partners" xml:space="preserve">
+	    <value>პარტნიორები</value>
+	    <comment></comment>
+	</data>
+	<data name="News" xml:space="preserve">
+	    <value>სიახლეები</value>
+	    <comment></comment>
+	</data>
+	<data name="AboutUs" xml:space="preserve">
+	    <value>ჩვენ შესახებ</value>
+	    <comment></comment>
+	</data>
+	<data name="Settings" xml:space="preserve">
+	    <value>პარამეტრები</value>
+	    <comment></comment>
+	</data>
+	<data name="Logout" xml:space="preserve">
+	    <value>გამოსვლა</value>
+	    <comment></comment>
+	</data>
+	<data name="Greeting" xml:space="preserve">
+	    <value>მოგესალმებით!</value>
+	    <comment></comment>
+	</data>
+	<data name="FacebookLogin" xml:space="preserve">
+	    <value>FACEBOOK-ით შესვლა</value>
+	    <comment></comment>
+	</data>
+	<data name="Or" xml:space="preserve">
+	    <value>ან</value>
+	    <comment></comment>
+	</data>
+	<data name="Authorize" xml:space="preserve">
+	    <value>ავტორიზაცია</value>
+	    <comment></comment>
+	</data>
+	<data name="Registration" xml:space="preserve">
+	    <value>რეგისტრაცია</value>
+	    <comment></comment>
+	</data>
+	<data name="UserName" xml:space="preserve">
+	    <value>მომხმარებელი</value>
+	    <comment></comment>
+	</data>
+	<data name="Password" xml:space="preserve">
+	    <value>პაროლი</value>
+	    <comment></comment>
+	</data>
+	<data name="RestorePassword" xml:space="preserve">
+	    <value>პაროლის აღდგენა</value>
+	    <comment></comment>
+	</data>
+	<data name="GetPositive" xml:space="preserve">
+	    <value>დააგროვე პოზიტივი</value>
+	    <comment></comment>
+	</data>
+	<data name="DoUHaveUnicard" xml:space="preserve">
+	    <value>გაქვთ თუ არა უნიქარდის ბარათი?</value>
+	    <comment></comment>
+	</data>
+	<data name="Yeap" xml:space="preserve">
+	    <value>დიახ</value>
+	    <comment></comment>
+	</data>
+	<data name="No" xml:space="preserve">
+	    <value>არა</value>
+	    <comment></comment>
+	</data>
+	<data name="EnterUnicardNumber" xml:space="preserve">
+	    <value>შეავსეთ ბარათის ნომერი</value>
+	    <comment></comment>
+	</data>
+	<data name="EnterYourPersonalInformation" xml:space="preserve">
+	    <value>შეავსეთ თქვენი მონაცემები</value>
+	    <comment></comment>
+	</data>
+	<data name="Next" xml:space="preserve">
+	    <value>შემდეგი</value>
+	    <comment></comment>
+	</data>
+	<data name="ShareApp" xml:space="preserve">
+	    <value>გააზიარეთ აპლიკაცია</value>
+	    <comment></comment>
+	</data>
+	<data name="RateApp" xml:space="preserve">
+	    <value>შეაფასეთ აპლიკაცია</value>
+	    </data>
+	<data name="UWillGetSMSOnNumberBellow" xml:space="preserve">
+	    <value>მითითებულ ნომერზე მოგივათ SMS</value>
+	    <comment></comment>
+	</data>
+	<data name="EnterSMSCode" xml:space="preserve">
+	    <value>შეიყვანეთ კოდი</value>
+	    <comment></comment>
+	</data>
+	<data name="ResendSMS" xml:space="preserve">
+	    <value>ხელახლა გაგზავნა</value>
+	    <comment></comment>
+	</data>
+	<data name="EnterEmailAndPassword" xml:space="preserve">
+	    <value>შეავსეთ მონაცემები</value>
+	    <comment></comment>
+	</data>
+	<data name="Email" xml:space="preserve">
+	    <value>ელ-ფოსტა</value>
+	    <comment></comment>
+	</data>
+	<data name="ConfirmPassword" xml:space="preserve">
+	    <value>გაიმეორეთ პაროლი</value>
+	    <comment></comment>
+	</data>
+	<data name="EnterLastTransactionDetails" xml:space="preserve">
+	    <value>შეიყვანეთ ბოლო ტრანზაქციის დეტალები</value>
+	    <comment></comment>
+	</data>
+	<data name="Amount" xml:space="preserve">
+	    <value>თანხა</value>
+	    <comment></comment>
+	</data>
+	<data name="Date" xml:space="preserve">
+	    <value>თარიღი</value>
+	    <comment></comment>
+	</data>
+	<data name="SelectDate" xml:space="preserve">
+	    <value>აირჩიეთ თარიღი</value>
+	    <comment></comment>
+	</data>
+	<data name="Select" xml:space="preserve">
+	    <value>არჩევა</value>
+	    <comment></comment>
+	</data>
+	<data name="Cancel" xml:space="preserve">
+	    <value>გაუქმება</value>
+	    <comment></comment>
+	</data>
+	<data name="Push" xml:space="preserve">
+	    <value>PUSH შეტყობინებები</value>
+	    <comment></comment>
+	</data>
+	<data name="Location" xml:space="preserve">
+	    <value>ადგილმდებარეობა</value>
+	    <comment></comment>
+	</data>	
+	<data name="ChangePassword" xml:space="preserve">
+	    <value>პაროლის შეცვლა</value>
+	    <comment></comment>
+	</data>	
+	<data name="SetPin" xml:space="preserve">
+	    <value>პინ-კოდის რეგისტრაცია</value>
+	    <comment></comment>
+	</data>	
+	<data name="ChangePin" xml:space="preserve">
+	    <value>პინ-კოდის შეცვლა</value>
+	    <comment></comment>
+	</data>
+	<data name="RemovePin" xml:space="preserve">
+	    <value>პინ-კოდის მოხსნა</value>
+	</data>
+	<data name="FirstName" xml:space="preserve">
+	    <value>სახელი</value>
+	    <comment></comment>
+	</data>
+	<data name="LastName" xml:space="preserve">
+	    <value>გვარი</value>
+	    <comment></comment>
+	</data>
+	<data name="PersonalId" xml:space="preserve">
+	    <value>პირადი ნომერი</value>
+	    <comment></comment>
+	</data>
+	<data name="BirthDay" xml:space="preserve">
+	    <value>დაბადების თარიღი</value>
+	    <comment></comment>
+	</data>
+	<data name="PhoneFormat" xml:space="preserve">
+	    <value>ტელეფონი (5xx xxxxxx)</value>
+	    <comment></comment>
+	</data>
+	<data name="OldPassword" xml:space="preserve">
+	    <value>ძველი პაროლი</value>
+	    <comment></comment>
+	</data>
+	<data name="NewPassword" xml:space="preserve">
+	    <value>ახალი პაროლი</value>
+	    <comment></comment>
+	</data>
+	<data name="ConfirmNewPassword" xml:space="preserve">
+	    <value>გაიმეორეთ პაროლი</value>
+	    <comment></comment>
+	</data>
+	<data name="Change" xml:space="preserve">
+	    <value>შეცვლა</value>
+	    <comment></comment>
+	</data>
+	<data name="ShowPassword" xml:space="preserve">
+	    <value>პაროლის ჩვენება</value>
+	    <comment></comment>
+	</data>
+	<data name="enter_new_pin" xml:space="preserve">
+	    <value>შეიყვანეთ ახალი პინ-კოდი</value>
+	    <comment></comment>
+	</data>
+ 	<data name="repeat_new_pin" xml:space="preserve">
+	    <value>გაიმეროთ ახალი პინ-კოდი</value>
+	    <comment></comment>
+	</data>
+ 	<data name="set_pin" xml:space="preserve">
+	    <value>პინ კოდის რეგისტრაცია</value>
+	    <comment></comment>
+	</data>
+	<data name="Error" xml:space="preserve">
+	    <value>შეცდომა</value>
+	    <comment></comment>
+	</data>
+	<data name="WeNeedAccessToYourEmailToConnectWithFB" xml:space="preserve">
+	    <value>ავტორიზაციისათვის საჭიროა წვდომა თქვენი Facebook-ის ელ.ფოსტაზე</value>
+	    <comment></comment>
+	</data>
+	<data name="GotIt" xml:space="preserve">
+	    <value>გასაგებია</value>
+	    <comment></comment>
+	</data>
+	<data name="FullName" xml:space="preserve">
+	    <value>სახელი გვარი</value>
+	    <comment></comment>
+	</data>
+	<data name="PinCode" xml:space="preserve">
+	    <value>პინ-კოდი</value>
+	    <comment></comment>
+	</data>
+	<data name="RegisterPinCode" xml:space="preserve">
+	    <value>პინ-კოდის რეგისტრაცია</value>
+	    <comment></comment>
+	</data>
+	<data name="WithouPin" xml:space="preserve">
+	    <value>პინ-კოდის გარეშე</value>
+	    <comment></comment>
+	</data>
+	<data name="enter_pin" xml:space="preserve">
+	    <value>შეიყვანეთ პინ-კოდი</value>
+	    <comment></comment>
+	</data>
+	<data name="Score" xml:space="preserve">
+	    <value>ქულა</value>
+	    <comment></comment>
+	</data>
+	<data name="CurrentBalance" xml:space="preserve">
+	    <value>მიმდინარე ნაშთი</value>
+	    <comment></comment>
+	</data>
+	<data name="Blocked" xml:space="preserve">
+	    <value>დაბლოკილი</value>
+	    <comment></comment>
+	</data>
+	<data name="Spent" xml:space="preserve">
+	    <value>დახარჯული</value>
+	    <comment></comment>
+	</data>
+	<data name="SumTotal" xml:space="preserve">
+	    <value>დაგროვებული</value>
+	    <comment></comment>
+	</data>
+	<data name="Search" xml:space="preserve">
+	    <value>ძებნა</value>
+	    <comment></comment>
+	</data>
+	<data name="Catalogue" xml:space="preserve">
+	    <value>კატალოგი</value>
+	    <comment></comment>
+	</data>
+	<data name="Discounted" xml:space="preserve">
+	    <value>ფასდაკლებულები</value>
+	    <comment></comment>
+	</data>
+	<data name="LastAdded" xml:space="preserve">
+	    <value>ბოლოს დამატებულები</value>
+	    <comment></comment>
+	</data>
+	<data name="RemoveFilter" xml:space="preserve">
+	    <value>ფილტრის მოხსნა</value>
+	    <comment></comment>
+	</data>
+	<data name="Categories" xml:space="preserve">
+	    <value>კატეგორიები</value>
+	    <comment></comment>
+	</data>
+	<data name="UserType" xml:space="preserve">
+	    <value>მომხმარებლის ტიპი</value>
+	    <comment></comment>
+	</data>
+	<data name="PriceRanges" xml:space="preserve">
+	    <value>ქულების მიხედვით</value>
+	    <comment></comment>
+	</data>
+	<data name="Buy" xml:space="preserve">
+	    <value>საჩუქრის მიღება</value>
+	    <comment></comment>
+	</data>
+	<data name="DeliveryForm" xml:space="preserve">
+	    <value>მიღების ფორმა</value>
+	    <comment></comment>
+	</data>
+	<data name="Address" xml:space="preserve">
+	    <value>მისამართი</value>
+	    <comment></comment>
+	</data>
+	<data name="FinalPrice" xml:space="preserve">
+	    <value>საბოლოო ფასი:</value>
+	    <comment></comment>
+	</data>
+	<data name="SelectServiceCenter" xml:space="preserve">
+	    <value>შეარჩიეთ მომსახურების ცენტრი</value>
+	    <comment></comment>
+	</data>
+	<data name="ResponsiblePerson" xml:space="preserve">
+	    <value>უფლებამოსილი პირი:</value>
+	    <comment></comment>
+	</data>
+	<data name="ResponsiblePersonDesc" xml:space="preserve">
+	    <value>იმისათვის, რომ თქვენ მიერ შერჩეული საჩუქარი სხვამ მიიღოს, გთხოვთ, მიუთითეთ უფლებამოსილი პირის მონაცემები</value>
+	    <comment></comment>
+	</data>
+	<data name="MobilePhoneNumber" xml:space="preserve">
+	    <value>მობილური ტელეფონის ნომერი</value>
+	    <comment></comment>
+	</data>
+	<data name="MobilePhoneNumberDesc" xml:space="preserve">
+	    <value>ბალანსის შესავსებად, გთხოვთ, მიუთითოთ სასურველი ნომერი</value>
+	    <comment></comment>
+	</data>
+	<data name="EnterInfomation" xml:space="preserve">
+	    <value>შეიყვანეთ მონაცემები</value>
+	    <comment></comment>
+	</data>
+	<data name="Check" xml:space="preserve">
+	    <value>შემოწმება</value>
+	    <comment></comment>
+	</data>
+	<data name="UHaveDiscounts" xml:space="preserve">
+	    <value>თქვენი ფასდაკლებები</value>
+	    <comment></comment>
+	</data>
+	<data name="PasswordHint" xml:space="preserve">
+	    <value>პაროლი უნდა შედგებოდეს 8 სიმბოლოსგან, შეიცავდეს ციფრებს და ლათინურ ასოებს</value>
+	    <comment></comment>
+	</data>
+	<data name="SMSVerificationHint" xml:space="preserve">
+	    <value>SMS-ს მიიღებთ 3 წუთის განმავლობაში. წინააღმდეგ შემთხვევაში, სცადეთ ხელახლა.</value>
+	    <comment></comment>
+	</data>
+	<data name="UserNumberHint" xml:space="preserve">
+	    <value>თუ აღნიშნული ნომერი თქვენ არ გეკუთვნით გთხოვთ დაუკავშირდეთ უნიქარდის ქოლცენტრს.</value>
+	    <comment></comment>
+	</data>
+	<data name="ObjectList" xml:space="preserve">
+	    <value>ობიექტების სია</value>
+	    <comment></comment>
+	</data>
+	<data name="Unimania" xml:space="preserve">
+	    <value>უნიმანია</value>
+	    <comment></comment>
+	</data>
+	<data name="IncorrectPin" xml:space="preserve">
+	    <value>პინ კოდი არასწორია</value>
+	    <comment></comment>
+	</data>
+</root>
+ 

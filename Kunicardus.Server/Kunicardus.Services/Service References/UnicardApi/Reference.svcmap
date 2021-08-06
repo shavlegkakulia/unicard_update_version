@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="14e77149-2863-487d-9fa2-f3665e328b63" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://109.238.238.194/UnicardPublicAPI.Service1.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UnicardPublicAPI.xsd" MetadataType="Schema" ID="bfa1cd88-59c9-4e85-8dfb-735ffc553aeb" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd9" />
+    <MetadataFile FileName="UnicardPublicAPI1.xsd" MetadataType="Schema" ID="16c391bc-8041-42fc-b4b2-7ad31474b215" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd8" />
+    <MetadataFile FileName="UnicardPublicAPI2.xsd" MetadataType="Schema" ID="7346844b-2f91-4211-bb3e-8501a64bbda6" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd14" />
+    <MetadataFile FileName="UnicardPublicAPI3.xsd" MetadataType="Schema" ID="4ab9f022-8052-4cef-99df-adb94aa6dc30" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd10" />
+    <MetadataFile FileName="UnicardPublicAPI4.xsd" MetadataType="Schema" ID="e2744cc1-3186-40d5-bf45-6e8f691e7662" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd6" />
+    <MetadataFile FileName="UnicardPublicAPI5.xsd" MetadataType="Schema" ID="1c7026b6-5b28-44f6-a17a-9106da927fcb" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd18" />
+    <MetadataFile FileName="UnicardPublicAPI6.xsd" MetadataType="Schema" ID="e49830c2-8fa8-410b-819c-81d41988b25a" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd20" />
+    <MetadataFile FileName="UnicardPublicAPI7.xsd" MetadataType="Schema" ID="b251771b-b616-4cfd-9ccd-ddba0bf615c4" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd13" />
+    <MetadataFile FileName="UnicardPublicAPI8.xsd" MetadataType="Schema" ID="4d3cd22f-01cc-4199-a9bd-4ae31e6381c6" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd15" />
+    <MetadataFile FileName="UnicardPublicAPI9.xsd" MetadataType="Schema" ID="5c5c7d24-01d8-4ae4-a2a3-8bc7b65c2976" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd11" />
+    <MetadataFile FileName="UnicardPublicAPI10.xsd" MetadataType="Schema" ID="0e9bd1b2-2be8-435c-b252-ec3578698be9" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd19" />
+    <MetadataFile FileName="UnicardPublicAPI11.xsd" MetadataType="Schema" ID="a5ed691c-bd2a-4206-954c-8ee78ce27e8c" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd21" />
+    <MetadataFile FileName="UnicardPublicAPI.disco" MetadataType="Disco" ID="ccd66693-74c4-4173-a717-6e7f45e7f951" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?disco" />
+    <MetadataFile FileName="UnicardPublicAPI12.xsd" MetadataType="Schema" ID="3dc5f621-620f-4a62-a0ef-c46a7dcdb8cb" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd17" />
+    <MetadataFile FileName="UnicardPublicAPI13.xsd" MetadataType="Schema" ID="4c29b33e-d24b-4381-ac6a-7b3572764b87" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd16" />
+    <MetadataFile FileName="UnicardPublicAPI14.xsd" MetadataType="Schema" ID="75e95943-6f03-4c92-8363-41ec4aa3d78c" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd12" />
+    <MetadataFile FileName="UnicardPublicAPI15.xsd" MetadataType="Schema" ID="1d1e3736-121f-400b-8cef-ea3de8763b37" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd5" />
+    <MetadataFile FileName="UnicardPublicAPI16.xsd" MetadataType="Schema" ID="f1fcc030-a7c5-472e-935f-6deff1ad8551" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd4" />
+    <MetadataFile FileName="UnicardPublicAPI17.xsd" MetadataType="Schema" ID="cbef66cd-ff05-46ee-9018-1bb76afd64ce" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd7" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="72cb3039-894d-4e98-af00-496c930bb37f" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?wsdl" />
+    <MetadataFile FileName="UnicardPublicAPI18.xsd" MetadataType="Schema" ID="0ed9326a-173f-43eb-a233-4f51dd636de7" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="UnicardPublicAPI19.xsd" MetadataType="Schema" ID="0c4d068e-b19e-49e3-b4fa-5c8efaeac867" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="UnicardPublicAPI20.xsd" MetadataType="Schema" ID="536f96c6-904b-4177-9b93-9607a1dfdbed" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="UnicardPublicAPI21.xsd" MetadataType="Schema" ID="d359167a-8592-447e-9800-465bf3fde276" SourceId="1" SourceUrl="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

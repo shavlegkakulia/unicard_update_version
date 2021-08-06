@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{1C2D66C2-01CF-4651-AA98-C3C08D7F0C44}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Kunicardus.Touch</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;IOS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>false</MtouchProfiling>
+    <CodesignKey>iPhone Developer: Givi Sartania (6W8V5WMLUB)</CodesignKey>
+    <MtouchI18n>west</MtouchI18n>
+    <AssemblyName>UnicardTouch</AssemblyName>
+    <CodesignProvision>
+    </CodesignProvision>
+    <MtouchExtraArgs>-v -v -v</MtouchExtraArgs>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer: Nino Svanidze (2S9VQS4M2X)</CodesignKey>
+    <AssemblyName>KunicardusTouch</AssemblyName>
+    <DefineConstants>__IOS__;</DefineConstants>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <AssemblyName>UnicardTouch</AssemblyName>
+    <DefineConstants>IOS;</DefineConstants>
+    <MtouchI18n>
+    </MtouchI18n>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;__IOS__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer: Nino Svanidze (MPMA6L4F48)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <AssemblyName>KunicardusTouch</AssemblyName>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchLink>None</MtouchLink>
+    <CodesignProvision>
+    </CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cirrious.CrossCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\Xamarin.iOS10\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\Xamarin.iOS10\Cirrious.CrossCore.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Binding.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Binding.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Color.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Color.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.Color.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.DownloadCache.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.DownloadCache.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.DownloadCache.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File.Touch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.File.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.File.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Maps, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Google.iOS.Maps.2.1.0.1\lib\Xamarin.iOS10\Google.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlite-net-pcl.1.0.11\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin-Sidebar-Unified">
+      <HintPath>..\Components\SidebarNavigation-1.8\lib\ios-unified\Xamarin-Sidebar-Unified.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile">
+      <HintPath>..\Components\zxing.net.mobile-1.4.7.2\lib\ios-unified\ZXing.Net.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.ios">
+      <HintPath>..\Components\zxing.net.mobile-1.4.7.2\lib\ios-unified\zxing.ios.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="GoogleMaps">
+      <HintPath>..\Components\googlemapsios-1.9.2\lib\ios-unified\GoogleMaps.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\AdditionalReferences\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleAnalytics.iOS">
+      <HintPath>..\Components\googleanalytics-3.0.12\lib\ios-unified\GoogleAnalytics.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpMobileCode.ModalPicker">
+      <HintPath>..\AdditionalReferences\SharpMobileCode.ModalPicker.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-667h%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="DebugTrace.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Helpers\Device\TouchDevicePlugin.cs" />
+    <Compile Include="Helpers\AppSettings\TouchConfigBundleProvider.cs" />
+    <Compile Include="Controllers\RootViewController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\MainViewController.cs" />
+    <Compile Include="Controllers\OrganisationListViewController.cs" />
+    <Compile Include="Controllers\LoginViewController.cs" />
+    <Compile Include="Plugins\Connectivity\NetworkStatus.cs" />
+    <Compile Include="Plugins\Connectivity\Reachability.cs" />
+    <Compile Include="Plugins\Connectivity\TouchConnectivityPlugin.cs" />
+    <Compile Include="TouchCustomPresenter.cs" />
+    <Compile Include="Controllers\AboutUsViewController.cs" />
+    <Compile Include="Helpers\UI\ColorExtensions.cs" />
+    <Compile Include="Helpers\UI\Styles.cs" />
+    <Compile Include="Controllers\BaseMvxViewController.cs" />
+    <Compile Include="ApplicationStrings.Designer.cs">
+      <DependentUpon>ApplicationStrings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Helpers\UI\ImageHelper.cs" />
+    <Compile Include="Controllers\AuthViewController.cs" />
+    <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\KuniTextField.cs" />
+    <Compile Include="Views\KeyboardTopBar.cs" />
+    <Compile Include="Helpers\UI\UIButtonExtensions.cs" />
+    <Compile Include="Providers\SqliteProvider\TouchSqliteProvider.cs" />
+    <Compile Include="Plugins\DialogPlugin\TouchUIDialogPlugin.cs" />
+    <Compile Include="Plugins\ThreadPlugin\UIThreadPlugin.cs" />
+    <Compile Include="Controllers\CardViewController.cs" />
+    <Compile Include="Views\CardForScanView.cs" />
+    <Compile Include="Helpers\UI\Screen.cs" />
+    <Compile Include="Views\KuniBadgeBarButtonItem.cs" />
+    <Compile Include="Controllers\Registration\CardExistanceViewController.cs" />
+    <Compile Include="Views\Registration\RegistrationSubHeading.cs" />
+    <Compile Include="Controllers\Registration\BaseRegistrationViewController.cs" />
+    <Compile Include="Controllers\Registration\UnicardNumberInputViewController.cs" />
+    <Compile Include="Controllers\Registration\RegistrationViewController.cs" />
+    <Compile Include="Views\Registration\RegistrationNextButton.cs" />
+    <Compile Include="Views\Toast.cs" />
+    <Compile Include="Controllers\Registration\SMSVerificationViewController.cs" />
+    <Compile Include="Controllers\Registration\EmailRegistrationViewController.cs" />
+    <Compile Include="Controllers\Registration\TransactionVerificationViewController.cs" />
+    <Compile Include="Views\Registration\RadioButton.cs" />
+    <Compile Include="Helpers\DateTimeExtensions.cs" />
+    <Compile Include="Views\KuniUILabel.cs" />
+    <Compile Include="Controllers\Settings\SettingsViewController.cs" />
+    <Compile Include="Controllers\Settings\ChangePasswordViewController.cs" />
+    <Compile Include="Controllers\NewsListViewController.cs" />
+    <Compile Include="Views\NewsTableViewCell.cs" />
+    <Compile Include="Helpers\Pin\PinHelper.cs" />
+    <Compile Include="Controllers\Settings\OldPinViewController.cs" />
+    <Compile Include="Controllers\Settings\NewPinViewController.cs" />
+    <Compile Include="Controllers\Settings\ConfirmNewPinViewController.cs" />
+    <Compile Include="Controllers\Registration\FacebookRegistrationViewController.cs" />
+    <Compile Include="Providers\SecurityProvider\CustomSecurityProvider.cs" />
+    <Compile Include="Views\Pin\SettingsPinView.cs" />
+    <Compile Include="Views\Pin\ChoosePinSetup.cs" />
+    <Compile Include="Views\Pin\PinWrapper.cs" />
+    <Compile Include="Views\Pin\EnterPin.cs" />
+    <Compile Include="Views\OrganizationsTableViewCell.cs" />
+    <Compile Include="Views\PointsButton.cs" />
+    <Compile Include="Controllers\MyPageViewController.cs" />
+    <Compile Include="Views\MyPageTransactionRow.cs" />
+    <Compile Include="Controllers\AroundMe\AroundMeViewController.cs" />
+    <Compile Include="Views\AroundMe\AroundMeList.cs" />
+    <Compile Include="Controllers\NewsDetailsViewController.cs" />
+    <Compile Include="Views\BindableUIWebView.cs" />
+    <Compile Include="Views\AroundMe\MerchantListRow.cs" />
+    <Compile Include="Controllers\OrganizationDetailsViewController.cs" />
+    <Compile Include="Views\AroundMe\KuniMarkerInfoWindow.cs" />
+    <Compile Include="Helpers\Location\LocationManager.cs" />
+    <Compile Include="Helpers\Location\LocationUpdatedEventArgs.cs" />
+    <Compile Include="Controllers\Products\ProductsListViewController.cs" />
+    <Compile Include="Views\Products\ProductCell.cs" />
+    <Compile Include="Views\Products\CatalogFilterView.cs" />
+    <Compile Include="Views\Products\CatalogFilterItem.cs" />
+    <Compile Include="Views\Products\FilterExpandableList.cs" />
+    <Compile Include="Controllers\Products\ProductDetailsViewController.cs" />
+    <Compile Include="Views\Products\ProductDetailsDiscountView.cs" />
+    <Compile Include="Views\Products\CrossLinesView.cs" />
+    <Compile Include="Controllers\Products\ImageViewerController.cs" />
+    <Compile Include="Views\Buy\DeliveryMethodWrapper.cs" />
+    <Compile Include="Controllers\Buy\BuyProductViewController.cs" />
+    <Compile Include="Views\Buy\ChooseDeliveryMethod.cs" />
+    <Compile Include="Views\Buy\DeliveryMethodButton.cs" />
+    <Compile Include="Controllers\Registration\ResetPasswordViewController.cs" />
+    <Compile Include="Controllers\Products\ProductDelegate.cs" />
+    <Compile Include="Views\Products\UserDiscountsExpandableList.cs" />
+    <Compile Include="Views\CustomScrollView.cs" />
+    <Compile Include="Views\Registration\PasswordHint.cs" />
+    <Compile Include="Views\Registration\UserNumberHint.cs" />
+    <Compile Include="Views\Registration\SMSVerificationHint.cs" />
+    <Compile Include="Helpers\GAService.cs" />
+    <Compile Include="ShortcutIdentifier.cs" />
+    <Compile Include="Controllers\Products\ViewPager\ImagesPageDataSource.cs" />
+    <Compile Include="Controllers\Products\ImageItemViewController.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\Raw\UnicardConfig.xml" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\threelines.png" />
+    <BundleResource Include="Resources\threelines%402x.png" />
+    <BundleResource Include="Resources\Fonts\bpg_extrasquare_mtavruli.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\menu_unicard_logo.png" />
+    <BundleResource Include="Resources\menu_home.png" />
+    <BundleResource Include="Resources\menu_mypage.png" />
+    <BundleResource Include="Resources\menu_catalog.png" />
+    <BundleResource Include="Resources\menu_merchants.png" />
+    <BundleResource Include="Resources\menu_partners.png" />
+    <BundleResource Include="Resources\menu_news.png" />
+    <BundleResource Include="Resources\menu_aboutus.png" />
+    <BundleResource Include="Resources\menu_settings.png" />
+    <BundleResource Include="Resources\menu_logout.png" />
+    <BundleResource Include="Resources\menu_card.png" />
+    <BundleResource Include="Resources\back_line_green.png" />
+    <BundleResource Include="Resources\fb.png" />
+    <BundleResource Include="Resources\close.png" />
+    <BundleResource Include="Resources\alert.png" />
+    <BundleResource Include="Resources\location_pin.png" />
+    <BundleResource Include="Resources\devider_white_green.png" />
+    <BundleResource Include="Resources\clock_green.png" />
+    <BundleResource Include="Resources\email_green.png" />
+    <BundleResource Include="Resources\phone_green.png" />
+    <BundleResource Include="Resources\webpage_green.png" />
+    <BundleResource Include="Resources\fb_green.png" />
+    <BundleResource Include="Resources\rate.png" />
+    <BundleResource Include="Resources\share.png" />
+    <BundleResource Include="Resources\right_arrow.png" />
+    <BundleResource Include="Resources\checkbox_green_checked.png" />
+    <BundleResource Include="Resources\checkbox_green_unchecked.png" />
+    <BundleResource Include="Resources\checkbox_white_checked.png" />
+    <BundleResource Include="Resources\checkbox_white_unchecked.png" />
+    <BundleResource Include="Resources\clock_grey.png" />
+    <BundleResource Include="Resources\marker.png" />
+    <BundleResource Include="Resources\gel.png" />
+    <BundleResource Include="Resources\marker_icon_green.png" />
+    <BundleResource Include="Resources\marker_icon_orange.png" />
+    <BundleResource Include="Resources\location_pin2.png" />
+    <BundleResource Include="Resources\cross.png" />
+    <BundleResource Include="Resources\arrow_down_32.png" />
+    <BundleResource Include="Resources\arrow_up_32.png" />
+    <BundleResource Include="Resources\fb_user.png" />
+    <BundleResource Include="Resources\user_settings.png" />
+    <BundleResource Include="Resources\wandio.png" />
+    <BundleResource Include="Resources\gift.png" />
+    <BundleResource Include="Resources\unicard_logo.png" />
+    <BundleResource Include="Resources\menu_unicard_logo%402x.png" />
+    <BundleResource Include="Resources\menu_home%402x.png" />
+    <BundleResource Include="Resources\menu_mypage%402x.png" />
+    <BundleResource Include="Resources\menu_catalog%402x.png" />
+    <BundleResource Include="Resources\menu_merchants%402x.png" />
+    <BundleResource Include="Resources\menu_partners%402x.png" />
+    <BundleResource Include="Resources\menu_news%402x.png" />
+    <BundleResource Include="Resources\menu_settings%402x.png" />
+    <BundleResource Include="Resources\menu_logout%402x.png" />
+    <BundleResource Include="Resources\card_horizontal_big.png" />
+    <BundleResource Include="Resources\card_horizontal_big%402x.png" />
+    <BundleResource Include="Resources\card_horizontal.png" />
+    <BundleResource Include="Resources\card_horizontal%402x.png" />
+    <BundleResource Include="Resources\card_vertical_big.png" />
+    <BundleResource Include="Resources\card_vertical_big%402x.png" />
+    <BundleResource Include="Resources\card_vertical.png" />
+    <BundleResource Include="Resources\card_vertical%402x.png" />
+    <BundleResource Include="Resources\menu_card%402x.png" />
+    <BundleResource Include="Resources\menu_aboutus%402x.png" />
+    <BundleResource Include="Resources\clock_grey%402x.png" />
+    <BundleResource Include="Resources\marker%402x.png" />
+    <BundleResource Include="Resources\location_pin%402x.png" />
+    <BundleResource Include="Resources\location_pin2%402x.png" />
+    <BundleResource Include="Resources\alert%402x.png" />
+    <BundleResource Include="Resources\marker_icon_green%402x.png" />
+    <BundleResource Include="Resources\marker_icon_orange%402x.png" />
+    <BundleResource Include="Resources\unimania.png" />
+    <BundleResource Include="Resources\opencard.png" />
+    <BundleResource Include="Resources\filter_checked.png" />
+    <BundleResource Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ApplicationStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApplicationStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppDelegate.cs.txt" />
+    <Content Include="ToDo-MvvmCross\_ Touch UI.txt" />
+  </ItemGroup>
+  <Import Project="..\packages\SQLitePCL.raw_basic.0.8.2\build\Xamarin.iOS10\SQLitePCL.raw_basic.targets" Condition="Exists('..\packages\SQLitePCL.raw_basic.0.8.2\build\Xamarin.iOS10\SQLitePCL.raw_basic.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SQLitePCL.raw_basic.0.8.2\build\Xamarin.iOS10\SQLitePCL.raw_basic.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCL.raw_basic.0.8.2\build\Xamarin.iOS10\SQLitePCL.raw_basic.targets'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Google.iOS.Maps.2.1.0.1\build\Xamarin.Google.iOS.Maps.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Google.iOS.Maps.2.1.0.1\build\Xamarin.Google.iOS.Maps.targets'))" />
+  </Target>
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\packages\Xamarin.Google.iOS.Maps.2.1.0.1\build\Xamarin.Google.iOS.Maps.targets" Condition="Exists('..\packages\Xamarin.Google.iOS.Maps.2.1.0.1\build\Xamarin.Google.iOS.Maps.targets')" />
+</Project>

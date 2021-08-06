@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/user_discount_prize_logo"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:gravity="bottom"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/gift" />
+    <Kunicardus.Droid.BaseTextView
+        android:layout_toRightOf="@id/user_discount_prize_logo"
+        android:id="@+id/user_discount_group_item"
+        android:text="@string/user_discounts_group_name"
+        android:gravity="bottom"
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="5dp"
+        android:background="@android:color/transparent" />
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:gravity="bottom"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/user_discounts_arrow" />
+</RelativeLayout>

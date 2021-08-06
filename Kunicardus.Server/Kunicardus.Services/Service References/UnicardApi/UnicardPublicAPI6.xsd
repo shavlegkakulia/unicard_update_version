@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Order" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Order" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:complexType name="OrderInfoModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q1:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderInfoModel" nillable="true" type="tns:OrderInfoModel" />
+  <xs:complexType name="OrderInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q2:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orders" nillable="true" type="tns:ArrayOfOrderInfo" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrderInfoResult" nillable="true" type="tns:OrderInfoResult" />
+  <xs:complexType name="ArrayOfOrderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderInfo" nillable="true" type="tns:OrderInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderInfo" nillable="true" type="tns:ArrayOfOrderInfo" />
+  <xs:complexType name="OrderInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="client_PIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="client_card" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="client_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product_code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product_merchant_code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product_price" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="product_type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="representative_PIN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="representative_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderInfo" nillable="true" type="tns:OrderInfo" />
+  <xs:complexType name="ConfirmOrderModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q3:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfirmOrderModel" nillable="true" type="tns:ConfirmOrderModel" />
+</xs:schema>

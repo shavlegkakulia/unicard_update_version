@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/my_page_linear_layout"
+    android:background="#8DBD3B">
+    <include
+        android:id="@+id/menu1toolbar"
+        layout="@layout/toolbar" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/toSeeRelativeLayout"
+        android:layout_below="@id/menu1toolbar"
+        android:visibility="visible"
+        android:background="#8DBD3B"
+        android:clickable="true">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/transfersListView"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:background="@android:color/white"
+                android:visibility="visible" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    <!--<ImageView
+            android:layout_width="fill_parent"
+            android:id="@+id/line"
+            android:layout_alignTop="@id/refresher"
+            android:scaleType="centerCrop"
+            android:src="@drawable/devider_new"
+            android:layout_height="50dp"
+            android:visibility="visible" />
+                local:MvxBind="ItemsSource Transactions"
+                local:MvxItemTemplate="@layout/mypageviewlistitem"-->
+    </RelativeLayout>
+</RelativeLayout>

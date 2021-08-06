@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="NotesLabel" xml:space="preserve">
+	    <value>Notes:</value>
+	    <comment>label for input field</comment>
+	</data>
+	<data name="Loading" xml:space="preserve">
+	    <value>მიმდინარეობს ჩატვირთვა...</value>
+	    <comment></comment>
+	</data>
+	<data name="Authorizing" xml:space="preserve">
+	    <value>მიმდინარეობს ავტორიზაცია...</value>
+	    <comment></comment>
+	</data>
+	<data name="Hello" xml:space="preserve">
+	    <value>გამარჯობა</value>
+	    <comment></comment>
+	</data>
+	<data name="ProcessingRequest" xml:space="preserve">
+	    <value>მოთხოვნა  მუშავდება...</value>
+	    <comment></comment>
+	</data>
+	<data name="UserExists" xml:space="preserve">
+	    <value>მითითებული მომხმარებელი უკვე არსებობს</value>
+	    <comment></comment>
+	</data>
+	<data name="SubmittingOTP" xml:space="preserve">
+	    <value>მიმდინარეობს შემოწმება</value>
+	    <comment></comment>
+	</data>
+	<data name="Registering" xml:space="preserve">
+	    <value>მიმდინარეობს რეგისტრაცია</value>
+	    <comment></comment>
+	</data>
+	<data name="VerificationCodeIsNull" xml:space="preserve">
+	    <value>გთხოვთ, შეიყვანოთ მითითებულ ნომერზე მოსული SMS კოდი</value>
+	    <comment></comment>
+	</data>
+	<data name="Partners" xml:space="preserve">
+	    <value>პარტნიორები</value>
+	    <comment></comment>
+	</data>
+  	<data name="News" xml:space="preserve">
+	    <value>სიახლეები</value>
+	    <comment></comment>
+	</data>
+  	<data name="AboutUs" xml:space="preserve">
+	    <value>ჩვენ შესახებ</value>
+	    <comment></comment>
+	</data>
+  	<data name="ContactUs" xml:space="preserve">
+	    <value>დაგვიკავშირდით</value>
+	    <comment></comment>
+	</data>
+  	<data name="Settings" xml:space="preserve">
+	    <value>პარამეტრები</value>
+	    <comment></comment>
+	</data>
+  	<data name="RemovePin" xml:space="preserve">
+	    <value>პინ-კოდის მოხსნა</value>
+	    <comment></comment>
+	</data>
+  	<data name="RemovePinPageTitle" xml:space="preserve">
+	    <value>შეიყვანეთ პინ-კოდი</value>
+	    <comment></comment>
+	</data>
+  	<data name="removed_pin_successfully" xml:space="preserve">
+	    <value>პინ-კოდი მოხსნილია</value>
+	    <comment></comment>
+  	</data>
+   	<data name="incorrect_pin" xml:space="preserve">
+	    <value>პინ-კოდი არასწორია</value>
+	    <comment></comment>
+  	</data>
+  	<data name="ChangePin" xml:space="preserve">
+	    <value>პინ-კოდის შეცვლა</value>
+	    <comment></comment>
+	</data>
+  	<data name="ChangePinPageTitle" xml:space="preserve">
+	    <value>შეიყვანეთ არსებული პინ-კოდი</value>
+	    <comment></comment>
+	</data>
+  	<data name="enter_new_pin" xml:space="preserve">
+	    <value>შეიყვანეთ ახალი პინ-კოდი</value>
+	    <comment></comment>
+	</data>
+  	<data name="repeat_new_pin" xml:space="preserve">
+	    <value>გაიმეროთ ახალი პინ-კოდი</value>
+	    <comment></comment>
+	</data>
+ 	<data name="repeated_pin_incorrect" xml:space="preserve">
+	    <value>განმეორებითი პინ-კოდი არასწორია</value>
+	    <comment></comment>
+	</data>
+ 	<data name="pin_changed_successfully" xml:space="preserve">
+	    <value>პინ-კოდი შეიცვალა</value>
+	    <comment></comment>
+	</data>
+	<data name="pin_set_successfully" xml:space="preserve">
+	    <value>პინ-კოდი რეგისტრირებულია</value>
+	    <comment></comment>
+	</data>
+ 	<data name="enter_new_pin" xml:space="preserve">
+	    <value>შეიყვანეთ ახალი პინ-კოდი</value>
+	    <comment></comment>
+	</data>
+	<data name="repeat_new_pin" xml:space="preserve">
+	    <value>გაიმეროთ ახალი პინ-კოდი</value>
+	    <comment></comment>
+	</data>
+ 	<data name="set_pin" xml:space="preserve">
+	    <value>პინ კოდის რეგისტრაცია</value>
+	    <comment></comment>
+	</data>
+	 <data name="repeated_pin_incorrect" xml:space="preserve">
+	    <value>განმეორებითი პინ-კოდი არასწორია</value>
+	    <comment></comment>
+	 </data>
+	 <data name="CorePasswordHint" xml:space="preserve">
+	    <value>პაროლი უნდა შედგებოდეს 8 სიმბოლოსგან, შეიცავდეს ციფრებს და ლათინურ ასოებს</value>
+	    <comment></comment>
+	</data>
+	 <data name="ValidWithNoTransactions" xml:space="preserve">
+	    <value>მითითებული ბარათით ტრანზაქცია ჯერ არ ჩატარებულა. გაატარეთ ბარათი უნიქარდის ნებისმიერ პარტნიორ კომპანიაში, შეინახეთ ბოლო ტრანზაქციის ჩეკი და განაახლეთ რეგისტრაციის პროცესი</value>
+	    <comment></comment>
+	</data>
+</root>

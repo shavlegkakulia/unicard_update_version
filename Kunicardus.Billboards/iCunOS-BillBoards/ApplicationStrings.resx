@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Enter" xml:space="preserve">
+	    <value>შესვლა</value>
+	    <comment></comment>
+	</data>
+	<data name="Auth" xml:space="preserve">
+	    <value>ავტორიზაცია</value>
+	    <comment></comment>
+	</data>
+	<data name="FbLogin" xml:space="preserve">
+	    <value>FACEBOOK-ით შესვლა</value>
+	    <comment></comment>
+	</data>
+	<data name="Loading" xml:space="preserve">
+	    <value>მიმდინარეობს ჩატვირთვა</value>
+	    </data>
+	<data name="MainPage" xml:space="preserve">
+	    <value>მთავარი გვერდი</value>
+	    <comment></comment>
+	</data>
+	<data name="Map" xml:space="preserve">
+	    <value>რუკა</value>
+	    <comment></comment>
+	</data>
+	<data name="Ads" xml:space="preserve">
+	    <value>რეკლამები</value>
+	    <comment></comment>
+	</data>
+	<data name="History" xml:space="preserve">
+	    <value>ისტორია</value>
+	    <comment></comment>
+	</data>
+	<data name="Settings" xml:space="preserve">
+	    <value>პარამეტრები</value>
+	    <comment></comment>
+	</data>
+	<data name="Logout" xml:space="preserve">
+	    <value>გამოსვლა</value>
+	    <comment></comment>
+	</data>
+	<data name="StartJourney" xml:space="preserve">
+	    <value>მოგზაურობის დაწყება!</value>
+	    <comment></comment>
+	</data>
+	<data name="StopJourney" xml:space="preserve">
+	    <value>შეწყვეტა</value>
+	    <comment></comment>
+	</data>
+	<data name="CollectPoints" xml:space="preserve">
+	    <value>დააგროვე ქულები 
+გზაში</value>
+	     <comment></comment>
+	</data>
+	<data name="Welcome" xml:space="preserve">
+	    <value>მოგესალმებით!</value>
+	    <comment></comment>
+	</data>
+	<data name="Register" xml:space="preserve">
+	    <value>რეგისტრაცია</value>
+	    <comment></comment>
+	</data> 
+	<data name="LoginInfo" xml:space="preserve">
+	    <value>აპლიკაციაში შესასვლელად გამოიყენეთ 
+უნიქარდის მომხმარებელი</value>
+	    <comment></comment>
+	</data>
+	<data name="UserName" xml:space="preserve">
+	    <value>მომხმარებელი</value>
+	    <comment></comment>
+	</data>
+	<data name="Password" xml:space="preserve">
+	    <value>პაროლი</value>
+	    <comment></comment>
+	</data>
+	<data name="RestorePassword" xml:space="preserve">
+	    <value>პაროლის აღდგენა</value>
+	    <comment></comment>
+	</data>
+	<data name="BilboardSeenTime" xml:space="preserve">
+	    <value>ბილბორდთან გავლის დრო</value>
+	    <comment></comment>
+	</data>
+	<data name="Error" xml:space="preserve">
+	    <value>შეცდომა</value>
+	    <comment></comment>
+	</data>
+	<data name="WeNeedAccessToYourEmailToConnectWithFB" xml:space="preserve">
+	    <value>ავტორიზაციისათვის საჭიროა წვდომა თქვენი Facebook-ის ელ.ფოსტაზე</value>
+	    <comment></comment>
+	</data>
+	<data name="GotIt" xml:space="preserve">
+	    <value>გასაგებია</value>
+	    <comment></comment>
+	</data>
+	<data name="Second" xml:space="preserve">
+	    <value>წამი</value>
+	    <comment></comment> 
+	</data>
+	<data name="Point" xml:space="preserve">
+	    <value>ქულა</value>
+	    <comment></comment>
+	</data>
+	<data name="Advertisements" xml:space="preserve">
+	    <value>რეკლამები</value>
+	    <comment></comment>
+	</data>
+	<data name="SeeAll" xml:space="preserve">
+	    <value>ყველას ნახვა</value>
+	    <comment></comment>
+	</data>
+	<data name="ForMorePoints" xml:space="preserve">
+	    <value>თუ გსურთ დაგერიცხოთ დამატებიტი 
+ქულები დააჭირეთ ქვედა ღილაკს</value>
+	    <comment></comment>
+	</data>
+	<data name="MorePoints" xml:space="preserve">
+	    <value>მეტი ქულა</value>
+	    <comment></comment>
+	</data>
+	<data name="Skip" xml:space="preserve">
+	    <value>გამოტოვება</value>
+	    <comment></comment>
+	</data>
+	<data name="NoInternetConnection" xml:space="preserve">
+	    <value>არ გაქვთ წვდომა ინტერნეტთან</value>
+	    <comment></comment>
+	</data>
+	<data name="NoInternetConnectionTryLater" xml:space="preserve">
+	    <value>ინტერნეტი არ არის ხელმისაწვდომი. გთხოვთ, სცადოთ მოგვიანებით.</value>
+	    <comment></comment>
+	</data>
+	<data name="DownloadAd" xml:space="preserve">
+	    <value>რეკლამის 
+ჩამოტვირთვა</value>
+	    <comment></comment>
+	</data>
+	<data name="BilboardPassDate" xml:space="preserve">
+	    <value>ბილბორდთან გავლის დრო</value>
+	    <comment></comment>
+	</data>
+	<data name="ForSeeAd" xml:space="preserve">
+	    <value>რეკლამის სანახავად</value>
+	    <comment></comment>
+	</data>
+	<data name="WatchTheAd" xml:space="preserve">
+	    <value>რეკლამის ყურება</value>
+	    <comment></comment>
+	</data>
+	<data name="Reject" xml:space="preserve">
+	    <value>უარყოფა</value>
+	    <comment></comment>
+	</data>
+	<data name="DontDownloadAd" xml:space="preserve">
+	    <value>გაუქმების შემთხვევაში, რეკლამის ჩამოტვირთვა და ქულების დარიცხვა არ მოხდება. ნამდვილად გსურთ გაუქმება?</value>
+	    <comment></comment>
+	</data>
+	<data name="RejectToWatchAd" xml:space="preserve">
+	    <value>რეკლამის ნახვაზე უარის თქმის შემთხვევაში, თქვენ არ დაგერიცხებათ აღნიშნული რეკლამის შესაბამისი ქულები. ნამდვილად გსურთ უარის თქმა?</value>
+	    <comment></comment>
+	</data>
+	<data name="NotAccumulatedNotification" xml:space="preserve">
+	    <value>ვერ მოხერხდა ქულის დარიცხვა</value>
+	    <comment></comment>
+	</data>
+	<data name="NotAccumulated" xml:space="preserve">
+	    <value>სამწუხაროდ, ქულების დარიცხვა 
+ვერ მოხერხდა. გთხოვთ, სცადოთ 
+ხელახლა ქვედა ღილაკზე დაჭერით</value>
+	    <comment></comment>
+	</data>
+	<data name="AccumulatePoints" xml:space="preserve">
+	    <value>ქულების დარიცხვა</value>
+	    <comment></comment>
+	</data>
+	<data name="SayReject" xml:space="preserve">
+	    <value>უარის თქმა</value>
+	    <comment></comment>
+	</data>
+	<data name="Abolish" xml:space="preserve">
+	    <value>გაუქმება</value>
+	    <comment></comment>
+	</data>
+	<data name="NoInternetConnection" xml:space="preserve">
+	    <value>ინტერნეტი არ არის ხელმისაწვდომი. გთხოვთ, სცადოთ მოგვიანებით.</value>
+	    <comment></comment>
+	</data>
+	<data name="NoInternetConnection" xml:space="preserve">
+	    <value>არ გაქვთ კავშირი ინტერნეტთან.</value>
+	    <comment></comment>
+	</data>
+	<data name="SkipMoreAd" xml:space="preserve">
+	    <value>ნამდვილად გსურთ დამატებითი რეკლამის ნახვაზე უარის თქმა?</value>
+	    <comment></comment>
+	</data>
+</root>
+

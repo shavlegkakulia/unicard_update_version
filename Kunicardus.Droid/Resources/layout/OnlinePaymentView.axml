@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/delivery_view_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray">
+    <include
+        android:id="@+id/BuyProductHeader"
+        layout="@layout/BuyProductHeader" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp">
+        <Kunicardus.Droid.BaseTextView
+            local:MvxBind="Text IndentifierTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitle"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="10dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:layout_marginBottom="12dp"
+            android:weightSum="2">
+            <Kunicardus.Droid.BasePaymentEditText
+                android:imeOptions="actionDone"
+                android:layout_weight="1"
+                android:text=""
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtMobileNumber"
+                local:MvxBind="Text OnlinePaymentIdentifier"
+                android:padding="11dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp" />
+            <Kunicardus.Droid.BaseButton
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_green_button"
+                android:text="@string/check"
+                local:MvxBind="Click CheckInfoClickedCommand"
+                android:id="@+id/btnCheckinfo"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:padding="11dp"
+                android:textSize="14dp" />
+        </LinearLayout>
+        <MvvmCross.Platforms.Android.Binding.Views.MvxListView
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/infolistView"
+            local:MvxBind="ItemsSource PaymentInfos;"
+            local:MvxItemTemplate="@layout/info_list_item_view"
+            android:visibility="visible" />
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:id="@+id/discountheader"
+            local:MvxBind="Visibility HasDiscount, Converter=Visibility"
+            android:layout_height="wrap_content"
+            android:minHeight="38dp"
+            android:layout_marginTop="7dp">
+            <View
+                android:id="@+id/headerLine"
+                android:background="@color/graydivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true" />
+            <View
+                android:background="@color/graydivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:paddingTop="3dp"
+                android:layout_below="@id/user_discount_prize_logo"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp" />
+            <ImageView
+                android:id="@+id/user_discount_prize_logo"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:gravity="bottom"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="7dp"
+                android:layout_below="@id/headerLine"
+                android:src="@drawable/gift" />
+            <Kunicardus.Droid.BaseTextView
+                android:layout_toRightOf="@id/user_discount_prize_logo"
+                android:id="@+id/user_discount_group_item"
+                android:text="@string/user_discounts_group_name"
+                android:gravity="bottom"
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:background="@android:color/transparent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <MvvmCross.Platforms.Android.Binding.Views.MvxListView
+            android:padding="5dp"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/discountList"
+            local:MvxBind="ItemsSource UserDiscounts;"
+            local:MvxItemTemplate="@layout/payment_discount_item"
+            android:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

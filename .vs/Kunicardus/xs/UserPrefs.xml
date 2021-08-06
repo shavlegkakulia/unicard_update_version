@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{5B9A160F-DBDF-4C41-9F9C-F75ACC98C43C}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Kunicardus" expanded="True">
+            <Node name="Kuni.Core" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="DataTransferObjects" expanded="True">
+                  <Node name="CardStatusDTO.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Kunicardus.Droid" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Packages" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Kunicardus.Droid PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Kunicardus-Touch PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.15BD2207-12E8-46E9-A3DC-2E9C36CD084D" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,35 @@
+D:\Sources\Work\kunicardus\Kuni.Core\bin\Debug\netstandard2.0\Kuni.Core.deps.json
+D:\Sources\Work\kunicardus\Kuni.Core\bin\Debug\netstandard2.0\Kuni.Core.dll
+D:\Sources\Work\kunicardus\Kuni.Core\bin\Debug\netstandard2.0\Kuni.Core.pdb
+D:\Sources\Work\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.csprojAssemblyReference.cache
+D:\Sources\Work\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.ApplicationStrings.resources
+D:\Sources\Work\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.csproj.GenerateResource.cache
+D:\Sources\Work\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.AssemblyInfoInputs.cache
+D:\Sources\Work\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.AssemblyInfo.cs
+D:\Sources\Work\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.csproj.CoreCompileInputs.cache
+D:\Sources\Work\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.dll
+D:\Sources\Work\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.pdb
+D:\Sources\kunicardus - Copy\Kuni.Core\bin\Debug\netstandard2.0\Kuni.Core.deps.json
+D:\Sources\kunicardus - Copy\Kuni.Core\bin\Debug\netstandard2.0\Kuni.Core.dll
+D:\Sources\kunicardus - Copy\Kuni.Core\bin\Debug\netstandard2.0\Kuni.Core.pdb
+D:\Sources\kunicardus - Copy\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.csprojAssemblyReference.cache
+D:\Sources\kunicardus - Copy\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.ApplicationStrings.resources
+D:\Sources\kunicardus - Copy\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.csproj.GenerateResource.cache
+D:\Sources\kunicardus - Copy\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.AssemblyInfoInputs.cache
+D:\Sources\kunicardus - Copy\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.AssemblyInfo.cs
+D:\Sources\kunicardus - Copy\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.csproj.CoreCompileInputs.cache
+D:\Sources\kunicardus - Copy\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.dll
+D:\Sources\kunicardus - Copy\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.pdb
+D:\Sources\kunicardus\Kuni.Core\bin\Debug\netstandard2.0\Kuni.Core.deps.json
+D:\Sources\kunicardus\Kuni.Core\bin\Debug\netstandard2.0\Kuni.Core.dll
+D:\Sources\kunicardus\Kuni.Core\bin\Debug\netstandard2.0\Kuni.Core.pdb
+D:\Sources\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.ApplicationStrings.resources
+D:\Sources\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.csproj.GenerateResource.cache
+D:\Sources\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.AssemblyInfoInputs.cache
+D:\Sources\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.AssemblyInfo.cs
+D:\Sources\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.csproj.CoreCompileInputs.cache
+D:\Sources\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.dll
+D:\Sources\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.pdb
+D:\Sources\kunicardus\Kuni.Core\bin\Debug\netstandard2.0\SQLitePCL.Ext.dll
+D:\Sources\kunicardus\Kuni.Core\obj\Debug\netstandard2.0\Kuni.Core.csprojAssemblyReference.cache
+D:\Sources\kunicardus\Kuni.Core\bin\Debug\netstandard2.0\ViewModels\LoginViewModel.cs

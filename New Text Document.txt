@@ -1,0 +1,25 @@
+
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1"
+        android:background="#FFFFFF"
+        android:layout_marginLeft="40dp"
+        android:layout_alignTop="@id/uniCard"
+        android:layout_marginRight="10dp">
+        <ImageView
+            android:id="@+id/mainBarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+
+
+
+            writer.Options.Height = Convert.ToInt32 (height * 0.9);
+			writer.Options.Width = Convert.ToInt32 (width * 1.4);

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+<style name="App_Theme" parent="@android:style/Theme.Holo.Light">
+   <item name="android:textViewStyle">@style/TextViewStyle</item>
+</style>
+
+<style name="TextViewStyle">
+    <item name="android:layout_height">45dip</item>
+    <item name="android:typeface">monospace</item>
+    <item name="android:textColor">#909090</item>
+</style>
+</resources> 

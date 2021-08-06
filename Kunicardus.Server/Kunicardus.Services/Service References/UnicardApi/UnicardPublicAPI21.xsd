@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CardModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CardModel" nillable="true" type="tns:CardModel" />
+  <xs:complexType name="ModelBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="app_source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModelBase" nillable="true" type="tns:ModelBase" />
+  <xs:complexType name="LastTransactions">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lasttransactions" nillable="true" type="tns:ArrayOfLastTransaction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LastTransactions" nillable="true" type="tns:LastTransactions" />
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result" />
+  <xs:complexType name="ArrayOfLastTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LastTransaction" nillable="true" type="tns:LastTransaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLastTransaction" nillable="true" type="tns:ArrayOfLastTransaction" />
+  <xs:complexType name="LastTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="merch_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LastTransaction" nillable="true" type="tns:LastTransaction" />
+  <xs:complexType name="LastTransactionModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="app_source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tran_date" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LastTransactionModel" nillable="true" type="tns:LastTransactionModel" />
+  <xs:complexType name="CardStatusResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="card_status" type="xs:boolean" />
+          <xs:element minOccurs="0" name="has_transaction" type="xs:boolean" />
+          <xs:element minOccurs="0" name="is_registered" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CardStatusResult" nillable="true" type="tns:CardStatusResult" />
+  <xs:complexType name="EmailActivationModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="activation_code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmailActivationModel" nillable="true" type="tns:EmailActivationModel" />
+  <xs:complexType name="EmailActivationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmailActivationResult" nillable="true" type="tns:EmailActivationResult" />
+  <xs:complexType name="CityModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="city_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CityModel" nillable="true" type="tns:CityModel" />
+  <xs:complexType name="Cities">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cities" nillable="true" type="tns:ArrayOfCity" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Cities" nillable="true" type="tns:Cities" />
+  <xs:complexType name="ArrayOfCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="City" nillable="true" type="tns:City" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCity" nillable="true" type="tns:ArrayOfCity" />
+  <xs:complexType name="City">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="city_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="city_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="City" nillable="true" type="tns:City" />
+  <xs:complexType name="DistrictModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="city_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="district_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DistrictModel" nillable="true" type="tns:DistrictModel" />
+  <xs:complexType name="Districts">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="districts" nillable="true" type="tns:ArrayOfDistrict" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Districts" nillable="true" type="tns:Districts" />
+  <xs:complexType name="ArrayOfDistrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="District" nillable="true" type="tns:District" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDistrict" nillable="true" type="tns:ArrayOfDistrict" />
+  <xs:complexType name="District">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="district_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="district_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="District" nillable="true" type="tns:District" />
+  <xs:complexType name="StreetModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="app_source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="district_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="street_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StreetModel" nillable="true" type="tns:StreetModel" />
+  <xs:complexType name="Streets">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="streets" nillable="true" type="tns:ArrayOfStreet" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Streets" nillable="true" type="tns:Streets" />
+  <xs:complexType name="ArrayOfStreet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Street" nillable="true" type="tns:Street" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStreet" nillable="true" type="tns:ArrayOfStreet" />
+  <xs:complexType name="Street">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="street_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="street_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Street" nillable="true" type="tns:Street" />
+  <xs:complexType name="MaritalStatusModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="marital_status_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MaritalStatusModel" nillable="true" type="tns:MaritalStatusModel" />
+  <xs:complexType name="MaritalStatuses">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="maritalstatuses" nillable="true" type="tns:ArrayOfMaritalStatus" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MaritalStatuses" nillable="true" type="tns:MaritalStatuses" />
+  <xs:complexType name="ArrayOfMaritalStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaritalStatus" nillable="true" type="tns:MaritalStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaritalStatus" nillable="true" type="tns:ArrayOfMaritalStatus" />
+  <xs:complexType name="MaritalStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="marital_status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="marital_status_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MaritalStatus" nillable="true" type="tns:MaritalStatus" />
+  <xs:complexType name="WorkingAreaModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="working_area_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkingAreaModel" nillable="true" type="tns:WorkingAreaModel" />
+  <xs:complexType name="WorkingAreas">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="workingareas" nillable="true" type="tns:ArrayOfWorkingArea" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkingAreas" nillable="true" type="tns:WorkingAreas" />
+  <xs:complexType name="ArrayOfWorkingArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkingArea" nillable="true" type="tns:WorkingArea" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkingArea" nillable="true" type="tns:ArrayOfWorkingArea" />
+  <xs:complexType name="WorkingArea">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="working_area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="working_area_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkingArea" nillable="true" type="tns:WorkingArea" />
+  <xs:complexType name="IncomeModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cl_income_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IncomeModel" nillable="true" type="tns:IncomeModel" />
+  <xs:complexType name="Incomes">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="incomes" nillable="true" type="tns:ArrayOfIncome" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Incomes" nillable="true" type="tns:Incomes" />
+  <xs:complexType name="ArrayOfIncome">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Income" nillable="true" type="tns:Income" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIncome" nillable="true" type="tns:ArrayOfIncome" />
+  <xs:complexType name="Income">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cl_income_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="detail" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Income" nillable="true" type="tns:Income" />
+  <xs:complexType name="UserModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="row_count" type="xs:int" />
+          <xs:element minOccurs="0" name="row_index" type="xs:int" />
+          <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserModel" nillable="true" type="tns:UserModel" />
+  <xs:complexType name="UserBalanceResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="scores_blocked" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="scores_left" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="scores_saved" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="scores_spent" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserBalanceResult" nillable="true" type="tns:UserBalanceResult" />
+  <xs:complexType name="UserAuthorizationModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fb_token" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pass" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserAuthorizationModel" nillable="true" type="tns:UserAuthorizationModel" />
+  <xs:complexType name="UserAuthorizationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="session_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserAuthorizationResult" nillable="true" type="tns:UserAuthorizationResult" />
+  <xs:complexType name="RegistrationModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="add_email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="birth_date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="car_quantity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="client_income" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="district" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fam_memb_quantity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fam_member_under_18" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="family_income" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fb_token" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="home_phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="merrital_status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="new_card_registration" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="person_code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="raion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sms_code_otp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="street" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="work_address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="work_desc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="working_sphere" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegistrationModel" nillable="true" type="tns:RegistrationModel" />
+  <xs:complexType name="RegistrationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="session_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegistrationResult" nillable="true" type="tns:RegistrationResult" />
+  <xs:complexType name="VirtualCardResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="vcard" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VirtualCardResult" nillable="true" type="tns:VirtualCardResult" />
+  <xs:complexType name="ChangePasswordModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="new_password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChangePasswordModel" nillable="true" type="tns:ChangePasswordModel" />
+  <xs:complexType name="ClientInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="user_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientInfo" nillable="true" type="tns:ClientInfo" />
+  <xs:complexType name="ClientInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="add_email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="birth_date" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="car_quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="city" type="xs:int" />
+          <xs:element minOccurs="0" name="client_income" type="xs:int" />
+          <xs:element minOccurs="0" name="discount" type="xs:int" />
+          <xs:element minOccurs="0" name="district" type="xs:int" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fam_memb_quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="fam_member_under_18" type="xs:int" />
+          <xs:element minOccurs="0" name="family_income" type="xs:int" />
+          <xs:element minOccurs="0" name="fb_token" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="full_address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="home_phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="is_main_card" type="xs:boolean" />
+          <xs:element minOccurs="0" name="merrital_status" type="xs:int" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="person_code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="raion" type="xs:int" />
+          <xs:element minOccurs="0" name="sex" type="xs:int" />
+          <xs:element minOccurs="0" name="street" type="xs:int" />
+          <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="viplvl" type="xs:int" />
+          <xs:element minOccurs="0" name="work_address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="work_desc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="working_sphere" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientInfoResult" nillable="true" type="tns:ClientInfoResult" />
+  <xs:complexType name="ClientInfoByCard">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientInfoByCard" nillable="true" type="tns:ClientInfoByCard" />
+  <xs:complexType name="ClientInfoResultByCard">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="person_code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="surname" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientInfoResultByCard" nillable="true" type="tns:ClientInfoResultByCard" />
+  <xs:complexType name="SendOTPModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="app_source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendOTPModel" nillable="true" type="tns:SendOTPModel" />
+  <xs:complexType name="SubmitOTPModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="app_source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="otp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubmitOTPModel" nillable="true" type="tns:SubmitOTPModel" />
+  <xs:complexType name="ResetPasswordModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="app_source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="new_password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sms_code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResetPasswordModel" nillable="true" type="tns:ResetPasswordModel" />
+  <xs:complexType name="UserNameModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="user_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserNameModel" nillable="true" type="tns:UserNameModel" />
+  <xs:complexType name="UserNameResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="exists" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserNameResult" nillable="true" type="tns:UserNameResult" />
+  <xs:complexType name="ArrayOfDeliveryMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeliveryMethod" nillable="true" type="tns:DeliveryMethod" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeliveryMethod" nillable="true" type="tns:ArrayOfDeliveryMethod" />
+  <xs:complexType name="DeliveryMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeliveryMethod" nillable="true" type="tns:DeliveryMethod" />
+  <xs:complexType name="DeliveryMethods">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="delivery_methods" nillable="true" type="tns:ArrayOfDeliveryMethod" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeliveryMethods" nillable="true" type="tns:DeliveryMethods" />
+  <xs:complexType name="UserPhoneResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserPhoneResult" nillable="true" type="tns:UserPhoneResult" />
+  <xs:complexType name="BonusAccumulationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccumulatedBonus" type="xs:double" />
+          <xs:element minOccurs="0" name="DeclinedByUnicard" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BonusAccumulationResult" nillable="true" type="tns:BonusAccumulationResult" />
+  <xs:complexType name="AccountInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:double" />
+          <xs:element minOccurs="0" name="fullname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="score" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AccountInfoResult" nillable="true" type="tns:AccountInfoResult" />
+  <xs:complexType name="UpdateUserInfoModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="add_email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="car_quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="city" type="xs:int" />
+          <xs:element minOccurs="0" name="client_income" type="xs:int" />
+          <xs:element minOccurs="0" name="district" type="xs:int" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fam_memb_quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="fam_member_under_18" type="xs:int" />
+          <xs:element minOccurs="0" name="family_income" type="xs:int" />
+          <xs:element minOccurs="0" name="fb_token" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="home_phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="merrital_status" type="xs:int" />
+          <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sex" type="xs:int" />
+          <xs:element minOccurs="0" name="street" type="xs:int" />
+          <xs:element minOccurs="0" name="user_id" type="xs:int" />
+          <xs:element minOccurs="0" name="work_address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="work_desc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="working_sphere" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateUserInfoModel" nillable="true" type="tns:UpdateUserInfoModel" />
+  <xs:complexType name="MerchantAuthorizationModel">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="pass" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerchantAuthorizationModel" nillable="true" type="tns:MerchantAuthorizationModel" />
+  <xs:complexType name="CardInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="birthdate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="mobilephone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="person_code" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CardInfo" nillable="true" type="tns:CardInfo" />
+  <xs:complexType name="TokenIdResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TokenId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TokenIdResult" nillable="true" type="tns:TokenIdResult" />
+  <xs:complexType name="CardInfoWithToken">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="birthdate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="mobilephone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="person_code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tokenid" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CardInfoWithToken" nillable="true" type="tns:CardInfoWithToken" />
+  <xs:complexType name="CardResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CardResult" nillable="true" type="tns:CardResult" />
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Transactions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Transactions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:complexType name="TransactionsResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q1:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="total_count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="transactions" nillable="true" type="tns:ArrayOfTransaction" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransactionsResult" nillable="true" type="tns:TransactionsResult" />
+  <xs:complexType name="ArrayOfTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction" nillable="true" type="tns:Transaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransaction" nillable="true" type="tns:ArrayOfTransaction" />
+  <xs:complexType name="Transaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="amount_gel" type="xs:decimal" />
+      <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="organisation_id" type="xs:int" />
+      <xs:element minOccurs="0" name="organisation_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="score" type="xs:decimal" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Transaction" nillable="true" type="tns:Transaction" />
+</xs:schema>

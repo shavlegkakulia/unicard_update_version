@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.News" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.News" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:complexType name="NewsResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q1:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="news" nillable="true" type="tns:ArrayOfNewsItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewsResult" nillable="true" type="tns:NewsResult" />
+  <xs:complexType name="ArrayOfNewsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NewsItem" nillable="true" type="tns:NewsItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNewsItem" nillable="true" type="tns:ArrayOfNewsItem" />
+  <xs:complexType name="NewsItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewsItem" nillable="true" type="tns:NewsItem" />
+  <xs:complexType name="NewsIdModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q2:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="news_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewsIdModel" nillable="true" type="tns:NewsIdModel" />
+  <xs:complexType name="NewsByIdResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q3:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="news" nillable="true" type="tns:NewsItem" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewsByIdResult" nillable="true" type="tns:NewsByIdResult" />
+</xs:schema>

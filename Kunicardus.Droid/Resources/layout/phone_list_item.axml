@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:text="+995 595 95 37 04"
+        android:id="@+id/phone_text"
+        local:MvxBind="Text "
+        android:textColor="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+</LinearLayout>

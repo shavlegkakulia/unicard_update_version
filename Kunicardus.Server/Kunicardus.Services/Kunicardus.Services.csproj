@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{134F3257-658D-436E-882E-F0B14D0862BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kunicardus.Services</RootNamespace>
+    <AssemblyName>Kunicardus.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IAdvertisementService.cs" />
+    <Compile Include="AdvertisementService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\UnicardApi\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kunicardus.Domain\Kunicardus.Domain.csproj">
+      <Project>{fa677206-38ad-46f3-8c15-a06558c7ceab}</Project>
+      <Name>Kunicardus.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kunicardus.Services.Models\Kunicardus.Services.Models.csproj">
+      <Project>{9c418987-f044-47e8-91fe-34c2b4a055e8}</Project>
+      <Name>Kunicardus.Services.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.AccountInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.BonusAccumulationByUserResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.BonusAccumulationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.BrandsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.CardResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.CardStatusResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.Cities.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.ClientInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.ClientInfoResultByCard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.ContactInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.CustomerTypesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.DeliveryMethods.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.Districts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.EmailActivationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.Incomes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.LastTransactions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.MakePaymentResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.MaritalStatuses.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.MerchantsAddresesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.MerchantsByDeviceResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.MerchantsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.NewsByIdResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.NewsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.OnlinePaymentInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.OrderInfoResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.OrganizationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.OrganizationsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.PrizeCategoryResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.PrizeDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.PrizePriceRangesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.PrizesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.PrizeSubCategoryResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.PrizeTypesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.RegistrationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.SearchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.SectorsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.SectorsWithSubsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.ServiceCentersResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.Streets.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.SubSectorsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.TokenIdResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.TransactionsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.UserAuthorizationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.UserBalanceResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.UserNameResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.UserPhoneResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.UserTypesResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.VirtualCardResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Kunicardus.Services.UnicardApi.WorkingAreas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UnicardApi\Service1.wsdl" />
+    <None Include="Service References\UnicardApi\UnicardPublicAPI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\UnicardApi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UnicardApi\UnicardPublicAPI.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UnicardApi\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UnicardApi\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UnicardApi\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

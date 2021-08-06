@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#95c740">
+    <include
+        android:id="@+id/backbuttonToolbar"
+        layout="@layout/backbuttonlayout"
+        android:layout_marginTop="3dp"
+        local:MvxBind="Click BackCommand" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@id/backbuttonToolbar"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/regRelativeLayout">
+            <Kunicardus.Droid.BaseTextView
+                android:text="@string/transVerifySub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/backbuttonToolbar"
+                android:id="@+id/txtWelcomeSub"
+                android:textColor="#b9f050"
+                android:textSize="14dp"
+                android:layout_marginBottom="25dp"
+                android:gravity="center" />
+            <MvxRadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:id="@+id/radioButtons"
+                android:layout_below="@id/txtWelcomeSub"
+                local:MvxItemTemplate="@layout/item_radio"
+                local:MvxBind="ItemsSource Merchants;SelectedItem SelectedMerchant"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="25dp" />
+            <LinearLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_below="@id/radioButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:id="@+id/relativeLayout1">
+                <RelativeLayout
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/costRelativeLayout">
+                    <ImageView
+                        android:src="@drawable/gelwhite"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView1" />
+                    <RelativeLayout
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/part1"
+                        android:layout_toRightOf="@id/imageView1"
+                        android:layout_marginLeft="5dp">
+                        <Kunicardus.Droid.BaseEditText
+                            android:textCursorDrawable="@drawable/cursor_design"
+                            android:id="@+id/txt_verify_card_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:inputType="numberDecimal"
+                            android:hint="თანხა"
+                            android:textColorHint="#b9f050"
+                            android:textColor="#FFFFFF"
+                            local:MvxBind="Text Price"
+                            android:background="@null"
+                            android:layout_centerHorizontal="false"
+                            android:textSize="14dp" />
+                        <View
+                            android:layout_below="@id/txt_verify_card_price"
+                            android:layout_height="2dp"
+                            android:layout_width="wrap_content"
+                            android:background="#b9f050"
+                            android:id="@+id/View1"
+                            local:MvxBind="BackgroundColor ValidationColor(Price, ShouldValidateModel)" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/dateRelativeLayout">
+                    <ImageView
+                        android:src="@drawable/clockwhite"
+                        android:layout_width="14dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView2" />
+                    <RelativeLayout
+                        android:minWidth="25px"
+                        android:minHeight="25px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/imageView2"
+                        android:id="@+id/part2"
+                        android:layout_marginLeft="5dp">
+                        <Kunicardus.Droid.BaseEditText
+                            android:textCursorDrawable="@drawable/cursor_design"
+                            android:id="@+id/txt_verify_card_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="თარიღი"
+                            android:background="@null"
+                            android:textColorHint="#b9f050"
+                            android:textColor="#FFFFFF"
+                            local:MvxBind="Text Date,Converter=ApiDateTime"
+                            android:textSize="14dp" />
+                        <View
+                            android:layout_below="@id/txt_verify_card_date"
+                            android:layout_height="2dp"
+                            android:layout_width="wrap_content"
+                            android:background="#b9f050"
+                            android:id="@+id/View2"
+                            local:MvxBind="BackgroundColor ValidationColor(Date, ShouldValidateModel)" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <ImageButton
+                android:src="@drawable/next"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:id="@+id/continue_card_verification"
+                android:layout_centerHorizontal="true"
+                local:MvxBind="Click ContinueCommand"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@id/relativeLayout1" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

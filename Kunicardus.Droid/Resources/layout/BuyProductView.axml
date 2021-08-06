@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray">
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:background="@color/green">
+        <ImageButton
+            android:src="@drawable/backbutton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/backbtn" />
+        <Kunicardus.Droid.BaseTextView
+            android:textColor="@android:color/white"
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"
+            android:text="@string/buy"
+            android:layout_alignParentBottom="false" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_weight="90"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_layout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/llbottom"
+            android:orientation="vertical"
+            android:background="@color/lightgray">
+            <LinearLayout
+                android:minHeight="250px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/contentFrame"
+                android:background="@color/lightgray"
+                android:layout_marginBottom="10dp" />
+            <View
+                android:layout_marginBottom="5dp"
+                android:background="@color/graydivider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/imgIcon"
+                android:id="@+id/view1" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/relativeLayout1"
+                android:layout_gravity="center_vertical">
+                <Kunicardus.Droid.BaseTextView
+                    android:text="@string/point"
+                    android:textColor="@color/green"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textSize="12dp"
+                    android:paddingTop="11dp"
+                    android:paddingLeft="3dp" />
+                <Kunicardus.Droid.BaseTextView
+                    android:text="11111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/textView1"
+                    android:textSize="31dp"
+                    local:MvxBind="Text ProductPrice"
+                    android:textColor="@color/green"
+                    android:id="@+id/txtFPoin" />
+                <Kunicardus.Droid.BaseTextView
+                    android:text="@string/finalprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_toLeftOf="@id/txtFPoin"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/textView3"
+                    android:textSize="12dp"
+                    android:paddingTop="11dp" />
+            </RelativeLayout>
+            <Kunicardus.Droid.BaseButton
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="18dp"
+                android:textColor="#FFFFFF"
+                android:layout_height="wrap_content"
+                android:background="@drawable/catalog_detail_button_background"
+                android:text="@string/buy"
+                android:id="@+id/btnBuy"
+                android:layout_centerInParent="false"
+                local:MvxBind="Click BuyProductCommand" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

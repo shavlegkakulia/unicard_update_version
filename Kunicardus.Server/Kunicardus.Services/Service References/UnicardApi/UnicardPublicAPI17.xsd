@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Merchants" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Merchants" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="MerchantsModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q1:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="city_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="district_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="org_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerchantsModel" nillable="true" type="tns:MerchantsModel" />
+  <xs:complexType name="MerchantsResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q2:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="merchants" nillable="true" type="tns:ArrayOfMerchant" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerchantsResult" nillable="true" type="tns:MerchantsResult" />
+  <xs:complexType name="ArrayOfMerchant">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Merchant" nillable="true" type="tns:Merchant" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMerchant" nillable="true" type="tns:ArrayOfMerchant" />
+  <xs:complexType name="Merchant">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="district" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="logo_url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="merch_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="merch_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_point_desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="unit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="unit_score" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Merchant" nillable="true" type="tns:Merchant" />
+  <xs:complexType name="MerchantsAddresesResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q3:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cities" nillable="true" type="tns:ArrayOfMerchantCity" />
+          <xs:element minOccurs="0" name="org_name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerchantsAddresesResult" nillable="true" type="tns:MerchantsAddresesResult" />
+  <xs:complexType name="ArrayOfMerchantCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MerchantCity" nillable="true" type="tns:MerchantCity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMerchantCity" nillable="true" type="tns:ArrayOfMerchantCity" />
+  <xs:complexType name="MerchantCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="city_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="city_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="districts" nillable="true" type="tns:ArrayOfMerchantDistrict" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MerchantCity" nillable="true" type="tns:MerchantCity" />
+  <xs:complexType name="ArrayOfMerchantDistrict">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MerchantDistrict" nillable="true" type="tns:MerchantDistrict" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMerchantDistrict" nillable="true" type="tns:ArrayOfMerchantDistrict" />
+  <xs:complexType name="MerchantDistrict">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="addresses" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="district_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="district_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MerchantDistrict" nillable="true" type="tns:MerchantDistrict" />
+  <xs:complexType name="MerchantsByDeviceModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q5:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="device_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerchantsByDeviceModel" nillable="true" type="tns:MerchantsByDeviceModel" />
+  <xs:complexType name="MerchantsByDeviceResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q6:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="merchants" nillable="true" type="tns:ArrayOfMerchantsByDevice" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MerchantsByDeviceResult" nillable="true" type="tns:MerchantsByDeviceResult" />
+  <xs:complexType name="ArrayOfMerchantsByDevice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MerchantsByDevice" nillable="true" type="tns:MerchantsByDevice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMerchantsByDevice" nillable="true" type="tns:ArrayOfMerchantsByDevice" />
+  <xs:complexType name="MerchantsByDevice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="merch_address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="merch_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="merch_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="terminal_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MerchantsByDevice" nillable="true" type="tns:MerchantsByDevice" />
+</xs:schema>

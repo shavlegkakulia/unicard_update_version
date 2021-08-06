@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="46"
+    android:id="@+id/cardRealativeLayout"
+    android:background="#8DBD3B"
+    android:layout_marginTop="20dp">
+    <ImageView
+        android:id="@+id/back_line"
+        android:layout_height="74.2dp"
+        android:src="@drawable/back_line"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rotateLayout">
+        <ImageView
+            android:id="@+id/uniCard"
+            android:src="@drawable/unicard"
+            android:layout_centerHorizontal="true"
+            android:layout_width="300dp"
+            android:layout_height="183dp" />
+        <Kunicardus.Droid.BaseTextView
+            android:text="036000291452"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardNumber"
+            android:layout_alignRight="@id/uniCard"
+            android:layout_alignLeft="@id/uniCard"
+            android:textColor="#423726"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:layout_centerInParent="true"
+            android:paddingRight="25dp"
+            android:paddingBottom="7dp"
+            android:paddingTop="20dp"
+            local:MvxBind="Text CardNumber, Converter = CardnumberDisplay" />
+        <ImageView
+            android:id="@+id/barcode"
+            android:layout_width="180dp"
+            android:layout_height="65dp"
+            android:visibility="invisible"
+            android:background="#FFFFFF"
+            android:layout_below="@id/cardNumber"
+            android:layout_marginTop="40dp"
+            android:layout_alignLeft="@id/uniCard"
+            android:layout_marginLeft="20dp" />
+        <Kunicardus.Droid.BaseTextView
+            android:text="დააგროვე პოზიტივი"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardNumber"
+            android:id="@+id/textView1"
+            android:textColor="#ffffff"
+            android:layout_marginTop="85.7dp"
+            android:layout_alignRight="@id/uniCard"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/rectangle_txtpoint"
+            android:textSize="10dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp" />
+    </RelativeLayout>
+    <Kunicardus.Droid.BaseTextView
+        android:background="@drawable/round_btnpoints"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="-15.8dp"
+        android:layout_marginTop="70.7dp"
+        android:layout_marginBottom="-20dp"
+        android:layout_alignLeft="@id/rotateLayout"
+        android:layout_alignBottom="@id/rotateLayout"
+        android:id="@+id/total_points"
+        android:textColor="#8DBD3B"
+        android:text="1024"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        local:MvxBind="Text AcumulatedPoints"
+        android:textSize="22dp" />
+    <Kunicardus.Droid.BaseTextView
+        android:text="@string/point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPoints"
+        android:textColor="#ffffff"
+        android:layout_alignLeft="@id/total_points"
+        android:layout_alignBottom="@id/total_points"
+        android:layout_alignRight="@id/total_points"
+        android:gravity="center"
+        android:background="@drawable/rectangle_txtpoint"
+        android:textSize="10dp"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:minWidth="100dp" />
+</RelativeLayout>

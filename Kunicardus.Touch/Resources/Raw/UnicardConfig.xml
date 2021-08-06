@@ -1,0 +1,8 @@
+﻿<Configuration>
+	<UnicardServiceUrl value="http://api.unicard.ge/UnicardPublicAPI.Service1.svc/" />
+<!--   	<UnicardServiceUrl value="http://109.238.238.194/UnicardPublicAPI.Service1.svc/" />-->
+	<OfflineModeEnabled flag="true"/>
+	<LocalDbFileName value="unicardlocalstore.db" />
+	<LogLevel value="1" />
+	<LogFilePath value="logs"/>
+</Configuration>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Contacts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Contacts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:complexType name="ContactInfoResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q1:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="contact_email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fb_link" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="web_page_link" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="work_hours" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContactInfoResult" nillable="true" type="tns:ContactInfoResult" />
+</xs:schema>

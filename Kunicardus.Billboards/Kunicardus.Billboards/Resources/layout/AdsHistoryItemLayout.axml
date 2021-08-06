@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+    <View
+        android:background="@drawable/round_merchantsbackground"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageBackground"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgLogo"
+        android:layout_alignRight="@id/imageBackground"
+        android:layout_alignLeft="@id/imageBackground"
+        android:layout_alignTop="@id/imageBackground"
+        android:layout_alignBottom="@id/imageBackground"
+        android:padding="15dp" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true">
+        <TextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/points"
+            android:textSize="18dp"
+            android:textColor="#8dc641" />
+        <TextView
+            android:text="ქულა"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textSize="10dp"
+            android:layout_toRightOf="@id/points"
+            android:layout_alignBottom="@id/points"
+            android:gravity="bottom"
+            android:textColor="#8dc641" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/imgLogo">
+        <TextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:textSize="18dp" />
+        <TextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:id="@+id/txtDate" />
+    </RelativeLayout>
+</RelativeLayout>

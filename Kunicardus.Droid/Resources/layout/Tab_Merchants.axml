@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="#F6F8F8">
+    <ImageView
+        android:src="@drawable/tab_merchants_new"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/imghomePage"
+        android:layout_marginTop="5dp" />
+    <Kunicardus.Droid.BaseTextView
+        android:layout_marginTop="3dp"
+        android:text="@string/merchants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textColor="#4f4f4f"
+        android:gravity="center"
+        android:textSize="8dp" />
+</LinearLayout>

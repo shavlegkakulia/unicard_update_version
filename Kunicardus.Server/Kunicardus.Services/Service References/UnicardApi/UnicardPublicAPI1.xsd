@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.PrizeCategories" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.PrizeCategories" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:complexType name="PrizeCategoryResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q1:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="categories" nillable="true" type="tns:ArrayOfPrizeCategory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrizeCategoryResult" nillable="true" type="tns:PrizeCategoryResult" />
+  <xs:complexType name="ArrayOfPrizeCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrizeCategory" nillable="true" type="tns:PrizeCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrizeCategory" nillable="true" type="tns:ArrayOfPrizeCategory" />
+  <xs:complexType name="PrizeCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="is_hidden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PrizeCategory" nillable="true" type="tns:PrizeCategory" />
+  <xs:complexType name="PrizeSubCategoryModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q2:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cat_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrizeSubCategoryModel" nillable="true" type="tns:PrizeSubCategoryModel" />
+  <xs:complexType name="PrizeSubCategoryResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q3:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sub_categories" nillable="true" type="tns:ArrayOfPrizeSubCategory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrizeSubCategoryResult" nillable="true" type="tns:PrizeSubCategoryResult" />
+  <xs:complexType name="ArrayOfPrizeSubCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrizeSubCategory" nillable="true" type="tns:PrizeSubCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrizeSubCategory" nillable="true" type="tns:ArrayOfPrizeSubCategory" />
+  <xs:complexType name="PrizeSubCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PrizeSubCategory" nillable="true" type="tns:PrizeSubCategory" />
+</xs:schema>

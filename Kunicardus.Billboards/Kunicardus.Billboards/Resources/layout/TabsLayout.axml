@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:weightSum="5"
+    android:id="@+id/tabs"
+    android:background="#ffffff">
+    <ImageButton
+        android:src="@drawable/tabhome"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageButton1"
+        android:layout_weight="2"
+        android:tag="1"
+        android:background="#ffffff"
+        android:scaleType="fitEnd"
+        android:padding="10dp" />
+    <ImageButton
+        android:src="@drawable/tabmapnew"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:id="@+id/imageButton2"
+        android:layout_weight="1"
+        android:tag="2"
+        android:scaleType="fitCenter"
+        android:background="#ffffff"
+        android:padding="10dp" />
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="2"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/relativeLayout1">
+        <ImageButton
+            android:src="@drawable/tabads"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/imageButton3"
+            android:tag="3"
+            android:background="#ffffff"
+            android:scaleType="fitStart"
+            android:padding="10dp"
+            android:adjustViewBounds="true" />
+        <TextView
+            android:text="2"
+            android:textColor="@android:color/white"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/adsCount"
+            android:visibility="gone"
+            android:layout_alignRight="@id/imageButton3"
+            android:layout_alignTop="@id/imageButton3"
+            android:background="@drawable/round_alert_counter"
+            android:textSize="9dp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp" />
+    </RelativeLayout>
+</LinearLayout>

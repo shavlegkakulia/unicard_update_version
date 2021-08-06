@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">Hello World, Click Me!</string>
+    <string name="ApplicationName">Kunicardus.Billboards</string>
+  <string name="drawer_open">მენიუ</string>
+  <string name="drawer_close">მთავარი გვერდი</string>
+  <string name="homePage">მთავარი გვერდი</string>
+  <string name="map">რუკა</string>
+  <string name="ads">რეკლამები</string>
+  <string name="info">პარამეტრები</string>
+  <string name="history">ისტორია</string>
+  <string name="passDateString">ბილბორდთან გავლის დრო</string>
+  <string name="logout">გამოსვლა</string>
+  <string name="locationFailed">Google Play Service-თან დაკავშირება ვერ მოხერხდა</string>
+  <string name="locationSuspended">Google Play Service-თან კავშირი შეწყდა</string>
+  <string name="app_name">UNICARD</string>
+  <string name = "app_id">753021038764444</string>
+
+  <!-- Error strings -->
+<string name="not_connected">GoogleApiClient no yet connected. Try again.</string>
+    <string name="geofence_not_available">Geofence service is not available now</string>
+    <string name="geofence_too_many_geofences">Your app has registered too many geofences</string>
+    <string name="geofence_too_many_pending_intents">
+        You have provided too many PendingIntents to the addGeofences() call
+    </string>
+    <string name="unknown_geofence_error">
+        Unknown error: the Geofence service is not available now
+    </string>
+    <string name="geofence_transition_invalid_type">
+        Geofence transition error: invalid transition type %1$d
+    </string>
+  <string name="no_location">
+    ადგილმდებარეობის მიღება ვერ მოხერხდა
+  </string>
+  <string name="no_network">
+    თქვენ არ გაქვთ წვდომა ინტერნეტთან
+  </string>
+  <string name="no_fbLogin">
+    Facebook ავტორიზაცია ვერ მოხერხდა.\nაპლიკაციამ ვერ მიიღო წვდომა საჭირო ინფორმაციაზე
+  </string>
+  <string name="no_ads">
+    თქვენ არ გაქვთ გავლილი ბილბორდები
+  </string>
+  <string name="no_billboards">
+    ბილბორდების ჩატვირთვა ვერ მოხერხდა
+  </string>
+  <string name="no_baseApp">
+    UNICARD-ის აპლიკაციაზე გადასვლა ვერ მოხერხდა
+  </string>
+
+  <string name ="closeMessage">ნამდვილად გსურთ აპლიკაციის დახურვა?</string>
+  <!-- Notification strings -->
+  
+  <!-- Transition type strings -->
+  <string name="geofence_transition_entered">Entered</string>
+  <string name="geofence_transition_exited">Exited</string>
+  <string name="unknown_geofence_transition">Unknown Transition</string>
+
+  <string name="geofence_transition_notification_text">Click notification to return to app</string>
+  <string name="geofence_transition_passed">თქვენ გაიარეთ ბილბორდი</string>
+
+  <string name = "welcome">მოგესალმებით</string>
+  <string name ="fbAuthorization">FACEBOOK-ით შესვლა</string>
+  <string name ="authorization">ავტორიზაცია</string>
+  <string name ="fbRegistration">Facebook რეგისტრაცია</string>
+  <string name="emailRegistration">ელ-ფოსტით რეგისტრაცია</string>
+  <string name="regQuestion">
+    <u>რეგისტრაცია</u>
+  </string>
+  <string name="resetPassword">
+    <u>პაროლის აღდგენა</u>
+  </string>
+  <string name="ignore">
+    <u>გაუქმება</u>
+  </string>
+  <string name="decline">
+    <u>უარის თქმა</u>
+  </string>
+  <string name="ok">
+    <u>გასაგებია</u>
+  </string>
+  <string name="congrats">გილოცავთ, თქვენ დაგერიცხათ {0} ქულა!</string>
+  <string name="extraIgnoreText">ნამდვილად გსურთ დამატებითი რეკლამის ნახვაზე უარის თქმა?</string>
+  <string name="ignoreText">გაუქმების შემთხვევაში, რეკლამის ჩამოტვირთვა და ქულების დარიცხვა არ მოხდება. ნამდვილად გსურთ გაუქმება?</string>
+  <string name="loadedIgnoreText">რეკლამის ნახვაზე უარის თქმის შემთხვევაში, თქვენ არ დაგერიცხებათ აღნიშნული რეკლამის შესაბამისი ქულები. ნამდვილად გსურთ უარის თქმა?</string>
+  <string name="passDate">ბილბორდთან გავლის დრო</string>
+  <string name="user">მომხმარებელი</string>
+  <string name="startTrip">მოგზაურობის დაწყება</string>
+  <string name="endTrip">შეწყვეტა</string>
+  <string name="nearestBoard">უახლოესი ბილბორდი</string>
+  <string name="loading">იტვირთება...</string>
+  <string name="retry">სცადეთ თავიდან</string>
+  <string name="clickButton">დამატებითი ქულისთვის\nდააჭირეთ ღილაკზე</string>
+  <string name="more">მეტი ქულა!</string>
+  <string name="savePointsError">დაფიქსირდა შეცდომა ქულების დარიცხვისას</string>
+  <string name="skip">
+    <u>უარის თქმა</u>
+  </string>
+  <string name="loadingAd">იტვირთება რეკლამა...</string>
+  <string name="downloadAd">რეკლამის ჩამოტვირთვა</string>
+  <string name="loginWarning">
+    აპლიკაციაში შესასვლელად გამოიყენეთ &lt;font color="#FFC115">უნიქარდის&lt;/font> მომხმარებელი!</string>  
+</resources>

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Transactions" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Sectors" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Organizations" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Merchants" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.PrizeCategories" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Brands" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.UserTypes" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.CustomerTypes" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.User" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.ServiceCenters" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.OnlinePayments" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd16" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.News" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Contacts" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd18" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Tran" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd19" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.MakePayment" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd20" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Order" />
+      <xsd:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd21" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.SearchResults" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetLastTransactions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastTransactions" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLastTransactions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckLastTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLastTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CheckLastTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckLastTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCardStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCardStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCardStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCardStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SubmitEmailActivation_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitEmailActivation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SubmitEmailActivation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitEmailActivationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCities" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDistricts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistricts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDistricts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStreets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStreets" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStreets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStreetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaritalStatuses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaritalStatuses" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMaritalStatuses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaritalStatusesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetWorkingAreas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkingAreas" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetWorkingAreas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkingAreasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetIncomes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIncomes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetIncomes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIncomesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBalance" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserAuthorization_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserAuthorization" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserAuthorization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserAuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserRegistration_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegistration" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserRegistration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetVirtualCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVirtualCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetVirtualCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVirtualCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetClientInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetClientInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetClientInfoByCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientInfoByCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetClientInfoByCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientInfoByCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendOTP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendOTP" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendOTP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SubmitOTP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitOTP" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SubmitOTP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ResetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ResetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserNameExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserNameExists" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UserNameExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserNameExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAccountStatement_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountStatement" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAccountStatement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountStatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrgSectors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrgSectors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrgSectors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrgSectorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrgSubSectors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrgSubSectors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrgSubSectors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrgSubSectorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrganizations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizations" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrganizations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrganizationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrgDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrgDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrgDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrgDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMerchantList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMerchantList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPrizeCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrizeCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPrizeCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrizeCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPrizeSubCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrizeSubCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPrizeSubCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrizeSubCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBrandList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBrandList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTypeList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCustomerTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerTypeList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCustomerTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetProductList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetProductList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrgSectorsWithSubSectors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrgSectorsWithSubSectors" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrgSectorsWithSubSectors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrgSectorsWithSubSectorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetProductById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetProductById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetServiceCenterList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceCenterList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetServiceCenterList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceCenterListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOnlinePaymentInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlinePaymentInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOnlinePaymentInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlinePaymentInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuyProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuyProduct" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BuyProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuyProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDeliveryMethods_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryMethods" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDeliveryMethods_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveryMethodsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserPhone_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPhone" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserPhone_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPhoneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetProductPriceRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductPriceRange" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetProductPriceRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductPriceRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPrizeTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrizeTypes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPrizeTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrizeTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSimilarProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimilarProducts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetSimilarProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSimilarProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNewsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNewsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNewsById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsById" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNewsById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewsByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetContactInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetContactInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BonusAccumulation_InputMessage">
+    <wsdl:part name="parameters" element="tns:BonusAccumulation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BonusAccumulation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BonusAccumulationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAccountInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAccountInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMerchantAddresses_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantAddresses" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMerchantAddresses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUserInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUserInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MakePayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakePayment" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MakePayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMerchantsByDevice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantsByDevice" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMerchantsByDevice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMerchantsByDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTempOffers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempOffers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTempOffers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTempOffersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Search_InputMessage">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MerchantAuthorization_InputMessage">
+    <wsdl:part name="parameters" element="tns:MerchantAuthorization" />
+  </wsdl:message>
+  <wsdl:message name="IService1_MerchantAuthorization_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MerchantAuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ConfirmOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmOrder" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ConfirmOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EBSendTokenAndBookCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:EBSendTokenAndBookCard" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EBSendTokenAndBookCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EBSendTokenAndBookCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EBSubmitAndRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:EBSubmitAndRegister" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EBSubmitAndRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EBSubmitAndRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ResendActivationEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResendActivationEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ResendActivationEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResendActivationEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BonusAccumulationByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:BonusAccumulationByUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BonusAccumulationByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BonusAccumulationByUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetLastTransactions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetLastTransactions" message="tns:IService1_GetLastTransactions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetLastTransactionsResponse" message="tns:IService1_GetLastTransactions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckLastTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CheckLastTransaction" message="tns:IService1_CheckLastTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CheckLastTransactionResponse" message="tns:IService1_CheckLastTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCardStatus" message="tns:IService1_GetCardStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCardStatusResponse" message="tns:IService1_GetCardStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitEmailActivation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SubmitEmailActivation" message="tns:IService1_SubmitEmailActivation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SubmitEmailActivationResponse" message="tns:IService1_SubmitEmailActivation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCities" message="tns:IService1_GetCities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCitiesResponse" message="tns:IService1_GetCities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistricts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDistricts" message="tns:IService1_GetDistricts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDistrictsResponse" message="tns:IService1_GetDistricts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStreets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStreets" message="tns:IService1_GetStreets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStreetsResponse" message="tns:IService1_GetStreets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaritalStatuses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMaritalStatuses" message="tns:IService1_GetMaritalStatuses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMaritalStatusesResponse" message="tns:IService1_GetMaritalStatuses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkingAreas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetWorkingAreas" message="tns:IService1_GetWorkingAreas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetWorkingAreasResponse" message="tns:IService1_GetWorkingAreas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIncomes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetIncomes" message="tns:IService1_GetIncomes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetIncomesResponse" message="tns:IService1_GetIncomes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserBalance" message="tns:IService1_GetUserBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserBalanceResponse" message="tns:IService1_GetUserBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAuthorization">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UserAuthorization" message="tns:IService1_UserAuthorization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UserAuthorizationResponse" message="tns:IService1_UserAuthorization_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRegistration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UserRegistration" message="tns:IService1_UserRegistration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UserRegistrationResponse" message="tns:IService1_UserRegistration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVirtualCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetVirtualCard" message="tns:IService1_GetVirtualCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetVirtualCardResponse" message="tns:IService1_GetVirtualCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ChangePassword" message="tns:IService1_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ChangePasswordResponse" message="tns:IService1_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetClientInfo" message="tns:IService1_GetClientInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetClientInfoResponse" message="tns:IService1_GetClientInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientInfoByCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetClientInfoByCard" message="tns:IService1_GetClientInfoByCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetClientInfoByCardResponse" message="tns:IService1_GetClientInfoByCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendOTP" message="tns:IService1_SendOTP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendOTPResponse" message="tns:IService1_SendOTP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitOTP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SubmitOTP" message="tns:IService1_SubmitOTP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SubmitOTPResponse" message="tns:IService1_SubmitOTP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ResetPassword" message="tns:IService1_ResetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ResetPasswordResponse" message="tns:IService1_ResetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserNameExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UserNameExists" message="tns:IService1_UserNameExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UserNameExistsResponse" message="tns:IService1_UserNameExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountStatement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAccountStatement" message="tns:IService1_GetAccountStatement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAccountStatementResponse" message="tns:IService1_GetAccountStatement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrgSectors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOrgSectors" message="tns:IService1_GetOrgSectors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOrgSectorsResponse" message="tns:IService1_GetOrgSectors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrgSubSectors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOrgSubSectors" message="tns:IService1_GetOrgSubSectors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOrgSubSectorsResponse" message="tns:IService1_GetOrgSubSectors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrganizations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOrganizations" message="tns:IService1_GetOrganizations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOrganizationsResponse" message="tns:IService1_GetOrganizations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrgDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOrgDetails" message="tns:IService1_GetOrgDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOrgDetailsResponse" message="tns:IService1_GetOrgDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMerchantList" message="tns:IService1_GetMerchantList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMerchantListResponse" message="tns:IService1_GetMerchantList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrizeCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPrizeCategoryList" message="tns:IService1_GetPrizeCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPrizeCategoryListResponse" message="tns:IService1_GetPrizeCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrizeSubCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPrizeSubCategoryList" message="tns:IService1_GetPrizeSubCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPrizeSubCategoryListResponse" message="tns:IService1_GetPrizeSubCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBrandList" message="tns:IService1_GetBrandList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBrandListResponse" message="tns:IService1_GetBrandList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTypeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserTypeList" message="tns:IService1_GetUserTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserTypeListResponse" message="tns:IService1_GetUserTypeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTypeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCustomerTypeList" message="tns:IService1_GetCustomerTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCustomerTypeListResponse" message="tns:IService1_GetCustomerTypeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetProductList" message="tns:IService1_GetProductList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetProductListResponse" message="tns:IService1_GetProductList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrgSectorsWithSubSectors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOrgSectorsWithSubSectors" message="tns:IService1_GetOrgSectorsWithSubSectors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOrgSectorsWithSubSectorsResponse" message="tns:IService1_GetOrgSectorsWithSubSectors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetProductById" message="tns:IService1_GetProductById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetProductByIdResponse" message="tns:IService1_GetProductById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceCenterList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetServiceCenterList" message="tns:IService1_GetServiceCenterList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetServiceCenterListResponse" message="tns:IService1_GetServiceCenterList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlinePaymentInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOnlinePaymentInfo" message="tns:IService1_GetOnlinePaymentInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOnlinePaymentInfoResponse" message="tns:IService1_GetOnlinePaymentInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuyProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BuyProduct" message="tns:IService1_BuyProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BuyProductResponse" message="tns:IService1_BuyProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveryMethods">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDeliveryMethods" message="tns:IService1_GetDeliveryMethods_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDeliveryMethodsResponse" message="tns:IService1_GetDeliveryMethods_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPhone">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserPhone" message="tns:IService1_GetUserPhone_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserPhoneResponse" message="tns:IService1_GetUserPhone_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductPriceRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetProductPriceRange" message="tns:IService1_GetProductPriceRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetProductPriceRangeResponse" message="tns:IService1_GetProductPriceRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrizeTypes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPrizeTypes" message="tns:IService1_GetPrizeTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPrizeTypesResponse" message="tns:IService1_GetPrizeTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSimilarProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetSimilarProducts" message="tns:IService1_GetSimilarProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetSimilarProductsResponse" message="tns:IService1_GetSimilarProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNewsList" message="tns:IService1_GetNewsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNewsListResponse" message="tns:IService1_GetNewsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewsById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNewsById" message="tns:IService1_GetNewsById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNewsByIdResponse" message="tns:IService1_GetNewsById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContactInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetContactInfo" message="tns:IService1_GetContactInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetContactInfoResponse" message="tns:IService1_GetContactInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BonusAccumulation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BonusAccumulation" message="tns:IService1_BonusAccumulation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BonusAccumulationResponse" message="tns:IService1_BonusAccumulation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAccountInfo" message="tns:IService1_GetAccountInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAccountInfoResponse" message="tns:IService1_GetAccountInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantAddresses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMerchantAddresses" message="tns:IService1_GetMerchantAddresses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMerchantAddressesResponse" message="tns:IService1_GetMerchantAddresses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateUserInfo" message="tns:IService1_UpdateUserInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateUserInfoResponse" message="tns:IService1_UpdateUserInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MakePayment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MakePayment" message="tns:IService1_MakePayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MakePaymentResponse" message="tns:IService1_MakePayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchantsByDevice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMerchantsByDevice" message="tns:IService1_GetMerchantsByDevice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMerchantsByDeviceResponse" message="tns:IService1_GetMerchantsByDevice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTempOffers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTempOffers" message="tns:IService1_GetTempOffers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTempOffersResponse" message="tns:IService1_GetTempOffers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOrderInfo" message="tns:IService1_GetOrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOrderInfoResponse" message="tns:IService1_GetOrderInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Search" message="tns:IService1_Search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchResponse" message="tns:IService1_Search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MerchantAuthorization">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/MerchantAuthorization" message="tns:IService1_MerchantAuthorization_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/MerchantAuthorizationResponse" message="tns:IService1_MerchantAuthorization_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ConfirmOrder" message="tns:IService1_ConfirmOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ConfirmOrderResponse" message="tns:IService1_ConfirmOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EBSendTokenAndBookCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EBSendTokenAndBookCard" message="tns:IService1_EBSendTokenAndBookCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EBSendTokenAndBookCardResponse" message="tns:IService1_EBSendTokenAndBookCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EBSubmitAndRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EBSubmitAndRegister" message="tns:IService1_EBSubmitAndRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EBSubmitAndRegisterResponse" message="tns:IService1_EBSubmitAndRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResendActivationEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ResendActivationEmail" message="tns:IService1_ResendActivationEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ResendActivationEmailResponse" message="tns:IService1_ResendActivationEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BonusAccumulationByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BonusAccumulationByUser" message="tns:IService1_BonusAccumulationByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BonusAccumulationByUserResponse" message="tns:IService1_BonusAccumulationByUser_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="Service1" />
+</wsdl:definitions>

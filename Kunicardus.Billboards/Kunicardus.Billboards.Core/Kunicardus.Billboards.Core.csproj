@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85F0DAE4-FF0E-4DD8-9A61-222B3F6A3F93}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kunicardus.Billboards.Core</RootNamespace>
+    <AssemblyName>Unicard.Billboards.Core</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.8.3\lib\android\SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Json" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da">
+      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbModels\UserInfo.cs" />
+    <Compile Include="Enums\AdvertistmentStatus.cs" />
+    <Compile Include="BillboardsDb.cs" />
+    <Compile Include="DbModels\BillboardHistory.cs" />
+    <Compile Include="DbModels\Billboard.cs" />
+    <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Helpers\ExtensionMethods.cs" />
+    <Compile Include="Models\AdsModel.cs" />
+    <Compile Include="Models\DTOs\BaseActionResult.cs" />
+    <Compile Include="Models\DTOs\Request\AuthRequest.cs" />
+    <Compile Include="Models\DTOs\Request\GetAdvertisementsRequest.cs" />
+    <Compile Include="Models\DTOs\Request\GetUserBalanceRequest.cs" />
+    <Compile Include="Models\DTOs\Request\GetUserInfoRequest.cs" />
+    <Compile Include="Models\DTOs\Request\SaveAdvertisementPointsRequest.cs" />
+    <Compile Include="Models\DTOs\Response\AdvertisementModel.cs" />
+    <Compile Include="Models\DTOs\Response\AuthResponse.cs" />
+    <Compile Include="Models\DTOs\Response\BillboardsModel.cs" />
+    <Compile Include="Models\DTOs\Response\GetAdvertismentsResponse.cs" />
+    <Compile Include="Models\DTOs\Response\GetBillboardsResponse.cs" />
+    <Compile Include="Models\DTOs\Response\GetUserBalanceResponse.cs" />
+    <Compile Include="Models\DTOs\Response\GetUserInfoResponse.cs" />
+    <Compile Include="Models\UserBalanceModel.cs" />
+    <Compile Include="Models\UserInfoModel.cs" />
+    <Compile Include="Models\MenuModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Plugins\IConnectivityPlugin.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Abstract\IAdsService.cs" />
+    <Compile Include="Services\Abstract\IBillboardsService.cs" />
+    <Compile Include="Services\Abstract\ILogoutService.cs" />
+    <Compile Include="Services\Abstract\IUserService.cs" />
+    <Compile Include="Services\Concrete\AdsService.cs" />
+    <Compile Include="Services\Concrete\AuthService.cs" />
+    <Compile Include="Services\Concrete\BillboardsService.cs" />
+    <Compile Include="Services\Abstract\IAuthService.cs" />
+    <Compile Include="Services\Concrete\UserService.cs" />
+    <Compile Include="Services\SecurityProvider\ICustomSecurityProvider.cs" />
+    <Compile Include="Services\UnicardApiProvider\BillboardsApiBaseRequest.cs" />
+    <Compile Include="Services\UnicardApiProvider\BillboardsBaseResponse.cs" />
+    <Compile Include="Services\UnicardApiProvider\IUnicardApiProvider.cs" />
+    <Compile Include="Services\UnicardApiProvider\UnicardApiBaseRequest.cs" />
+    <Compile Include="Services\UnicardApiProvider\UnicardApiBaseResponse.cs" />
+    <Compile Include="Services\UnicardApiProvider\UnicardApiNoResponseObject.cs" />
+    <Compile Include="Services\UnicardApiProvider\UnicardApiProvider.cs" />
+    <Compile Include="ViewModels\AdsListViewModel.cs" />
+    <Compile Include="ViewModels\AdvertismentViewModel.cs" />
+    <Compile Include="ViewModels\AuthViewModel.cs" />
+    <Compile Include="ViewModels\BillboardsViewModel.cs" />
+    <Compile Include="ViewModels\HistoryViewModel.cs" />
+    <Compile Include="ViewModels\HomePageViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="Models\DTOs\Request\GetAdvertisementRequest.cs" />
+    <Compile Include="Models\DTOs\Response\GetAdvertisementResponse.cs" />
+    <Compile Include="Services\UnicardApiProvider\UnicardApiBaseRequestForMethods.cs" />
+    <Compile Include="Models\DTOs\Request\GetHistoryRequest.cs" />
+    <Compile Include="Models\DTOs\Response\GetHistoryResponse.cs" />
+    <Compile Include="Models\HistoryModel.cs" />
+    <Compile Include="Models\DTOs\Request\AccumulatePointsRequest.cs" />
+    <Compile Include="Models\DTOs\Response\AccumulatePointsResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <XamarinComponentReference Include="sqlite-net">
+      <Version>1.0.8.3</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <Version>6.0.8.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

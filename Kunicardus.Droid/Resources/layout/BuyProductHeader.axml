@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/imgIcon"
+        android:padding="7dp"
+        local:MvxBind="ImageUrl CurrentImageUrl;" />
+    <Kunicardus.Droid.BaseTextView
+        android:text="Text"
+        android:layout_marginTop="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgIcon"
+        android:id="@+id/txtTitle"
+        android:gravity="center_vertical"
+        local:MvxBind="Text ProductName"
+        android:padding="7dp" />
+    <View
+        android:id="@+id/vDottedLine"
+        android:background="@color/graydivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toRightOf="@id/imgIcon" />
+    <Kunicardus.Droid.BaseTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vDottedLine"
+        android:layout_toRightOf="@id/imgIcon"
+        android:id="@+id/txtScore"
+        android:textColor="@color/green"
+        android:paddingLeft="7dp"
+        local:MvxBind="Text ProductPrice"
+        android:textSize="25dp" />
+    <Kunicardus.Droid.BaseTextView
+        android:text="@string/point"
+        android:textColor="@color/green"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vDottedLine"
+        android:layout_toRightOf="@id/txtScore"
+        android:paddingLeft="3dp"
+        android:paddingTop="8dp"
+        android:textSize="12dp"
+        android:id="@+id/textView4" />
+<!--    <View
+        android:layout_marginTop="9dp"
+        android:background="@color/graydivider"
+        android:layout_width="match_parent"
+        android:layout_height="1.8dp"
+        android:layout_below="@id/txtScore"
+        android:id="@+id/view1" />-->
+</RelativeLayout>

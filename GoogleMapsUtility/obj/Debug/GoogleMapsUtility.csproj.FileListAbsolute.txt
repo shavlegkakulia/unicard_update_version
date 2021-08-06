@@ -1,0 +1,24 @@
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\obj\Debug\__AndroidLibraryProjects__.zip
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\obj\Debug\MonoAndroid,Version=v5.0.AssemblyAttributes.cs
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.csprojAssemblyReference.cache
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\obj\Debug\stamp\_BuildLibraryImportsCache.stamp
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\bin\Debug\GoogleMapsUtility.dll
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\bin\Debug\GoogleMapsUtility.pdb
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.csproj.CoreCompileInputs.cache
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.csproj.CopyComplete
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.dll
+D:\Sources\kunicardus - Copy\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.pdb
+D:\Sources\kunicardus\GoogleMapsUtility\bin\Debug\GoogleMapsUtility.dll
+D:\Sources\kunicardus\GoogleMapsUtility\bin\Debug\GoogleMapsUtility.pdb
+D:\Sources\kunicardus\GoogleMapsUtility\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\Sources\kunicardus\GoogleMapsUtility\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+D:\Sources\kunicardus\GoogleMapsUtility\obj\Debug\__AndroidLibraryProjects__.zip
+D:\Sources\kunicardus\GoogleMapsUtility\obj\Debug\MonoAndroid,Version=v5.0.AssemblyAttributes.cs
+D:\Sources\kunicardus\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.csprojAssemblyReference.cache
+D:\Sources\kunicardus\GoogleMapsUtility\obj\Debug\stamp\_BuildLibraryImportsCache.stamp
+D:\Sources\kunicardus\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.csproj.CoreCompileInputs.cache
+D:\Sources\kunicardus\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.csproj.CopyComplete
+D:\Sources\kunicardus\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.dll
+D:\Sources\kunicardus\GoogleMapsUtility\obj\Debug\GoogleMapsUtility.pdb

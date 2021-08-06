@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<color name="orange">#f5a72b</color>
+	<color name="green">#8DBD3B</color>
+	<color name="white">#f3f3f3</color>
+	<color name="gray">#f6f8f8</color>
+	<color name="graydivider">#e2e3e3</color>
+	<color name="lightgray">#ebebeb</color>
+  <color name="ripple">#6f6f6f</color>
+  <color name="DimGray">#696969</color>
+</resources>

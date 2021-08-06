@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.User" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.User" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfUserDiscount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserDiscount" nillable="true" type="tns:UserDiscount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserDiscount" nillable="true" type="tns:ArrayOfUserDiscount" />
+  <xs:complexType name="UserDiscount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="discount_count" type="xs:int" />
+      <xs:element minOccurs="0" name="discounted_percent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserDiscount" nillable="true" type="tns:UserDiscount" />
+  <xs:complexType name="UserIdModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="app_source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserIdModel" nillable="true" type="tns:UserIdModel" />
+</xs:schema>

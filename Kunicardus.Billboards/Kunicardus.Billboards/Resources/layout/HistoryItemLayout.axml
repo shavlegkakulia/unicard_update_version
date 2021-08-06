@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:padding="15dp">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true">
+        <Kunicardus.Billboards.BaseTextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPoints"
+            android:textSize="16dp"
+            android:textColor="#E75A3D" />
+        <Kunicardus.Billboards.BaseTextView
+            android:text="ქულა"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textSize="10dp"
+            android:paddingBottom="2dp"
+            android:layout_toRightOf="@id/txtPoints"
+            android:layout_alignBottom="@id/txtPoints"
+            android:gravity="bottom"
+            android:textColor="#E75A3D" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/imgLogo">
+        <Kunicardus.Billboards.BaseTextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDate"
+            android:textSize="16dp" />
+        <Kunicardus.Billboards.BaseTextView
+            android:text="Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTime"
+            android:textSize="13dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/txtDate" />
+    </RelativeLayout>
+</RelativeLayout>

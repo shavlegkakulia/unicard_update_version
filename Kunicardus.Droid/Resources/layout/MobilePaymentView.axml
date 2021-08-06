@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/delivery_view_layout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <include
+        android:id="@+id/BuyProductHeader"
+        layout="@layout/BuyProductHeader" />
+    <Kunicardus.Droid.BaseTextView
+        android:text="@string/mobilePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTitle"
+        android:textSize="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="10dp" />
+    <Kunicardus.Droid.BaseTextView
+        android:text="@string/phone_num_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTitle"
+        android:textSize="12dp"
+        android:paddingTop="7dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="12dp" />
+    <Kunicardus.Droid.BasePaymentEditText
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMobileNumber"
+        android:maxLength="13"
+        android:padding="11dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="7dp"
+        android:inputType="phone"
+        android:hint="@string/phoneHint"
+        local:MvxBind="Text PhoneNumber"
+        android:imeOptions="actionDone" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginTop="7dp"
+        android:id="@+id/discountheader"
+        local:MvxBind="Visibility HasDiscount, Converter=Visibility"
+        android:layout_height="38dp">
+        <View
+            android:id="@+id/headerLine"
+            android:background="@color/graydivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true" />
+        <View
+            android:background="@color/graydivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingTop="3dp"
+            android:layout_below="@id/user_discount_prize_logo"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp" />
+        <ImageView
+            android:id="@+id/user_discount_prize_logo"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:gravity="bottom"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/headerLine"
+            android:src="@drawable/gift" />
+        <Kunicardus.Droid.BaseTextView
+            android:layout_toRightOf="@id/user_discount_prize_logo"
+            android:id="@+id/user_discount_group_item"
+            android:text="@string/user_discounts_group_name"
+            android:gravity="bottom"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <MvvmCross.Platforms.Android.Binding.Views.MvxListView
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/discountList"
+        local:MvxBind="ItemsSource UserDiscounts;"
+        local:MvxItemTemplate="@layout/payment_discount_item"
+        android:visibility="visible" />
+</LinearLayout>

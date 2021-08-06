@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C65A1DA-1E1A-4359-A657-646E82C5A2FE}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kunicardus.Billboards</RootNamespace>
+    <AssemblyName>Unicard.Billboards</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <Debugger>Xamarin</Debugger>
+    <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <DebugType>full</DebugType>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+    <Debugger>Xamarin</Debugger>
+    <DevInstrumentationEnabled>False</DevInstrumentationEnabled>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\Components\googleplayservices-25.0.0.0\lib\android\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Location, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Location.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Location.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Geofence.Plugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xam.Plugin.Geofence.1.0.6\lib\MonoAndroid10\Geofence.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Geofence.Plugin.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xam.Plugin.Geofence.1.0.6\lib\MonoAndroid10\Geofence.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.8.3\lib\android\SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.MediaRouter.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Xamarin.Facebook.4.2.0.0\lib\MonoAndroid403\Xamarin.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da">
+      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="SplunkMint.Xamarin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\SplunkMint.Xamarin.Android.4.0.1\lib\MonoAndroid\SplunkMint.Xamarin.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activities\LandingPage.cs" />
+    <Compile Include="Activities\LoginAuthView.cs" />
+    <Compile Include="Activities\LoginView.cs" />
+    <Compile Include="Activities\SplashScreenActivity.cs" />
+    <Compile Include="Adapters\AdRecyclerAdapter.cs" />
+    <Compile Include="Adapters\AdsHistoryAdapter.cs" />
+    <Compile Include="Adapters\AdsPagerAdapter.cs" />
+    <Compile Include="Adapters\ImageSliderAdapter.cs" />
+    <Compile Include="Adapters\InfoWindowAdapter.cs" />
+    <Compile Include="Adapters\LoadedAdsAdapter.cs" />
+    <Compile Include="Adapters\MenuAdapter.cs" />
+    <Compile Include="Adapters\MenuPagerAdapter.cs" />
+    <Compile Include="Adapters\ViewPagerAdapter.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="BaseWidgets\BaseButton.cs" />
+    <Compile Include="BaseWidgets\BaseEditText.cs" />
+    <Compile Include="BaseWidgets\BaseExpandableListView.cs" />
+    <Compile Include="BaseWidgets\BaseIngiriTextView.cs" />
+    <Compile Include="BaseWidgets\BasePointsTextView.cs" />
+    <Compile Include="BaseWidgets\BaseTextView.cs" />
+    <Compile Include="BaseWidgets\BindableWebView.cs" />
+    <Compile Include="BaseWidgets\CircledImageView.cs" />
+    <Compile Include="Fragments\AdsChildFragment.cs" />
+    <Compile Include="Fragments\AdsDynamicFragment.cs" />
+    <Compile Include="Fragments\AdsFragment.cs" />
+    <Compile Include="Fragments\BillboardsFragment.cs" />
+    <Compile Include="Fragments\BaseFragment.cs" />
+    <Compile Include="Fragments\HistoryFragment.cs" />
+    <Compile Include="Fragments\HomePageFragment.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Fragments\InfoFragment.cs" />
+    <Compile Include="Helpers\CustomViewPager.cs" />
+    <Compile Include="Helpers\RecyclerViewList.cs" />
+    <Compile Include="Plugins\ConnectivityPlugin.cs" />
+    <Compile Include="Plugins\DisplayInfo.cs" />
+    <Compile Include="Plugins\RangeCalculator.cs" />
+    <Compile Include="Plugins\RecyclerView\CustomLinearSmoothScroller.cs" />
+    <Compile Include="Plugins\RecyclerView\CustomRecycleView.cs" />
+    <Compile Include="Plugins\Geofencing\CustomGeofence.cs" />
+    <Compile Include="Plugins\Geofencing\GeofenceErrorMessages.cs" />
+    <Compile Include="Plugins\Geofencing\GeofenceTransitionsIntentService.cs" />
+    <Compile Include="Plugins\ImageDownloader.cs" />
+    <Compile Include="Plugins\RecyclerView\ISnappyLayoutManager.cs" />
+    <Compile Include="Plugins\RecyclerView\OnScrollListener.cs" />
+    <Compile Include="Plugins\RecyclerView\SnappyLinearLayoutManager.cs" />
+    <Compile Include="Providers\SecurityProvider\CustomSecurityProvider.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\TrackingService.cs" />
+    <Compile Include="ViewHolders\AdsViewHolder.cs" />
+    <Compile Include="ViewHolders\MenuItemViewHolder.cs" />
+    <Compile Include="ViewHolders\PaddingViewHolder.cs" />
+    <Compile Include="Plugins\CustomMapFragment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\ASAP-BOLD.OTF" />
+    <AndroidAsset Include="Assets\fonts\ASAP-BOLD.ttf" />
+    <AndroidAsset Include="Assets\fonts\BPG-INGIRI-ARIAL.ttf" />
+    <AndroidAsset Include="Assets\fonts\bpg_extrasquare_mtavruli.ttf" />
+    <AndroidAsset Include="Assets\fonts\georgianfont.ttf" />
+    <AndroidAsset Include="Assets\fonts\MyriadPro-Regular.ttf" />
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\drawable\profil.png" />
+    <AndroidResource Include="Resources\layout\AdsLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\BillboardsLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\HomeLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\layout\TabsLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\home.png" />
+    <AndroidResource Include="Resources\drawable\settings.png" />
+    <AndroidResource Include="Resources\drawable\ads.png" />
+    <AndroidResource Include="Resources\drawable\map.png" />
+    <AndroidResource Include="Resources\layout\MenuItem.axml" />
+    <AndroidResource Include="Resources\layout\AdsItemLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AdDetailsLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InfoLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SplashScreenLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MapInfoWindowLayout.axml" />
+    <AndroidResource Include="Resources\layout\LoginView.axml" />
+    <AndroidResource Include="Resources\layout\LoginAuthView.axml" />
+    <AndroidResource Include="Resources\layout\BackButtonLayout.axml" />
+    <AndroidResource Include="Resources\layout\ImageSliderItem.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\list_item_padding.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ProgressDrawable.xml" />
+    <AndroidResource Include="Resources\layout\HistoryLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AdsHistoryItemLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <None Include="Publish\billboards.keyInfo" />
+    <None Include="Publish\billboards.keystore" />
+    <None Include="Publish\info.txt" />
+    <AndroidResource Include="Resources\layout-xxxhdpi\AdDetailsLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-xxxhdpi\list_item_padding.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-hdpi\AdDetailsLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-xhdpi\AdDetailsLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-mdpi\AdDetailsLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-hdpi\list_item_padding.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-mdpi\list_item_padding.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LandingPageLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout-v21\Toolbar.axml" />
+    <AndroidResource Include="Resources\drawable\socar.jpg" />
+    <AndroidResource Include="Resources\layout\HistoryItemLayout.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\drawer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="googleplayservices">
+      <Version>25.0.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="sqlite-net">
+      <Version>1.0.8.3</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kunicardus.Billboards.Core\Kunicardus.Billboards.Core.csproj">
+      <Project>{85F0DAE4-FF0E-4DD8-9A61-222B3F6A3F93}</Project>
+      <Name>Kunicardus.Billboards.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\layout-v19\" />
+    <Folder Include="Resources\layout-xxhdpi\" />
+    <Folder Include="Resources\menu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tabMap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tabHome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tabAds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rounded_btn_background.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\profPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\backbutton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\menu_unicard_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rounded_txt_pointsBackground.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\rounded_img_adBackground.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\testAd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\round_dot.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\round_txt_timerBackground.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\progressBar.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\progressBarBackground.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\round_map_pointer.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\round_map_pointer_active.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GeofenceAppStarter.txt" />
+    <Content Include="Helpers\GeofenceService.txt" />
+    <AndroidResource Include="Resources\drawable\app_icon.png" />
+    <AndroidResource Include="Resources\drawable\map_info_window_background.xml" />
+    <AndroidResource Include="Resources\drawable\map_info_window_background_bottom.xml" />
+    <AndroidResource Include="Resources\drawable\map_info_window_background_top.xml" />
+    <AndroidResource Include="Resources\drawable\map_info_window_triangle.xml" />
+    <AndroidResource Include="Resources\drawable\round_merchantsBackground.xml" />
+    <AndroidResource Include="Resources\drawable\marker2.png" />
+    <AndroidResource Include="Resources\anim\rotation.xml" />
+    <AndroidResource Include="Resources\anim\slide_in.xml" />
+    <AndroidResource Include="Resources\anim\slide_in_back.xml" />
+    <AndroidResource Include="Resources\anim\slide_out.xml" />
+    <AndroidResource Include="Resources\anim\slide_out_back.xml" />
+    <AndroidResource Include="Resources\drawable\round_button_backgroundFB.xml" />
+    <AndroidResource Include="Resources\drawable\fb.png" />
+    <AndroidResource Include="Resources\drawable\round_button_background.xml" />
+    <AndroidResource Include="Resources\drawable\back_line.png" />
+    <AndroidResource Include="Resources\drawable\cursor_design.xml" />
+    <AndroidResource Include="Resources\drawable\email.png" />
+    <AndroidResource Include="Resources\drawable\lock.png" />
+    <AndroidResource Include="Resources\drawable\logout.png" />
+    <AndroidResource Include="Resources\drawable\back2.png" />
+    <AndroidResource Include="Resources\drawable\trip.png" />
+    <AndroidResource Include="Resources\drawable\endTrip.png" />
+    <AndroidResource Include="Resources\drawable\ad.png" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values-xxxhdpi\dimens.xml" />
+    <AndroidResource Include="Resources\values-hdpi\dimens.xml" />
+    <AndroidResource Include="Resources\drawable\history.png" />
+    <AndroidResource Include="Resources\drawable\mapBack.PNG" />
+    <AndroidResource Include="Resources\drawable\rounded_btn_background2.xml" />
+    <AndroidResource Include="Resources\drawable\devider.png" />
+    <AndroidResource Include="Resources\drawable\round_dot_active.xml" />
+    <AndroidResource Include="Resources\values-xhdpi\dimens.xml" />
+    <AndroidResource Include="Resources\drawable\download_background.xml" />
+    <AndroidResource Include="Resources\drawable\download.png" />
+    <AndroidResource Include="Resources\drawable\round_downloadBackground.xml" />
+    <AndroidResource Include="Resources\drawable\devidernew.png" />
+    <AndroidResource Include="Resources\drawable\drawerNew.png" />
+    <AndroidResource Include="Resources\drawable\tabMapNew.png" />
+    <AndroidResource Include="Resources\drawable\round_alert_counter.xml" />
+    <AndroidResource Include="Resources\values-xxhdpi\dimens.xml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <AndroidResource Include="Resources\drawable\pointsAcumulated.png" />
+    <AndroidResource Include="Resources\drawable\error.png" />
+    <AndroidResource Include="Resources\drawable\landing.png" />
+    <AndroidResource Include="Resources\drawable\rounded_btn_background_landing.xml" />
+    <AndroidResource Include="Resources\drawable\tripNew.png" />
+    <AndroidResource Include="Resources\drawable\endTripNew.png" />
+    <AndroidResource Include="Resources\drawable\backbuttonNew.png" />
+    <AndroidResource Include="Resources\drawable\back.png" />
+    <AndroidResource Include="Resources\drawable\profilePic.png" />
+    <AndroidResource Include="Resources\drawable-v21\round_downloadBackground.xml" />
+    <AndroidResource Include="Resources\drawable\downloadArrow.png" />
+    <AndroidResource Include="Resources\drawable\downloadCube.png" />
+    <AndroidResource Include="Resources\drawable\settings_logut.xml" />
+    <AndroidResource Include="Resources\drawable\fb_user.png" />
+    <AndroidResource Include="Resources\values\Colors.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\right_arrow.png" />
+    <AndroidResource Include="Resources\Raw\wheels_audio.mp3" />
+    <AndroidResource Include="Resources\Raw\bounce_audio.mp3" />
+    <AndroidResource Include="Resources\drawable\mapBackground.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

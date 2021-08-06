@@ -1,0 +1,5 @@
+﻿<resources>
+    <dimen name="item_width">350dp</dimen>
+    <dimen name="item_margin">250dp</dimen>
+    <dimen name="padding_item_width">50dp</dimen>
+</resources>

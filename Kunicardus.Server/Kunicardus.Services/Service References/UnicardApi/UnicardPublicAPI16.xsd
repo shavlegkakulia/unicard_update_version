@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Sectors" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Sectors" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Organizations" />
+  <xs:complexType name="SectorsModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q1:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="latest" type="xs:boolean" />
+          <xs:element minOccurs="0" name="sector_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SectorsModel" nillable="true" type="tns:SectorsModel" />
+  <xs:complexType name="SectorsResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q2:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sectors" nillable="true" type="tns:ArrayOfSector" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SectorsResult" nillable="true" type="tns:SectorsResult" />
+  <xs:complexType name="ArrayOfSector">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sector" nillable="true" type="tns:Sector" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSector" nillable="true" type="tns:ArrayOfSector" />
+  <xs:complexType name="Sector">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sector_id" type="xs:int" />
+      <xs:element minOccurs="0" name="sector_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sector" nillable="true" type="tns:Sector" />
+  <xs:complexType name="SubSectorsModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q3:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sector_id" type="xs:int" />
+          <xs:element minOccurs="0" name="sub_sector_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SubSectorsModel" nillable="true" type="tns:SubSectorsModel" />
+  <xs:complexType name="SubSectorsResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q4:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sub_sectors" nillable="true" type="tns:ArrayOfSubSector" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SubSectorsResult" nillable="true" type="tns:SubSectorsResult" />
+  <xs:complexType name="ArrayOfSubSector">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubSector" nillable="true" type="tns:SubSector" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSubSector" nillable="true" type="tns:ArrayOfSubSector" />
+  <xs:complexType name="SubSector">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sector_id" type="xs:int" />
+      <xs:element minOccurs="0" name="sector_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sub_sector_id" type="xs:int" />
+      <xs:element minOccurs="0" name="sub_sector_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubSector" nillable="true" type="tns:SubSector" />
+  <xs:complexType name="SectorsWithSubsResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q5:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sectors" nillable="true" type="tns:ArrayOfSectorWithSubSecotrs" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SectorsWithSubsResult" nillable="true" type="tns:SectorsWithSubsResult" />
+  <xs:complexType name="ArrayOfSectorWithSubSecotrs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SectorWithSubSecotrs" nillable="true" type="tns:SectorWithSubSecotrs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSectorWithSubSecotrs" nillable="true" type="tns:ArrayOfSectorWithSubSecotrs" />
+  <xs:complexType name="SectorWithSubSecotrs">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Sector">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sub_sectors" nillable="true" type="tns:ArrayOfSubSectorWithOrganizations" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SectorWithSubSecotrs" nillable="true" type="tns:SectorWithSubSecotrs" />
+  <xs:complexType name="ArrayOfSubSectorWithOrganizations">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubSectorWithOrganizations" nillable="true" type="tns:SubSectorWithOrganizations" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSubSectorWithOrganizations" nillable="true" type="tns:ArrayOfSubSectorWithOrganizations" />
+  <xs:complexType name="SubSectorWithOrganizations">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SubSector">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Organizations" minOccurs="0" name="organizations" nillable="true" type="q6:ArrayOfOrganization" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SubSectorWithOrganizations" nillable="true" type="tns:SubSectorWithOrganizations" />
+</xs:schema>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{911E8BFC-3653-4BE5-A28D-CC7C6E21A751}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Kunicardus.Core</RootNamespace>
+    <AssemblyName>Unicard.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Converters\Converter.cs" />
+    <Compile Include="CustomAppStart.cs" />
+    <Compile Include="Models\BusinessModels\AccountStatementModel.cs" />
+    <Compile Include="Models\BusinessModels\ContactInfoModel.cs" />
+    <Compile Include="Models\BusinessModels\MerchantModel.cs" />
+    <Compile Include="Models\BusinessModels\NewsModel.cs" />
+    <Compile Include="Models\BusinessModels\OrganizationDetailsModel.cs" />
+    <Compile Include="Models\BusinessModels\TransactionModel.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetMerchantsRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetNewsListRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetNewsRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetOrganizationDetailsRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetAccountStatementRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetAccountStatementResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetContactInfoResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetMerchantResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetNewsDetailsResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetNewsListResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetNewsResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetOrganizationDetailsResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetOrganizationsItemResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetMerchantsResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetTransactionsResponse.cs" />
+    <Compile Include="Models\DB\MerchantInfo.cs" />
+    <Compile Include="Models\DB\NewsInfo.cs" />
+    <Compile Include="Models\DB\OrganizationInfo.cs" />
+    <Compile Include="Models\DB\TransactionInfo.cs" />
+    <Compile Include="Models\Helpers\Transfer.cs" />
+    <Compile Include="Plugins\DateConverter.cs" />
+    <Compile Include="Plugins\StringExstenstion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\LocalDBProvider\ILocalDbProvider.cs" />
+    <Compile Include="Models\DB\DBModel.cs" />
+    <Compile Include="Models\DB\UserInfo.cs" />
+    <Compile Include="Providers\LocalDBProvider\LocalSqliteDbProvider.cs" />
+    <Compile Include="Helpers\AppSettings\IAppSettings.cs" />
+    <Compile Include="Helpers\AppSettings\BaseAppSettings.cs" />
+    <Compile Include="Helpers\AppSettings\IConfigReader.cs" />
+    <Compile Include="Helpers\AppSettings\ConfigReader.cs" />
+    <Compile Include="Helpers\Device\IDevice.cs" />
+    <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Helpers\AppSettings\AppSettings.cs" />
+    <Compile Include="Helpers\AppSettings\IConfigBundlePlugin.cs" />
+    <Compile Include="Services\Abstract\IContactService.cs" />
+    <Compile Include="Services\Abstract\IDataService.cs" />
+    <Compile Include="Services\Abstract\INewsService.cs" />
+    <Compile Include="Services\Concrete\ContactService.cs" />
+    <Compile Include="Services\Concrete\NewsService.cs" />
+    <Compile Include="ViewModels\AboutViewModel.cs" />
+    <Compile Include="ViewModels\LoginAuthViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MerchantsViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\MyPageViewModel.cs" />
+    <Compile Include="ViewModels\HomePageViewModel.cs" />
+    <Compile Include="Services\Abstract\IAuthService.cs" />
+    <Compile Include="Services\Concrete\AuthService.cs" />
+    <Compile Include="ViewModels\ConvertViewModel.cs" />
+    <Compile Include="Services\Abstract\IConvertUserNameService.cs" />
+    <Compile Include="Services\Concrete\ConvertUserNameService.cs" />
+    <Compile Include="ViewModels\NewsDetailsViewModel.cs" />
+    <Compile Include="ViewModels\NewsListViewModel.cs" />
+    <Compile Include="ViewModels\UnicardNumberInputViewModel.cs" />
+    <Compile Include="Services\Abstract\IGetUnicardStatusService.cs" />
+    <Compile Include="Services\Concrete\GetUnicardStatusService.cs" />
+    <Compile Include="ViewModels\BaseRegisterViewModel.cs" />
+    <Compile Include="ViewModels\TabsViewModel.cs" />
+    <Compile Include="ViewModels\FBRegisterViewModel.cs" />
+    <Compile Include="Providers\UnicardApiProvider\IUnicardApiProvider.cs" />
+    <Compile Include="Providers\UnicardApiProvider\UnicardApiNoResponseObject.cs" />
+    <Compile Include="Utilities\Logger\ILoggerService.cs" />
+    <Compile Include="Utilities\Logger\LoggingEvent.cs" />
+    <Compile Include="Utilities\Logger\LogLevel.cs" />
+    <Compile Include="Utilities\Logger\CoreLogger.cs" />
+    <Compile Include="Plugins\Connectivity\IConnectivityPlugin.cs" />
+    <Compile Include="Plugins\Connectivity\PluginLoader.cs" />
+    <Compile Include="Utilities\Timing\TimingUtility.cs" />
+    <Compile Include="ViewModels\SMSVerificationViewModel.cs" />
+    <Compile Include="Services\Abstract\ISmsVerifycationService.cs" />
+    <Compile Include="ViewModels\TransactionVerificationViewModel.cs" />
+    <Compile Include="Providers\UnicardApiProvider\UnicardApiProvider.cs" />
+    <Compile Include="Models\DataTransferObjects\CardStatusDTO.cs" />
+    <Compile Include="Providers\UnicardApiProvider\UnicardApiBaseRequest.cs" />
+    <Compile Include="Providers\UnicardApiProvider\UnicardApiBaseResponse.cs" />
+    <Compile Include="Plugins\UIDialogPlugin\IUIDialogPlugin.cs" />
+    <Compile Include="Models\BaseActionResult.cs" />
+    <Compile Include="Services\Abstract\IUserService.cs" />
+    <Compile Include="Services\Concrete\UserService.cs" />
+    <Compile Include="Plugins\UIThreadPlugin\IUIThreadPlugin.cs" />
+    <Compile Include="Models\DataTransferObjects\MerchantModel.cs" />
+    <Compile Include="Services\Concrete\TransactionsService.cs" />
+    <Compile Include="Services\Abstract\ITransactionsService.cs" />
+    <Compile Include="Models\DataTransferObjects\Merchant.cs" />
+    <Compile Include="Services\Concrete\SmsVerificationService.cs" />
+    <Compile Include="ViewModels\ChooseCardExistanceViewModel.cs" />
+    <Compile Include="ViewModels\RegistrationViewModel.cs" />
+    <Compile Include="ViewModels\EmailRegistrationViewModel.cs" />
+    <Compile Include="ApplicationStrings.Designer.cs">
+      <DependentUpon>ApplicationStrings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Services\Abstract\IOrganisationService.cs" />
+    <Compile Include="Services\Concrete\OrganizationService.cs" />
+    <Compile Include="Models\DataTransferObjects\TransferUserModel.cs" />
+    <Compile Include="Models\DataTransferObjects\SectorDTO.cs" />
+    <Compile Include="Models\DataTransferObjects\SubSectorDTO.cs" />
+    <Compile Include="Services\Abstract\IProductsService.cs" />
+    <Compile Include="Services\Concrete\ProductsService.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\AuthRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\CheckTransactionRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetCardStatusRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetLastTransactionsRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetOrganizationsRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetUserBalanceRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetUserInfoByCardRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetUserInfoRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetVirtualCardRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\RegisterUserRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\SendOTPRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\SubmitOTPRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\UserExistsRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\AuthResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetCardStatusResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetLastTransactionsResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetOrganizationsResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetOrganizationSectorsResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetUserInfoByCardResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetUserInfoResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetVirtualCardResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\RegisterUserResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\UserExistsResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetProductCategoryListResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\CategoryDTO.cs" />
+    <Compile Include="Models\BusinessModels\CardStatusModel.cs" />
+    <Compile Include="Models\BusinessModels\CategoryModel.cs" />
+    <Compile Include="Models\BusinessModels\CheckTransactionModel.cs" />
+    <Compile Include="Models\BusinessModels\OrganizationsModel.cs" />
+    <Compile Include="Models\BusinessModels\OrganizationSectorsModel.cs" />
+    <Compile Include="Models\BusinessModels\ProductCategoryModel.cs" />
+    <Compile Include="Models\BusinessModels\RegisterUserModel.cs" />
+    <Compile Include="Models\BusinessModels\SectorModel.cs" />
+    <Compile Include="Models\BusinessModels\SubCategoryModel.cs" />
+    <Compile Include="Models\BusinessModels\SubSectorModel.cs" />
+    <Compile Include="Models\BusinessModels\TransactionsModel.cs" />
+    <Compile Include="Models\BusinessModels\UserBalanceModel.cs" />
+    <Compile Include="Models\BusinessModels\UserExistsModel.cs" />
+    <Compile Include="Models\BusinessModels\UserInfoByCardModel.cs" />
+    <Compile Include="Models\BusinessModels\UserInfoModel.cs" />
+    <Compile Include="Models\BusinessModels\UserModel.cs" />
+    <Compile Include="Models\BusinessModels\VirtualCardModel.cs" />
+    <Compile Include="Models\BusinessModels\ProductSubCategoryModel.cs" />
+    <Compile Include="Models\BusinessModels\UserTypeModel.cs" />
+    <Compile Include="Models\BusinessModels\GetUserTypesModel.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetUserTypesResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\UserTypeDTO.cs" />
+    <Compile Include="Models\BusinessModels\BrandModel.cs" />
+    <Compile Include="Models\BusinessModels\ProductBrandListModel.cs" />
+    <Compile Include="Models\DataTransferObjects\BrandDTO.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetProductBrandListResponse.cs" />
+    <Compile Include="Models\BusinessModels\ProductModel.cs" />
+    <Compile Include="Models\BusinessModels\ProductsListModel.cs" />
+    <Compile Include="Models\DataTransferObjects\ProductDTO.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetProductListResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetProductListRequest.cs" />
+    <Compile Include="Models\BusinessModels\DiscountModel.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetProductByIDResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\DiscountDTO.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetProductByIDRequest.cs" />
+    <Compile Include="ViewModels\CatalogListViewModel.cs" />
+    <Compile Include="ViewModels\CatalogDetailViewModel.cs" />
+    <Compile Include="ViewModels\OrganisationListViewModel.cs" />
+    <Compile Include="ViewModels\ImageSliderViewModel.cs" />
+    <Compile Include="ViewModels\BaseCatalogViewModel.cs" />
+    <Compile Include="ViewModels\OrganisationDetailsViewModel.cs" />
+    <Compile Include="Models\BusinessModels\DetailedProductModel.cs" />
+    <Compile Include="Models\DB\UserTypesInfo.cs" />
+    <Compile Include="Models\DB\ProductCategoryInfo.cs" />
+    <Compile Include="Models\DB\ProductsInfo.cs" />
+    <Compile Include="ViewModels\ResetPasswordViewModel.cs" />
+    <Compile Include="Models\BusinessModels\UserPhoneModel.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetUserByPhoneRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetUserByPhoneResponse.cs" />
+    <Compile Include="ViewModels\ResetPasswordSMSVerificationViewModel.cs" />
+    <Compile Include="ViewModels\BaseResetPasswordViewModel.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\ResetPasswordRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\ResetPasswordResponse.cs" />
+    <Compile Include="Models\DB\DeliveryMethod.cs" />
+    <Compile Include="Services\Abstract\IPaymentService.cs" />
+    <Compile Include="Services\Concrete\PaymentService.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetDeliveryMethodsResponse.cs" />
+    <Compile Include="ViewModels\BuyProductViewModel.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetServiceCentersRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetServiceCentersResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\ServiceCenterDTO.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetUserBalanceResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\GetOnlinePaymentInfoRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\GetOnlinePaymentInfoResponse.cs" />
+    <Compile Include="Models\DataTransferObjects\PaymentInfoDTO.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\BuyProductRequest.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="Models\DataTransferObjects\Request\ChangePasswordRequest.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\ChangePasswordResponse.cs" />
+    <Compile Include="Models\BusinessModels\ChangePasswordModel.cs" />
+    <Compile Include="ViewModels\ChangePasswordViewModel.cs" />
+    <Compile Include="Helpers\Enums.cs" />
+    <Compile Include="Models\DB\SettingsInfo.cs" />
+    <Compile Include="ViewModels\PinViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\RootViewModel.cs" />
+    <Compile Include="Models\DB\AutoCompleteFields.cs" />
+    <Compile Include="Models\DataTransferObjects\PriceRangeDTO.cs" />
+    <Compile Include="Models\DB\OrganizationModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iChooseCardExistanceViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iUnicardNumberInputViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iRegistrationViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iSMSVerificationViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iEmailRegistrationViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iTransactionVerificationViewModel.cs" />
+    <Compile Include="Helpers\SecurityHelper\SecurityHelper.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iOldPinViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iNewPinViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iConfirmNewPinViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iFacebookRegistrationViewModel.cs" />
+    <Compile Include="Providers\SecurityProvider\ICustomSecurityProvider.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iMerchantsAroundMeViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iCatalogListViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iCatalogDetailViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iBuyProductViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iResetPasswordViewModel.cs" />
+    <Compile Include="ViewModels\iOSSpecific\iMyPageViewModel.cs" />
+    <Compile Include="AppStart.cs" />
+    <Compile Include="Services\Abstract\IGoogleAnalyticsService.cs" />
+    <Compile Include="Helpers\GAServiceHelper.cs" />
+    <Compile Include="Models\DB\TypeModel.cs" />
+    <Compile Include="Models\DataTransferObjects\Response\CheckVersionResponse.cs" />
+    <Compile Include="ViewModels\FirstViewModel.cs" />
+    <Compile Include="App.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Bootstrap\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Helpers\SecurityHelper\" />
+    <Folder Include="Plugins\SecurityProvider\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="project.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.5.231\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.5.7.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.5.7.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\packages\MvvmCross.Binding.5.7.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.Binding.5.7.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Color">
+      <HintPath>..\packages\MvvmCross.Plugin.Color.4.0.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Color.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\packages\MvvmCross.Plugin.DownloadCache.4.0.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.File">
+      <HintPath>..\packages\MvvmCross.Plugin.File.4.0.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Location">
+      <HintPath>..\packages\MvvmCross.Plugin.Location.4.0.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Location.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Network">
+      <HintPath>..\packages\MvvmCross.Plugin.Network.4.0.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Plugins.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core">
+      <HintPath>..\packages\PInvoke.Windows.Core.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32">
+      <HintPath>..\packages\PInvoke.Kernel32.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.BCrypt">
+      <HintPath>..\packages\PInvoke.BCrypt.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.BCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.NCrypt">
+      <HintPath>..\packages\PInvoke.NCrypt.0.3.2\lib\portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10\PInvoke.NCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.11\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.11\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.11\lib\portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ApplicationStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApplicationStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

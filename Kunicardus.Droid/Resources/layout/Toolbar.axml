@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:id="@+id/toolBarLayout"
+    android:background="@color/green"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+    <ImageButton
+        android:layout_centerVertical="true"
+        android:src="@drawable/drawer"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/menuImg"
+        android:baselineAlignBottom="false"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitCenter"
+        android:padding="10dp" />
+    <Kunicardus.Droid.BaseTextView
+        android:textColor="@android:color/white"
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:text="@string/myPage" />
+    <ImageButton
+        android:src="@drawable/alert"
+        android:layout_height="35dp"
+        android:id="@+id/alert"
+        android:baselineAlignBottom="false"
+        android:layout_alignParentRight="true"
+        android:gravity="left"
+        android:layout_width="35dp"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:scaleType="fitStart" />
+    <Kunicardus.Droid.BasePointsTextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/alertCount"
+        android:gravity="center"
+        android:layout_alignTop="@id/alert"
+        android:layout_alignRight="@id/alert"
+        android:textSize="12dp"
+        android:background="@drawable/round_alert_counter"
+        local:MvxBind="Text NewsCount"
+        android:textColor="#ffffff"
+        android:visibility="gone" />
+    <ImageButton
+        android:src="@drawable/merchants"
+        android:layout_height="33dp"
+        android:id="@+id/merchants"
+        android:baselineAlignBottom="false"
+        android:layout_width="33dp"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:scaleType="fitStart"
+        android:layout_toLeftOf="@id/alert" />
+</RelativeLayout>

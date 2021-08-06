@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Kunicardus.Droid.BaseTextView
+        android:id="@+id/drawer_item"
+        android:text="test"
+        android:layout_marginLeft="13dp"
+        android:textSize="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_marginRight="5dp"
+        android:padding="8dp"
+        android:background="@drawable/catalog_filter_item_background"
+        local:MvxBind="Text Value" />
+</LinearLayout>

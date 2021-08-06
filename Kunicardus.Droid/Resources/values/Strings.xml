@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="enter_pin">შეიყვანეთ პინ-კოდი</string>
+  <string name="incorrect_pin">პინ-კოდი არასწორია</string>
+  <string name="set_pin">პინ კოდის რეგისტრაცია</string>
+  <string name="set_without_pin">პინ კოდის გარეშე</string>
+  <string name="repeat_pin">გაიმეორეთ პინ-კოდი</string>
+  <string name="repeated_pin_incorrect">განმეორებითი პინ-კოდი არასწორია</string>
+  <string name="pin_set_successfully">პინ-კოდი რეგისტრირებულია</string>
+  <string name="pin_changed_successfully">პინ-კოდი შეიცვალა</string>
+  <string name="change_pin">პინ-კოდის შეცვლა</string>
+   <string name="change">ეცვლა</string>
+  <string name="enter_old_pin">შეიყვანეთ არსებული პინ-კოდი</string>
+  <string name="enter_new_pin">შეიყვანეთ ახალი პინ-კოდი</string>
+  <string name="repeat_new_pin">გაიმეროთ ახალი პინ-კოდი</string>
+  <string name="remove_pin">პინ-კოდის მოხსნა</string>
+  <string name="removed_pin_successfully">პინ-კოდი მოხსნილია</string>
+  <string name="settings">პარამეტრები</string>
+  <string name="push">PUSH შეტყობინებები</string>
+  <string name="location">ადგილმდებარეობა</string>
+  <string name="search">ძებნა</string>
+  <string name="user_discounts_group_name">თქვენ გეკუთვნით დამატებითი ფასდაკლება!</string>
+  <string name="app_name">UNICARD</string>
+  <string name="blocked">დაბლოკილი</string>
+  <string name="testText">Text</string>
+  <string name="outcome">დახარჯული</string>
+  <string name="collected">დაგროვებული</string>
+  <string name="currentReminder">მიმდინარე ნაშთი</string>
+  <string name="myPage">ჩემი გვერდი</string>
+  <string name="clickForCard">დააჭირეთ ბარათის სანახავად</string>
+  <string name="for_what_to_spend">რაში დავხარჯოტესტ</string>
+  <string name="catalog">კატალოგში ></string>
+  <string name="have_unicard">მაქვს უნიქარდი</string>
+  <string name="not_have_unicard">არ მაქვს უნიქარდი</string>
+  <string name = "name">სახელი</string>
+  <string name = "surname">გვარი</string>
+  <string name = "id_number">პირადი ნომერი</string>
+  <string name = "percent_discount_description">% ფასდაკლება</string>
+  <string name = "date_of_birth">დაბადების თარიღი</string>
+  <string name = "object_list">ობიექტების სია</string>
+  <string name = "phone_number">5xx xx xx xx</string>
+  <string name = "email">ელ. ფოსტა</string>
+  <string name = "password">პაროლი</string>
+  <string name = "confirm_password">გაიმეორეთ პაროლი</string>
+  <string name = "register_user">რეგისტრაციის დასრულება</string>
+  <string name = "welcome">მოგესალმებით</string>
+  <string name= "homePage">მთავარი გვერდი"</string>
+  <string name="aroundme">ჩემ გარშემო</string>
+  <string name = "or">ან</string>
+  <string name ="empty"></string>
+  <string name ="haveUnicardPromt">გაქვთ თუ არა UNICARD-ის ბარათი?</string>
+  <string name ="enterCard">შეიყვანეთ ბარათის ნომერი</string>
+  <string name ="authorization">ავტორიზაცია</string>
+  <string name ="fbAuthorization">FACEBOOK-ით შესვლა</string>
+  <string name ="fbRegistration">Facebook რეგისტრაცია</string>
+  <string name="back">დაბრუნება</string>
+  <string name="emailRegistration">ელ. ფოსტით რეგისტრაცია</string>
+  <string name="registration">რეგისტრაცია</string>
+  <string name="codeSent">მითითებულ ნომერზე მოგივათ SMS</string>
+  <string name="transVerify">ვალიდაცია</string>
+  <string name="user">მომხმარებელი</string>
+  <string name="point">ქულა</string>
+  <string name="finalprice">საბოლოო ფასი:</string>
+  <string name="home">მთავარი</string>
+  <string name="cataloge">რაში დავხარჯოტესტ</string>
+  <string name="where_to_spend">რაში დავხარჯოტესტ</string>
+  <string name="merchants">ჩემ გარშემო</string>
+  <string name="partners">პარტნიორები</string>
+  <string name="errorImageLoading">სურათის ჩამოტვირთვა ვერ მოხერხდა</string>
+  <string name="error_occured">მოხდა შეცდომა :(	</string>
+  <string name="loading">მიმდინარეობს ჩატვირთვა...</string>
+  <string name="GPSMessage">გთხოვთ, გაააქტიუროთ ადგილმდებარეობის სერვისი</string>
+  <string name="loadingMap">მიმდინარეობს რუკის ჩატვირთვა...</string>
+  <string name="loadingMerchants">მიმდინარეობს ობიექტების მიღება...</string>
+  <string name="resetPassword">
+    <u>პაროლის აღდგენა</u>
+  </string>
+  <string name="transVerifySub">შეიყვანეთ ბოლო ტრანზაქციის მიახლოებითი დეტალები</string>
+  <string name="numberError">ბარათის კოდის გენერაცია ვერ მოხერხდა, გთხოვთ, დარეკეთ UNICARD-ის საინფორმაციო ცენტრში</string>
+  <string name="yes">დიახ</string>
+  <string name="no">არა</string>
+  <string name="resend">
+    <u>ხელახლა გაგზავნა</u>
+  </string>
+  <string name="chooseAnswer">აირჩიეთ პასუხი</string>
+  <string name="picture">სურათი</string>
+  <string name="smsVerification">SMS ვერიფიკაცია</string>
+   <string name="smsverification">SMS ვერიფიკაცია</string>
+  <string name="regQuestion">
+    <u>რეგისტრაცია</u>
+  </string>
+  <string name="remove_filter">ფილტრის მოხსნა</string>
+  <string name="forgotPassword">დაგავიწყდათ პაროლი?</string>
+  <string name="buy">შეძენა</string>
+  <string name = "receivefrom">მიღების ფორმა</string>
+  <string name = "fetch">ადგილზე მიტანა</string>
+  <string name = "fetchDescription">საჩუქრის მიღების სავარაუდო თარიღებია: </string>
+
+  <string name = "spinnerhint">აირჩიეთ</string>
+  <string name = "choosePartnerComp">შეარჩიეთ პარტნიორი კომპანია</string>
+  <string name = "chooseServiceCenter">შეარჩიეთ სერვის ცენტრი</string>
+  <string name = "personalN">პირადი ნომერი</string>
+  <string name = "firstName">სახელი</string>
+  <string name = "lastName">გვარი</string>
+  <string name = "onlinePayment">ონლაინ გადახდა</string>
+  <string name = "check">შემოწმება</string>
+  <string name = "score">ქულა</string>
+  <string name = "mobilePhone">მობილური ტელეფონის ნომერი</string>
+  <string name = "supPersonDesc">იმისათვის, რომ თქვენ მიერ შერჩეული საჩუქარი სხვა პირმა მიიღოს, გთხოვთ, მიუთითოთ უფლებამოსილი პირის მონაცემები</string>
+  <!--	<string name = "app_id">529783220494193</string>-->
+  <string name = "app_id">753021038764444</string>
+  <string name = "tabHome">მთავარი\nგვერდი</string>
+  <string name = "tabTransactions">ჩემი\nგვერდი</string>
+  <string name = "tabCatalog">რაში\nდავხარჯო</string>
+  <string name = "tabMerchants">ჩემ\nგარშემო</string>
+  <string name = "change_password">პაროლის შეცვლა</string>
+  <string name = "authorized_person">უფლებამოსილი პირი</string>
+  <string name = "authorized_person_desc">იმისათვის, რომ თქვენ მიერ შერჩეული საჩუქარი სხვა პირმა მიიღოს, გთხოვთ, მიუთითოთ უფლებამოსილი პირის მონაცემები</string>
+
+  <string name = "phone_num_desc">ბალანსის შესავსებად, გთხოვთ, მიუთითოთ სასურველი ნომერი</string>
+  <string name="locationFailed">Google Play Service-თან დაკავშირება ვერ მოხერხდა</string>
+  <string name="locationSuspended">Google Play Service-თან კავშირი შეწყდა</string>
+  <string name="contactUs">დაგვიკავშირდით</string>
+
+
+ 
+
+
+  <string name = "address">მისამართი</string>
+  <string name = "aboutus">ჩვენ შესახებ</string>
+  <string name ="loginRegQuestion">არ გაქვთ გავლილი \u0020</string>
+  <string name = "news">სიახლეები</string>
+  <string name ="closeMessage">ნამდვილად გსურთ აპლიკაციის დახურვა?</string>
+  <string name ="phoneHint">(5XX) XXX-XXX</string>
+  <string name ="smsverothernumber">თუ აღნიშნული ნომერი თქვენ არ გეკუთვნით, გთხოვთ, დაუკავშირდეთ უნიქარდის საინფორმაციო ცენტრს</string>
+  <string name ="passhint">პაროლი უნდა შედგებოდეს 8 სიმბოლოსგან, შეიცავდეს ციფრებს და ლათინურ ასოებს</string>
+  <string name ="no_network">თქვენ არ გაქვთ ინტერნეტთან წვდომა. გთხოვთ, ჩართოთ ინტერნეტი.</string>
+  <string name="fb_not_registered">თქვენ არ ხართ დარეგისტრირებული უნიქარდის სისტემაში. გსურთ რეგისტრაცია?</string>
+  <string name="pgel">ლარზე</string>
+  <string name="buyProcessCompleted">თქვენი შეკვეთა მიღებულია</string>
+  <string name="contin">გაგრძელება</string>
+  <string name="regcompleted">გილოცავთ, თქვენ წარმატებით დარეგისტრირდით!</string>
+  <string name="checkEmail">ანგარიშის გასააქტიურებლად გთხოვთ, ეწვიოთ თქვენს ელ. ფოსტას.</string>
+</resources>

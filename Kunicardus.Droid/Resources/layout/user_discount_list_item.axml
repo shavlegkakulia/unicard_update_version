@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="7dp"
+    android:orientation="horizontal"
+    android:paddingTop="10dp">
+    <LinearLayout
+        android:id="@+id/lyf"
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_weight=".70"
+        android:paddingRight="8dp">
+        <Kunicardus.Droid.BasePointsTextView
+            android:id="@+id/percentage_textview"
+            android:text="20"
+            android:layout_marginLeft="5dp"
+            android:textSize="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:layout_marginBottom="5dp" />
+        <Kunicardus.Droid.BaseTextView
+            android:text="%"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green" />
+        <Kunicardus.Droid.BaseTextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/discount_info_textview"
+            android:text="text"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp"
+        android:layout_weight=".30"
+        android:paddingLeft="6dp">
+        <Kunicardus.Droid.BasePointsTextView
+            android:id="@+id/points_amount_after_discount"
+            android:text="test"
+            android:textSize="21dp"
+            android:layout_marginRight="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:linksClickable="false" />
+        <Kunicardus.Droid.BaseTextView
+            android:id="@+id/points_text_view"
+            android:text="ქულა"
+            android:textSize="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green" />
+    </LinearLayout>
+</LinearLayout>

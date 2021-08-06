@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Organizations" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Organizations" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="OrganizationsModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q1:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="by_score" type="xs:boolean" />
+          <xs:element minOccurs="0" name="latest_org" type="xs:boolean" />
+          <xs:element minOccurs="0" name="page_index" type="xs:int" />
+          <xs:element minOccurs="0" name="row_count" type="xs:int" />
+          <xs:element minOccurs="0" name="sector_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sub_sector_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrganizationsModel" nillable="true" type="tns:OrganizationsModel" />
+  <xs:complexType name="OrganizationsResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q2:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="organizations" nillable="true" type="tns:ArrayOfOrganization" />
+          <xs:element minOccurs="0" name="total_count" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrganizationsResult" nillable="true" type="tns:OrganizationsResult" />
+  <xs:complexType name="ArrayOfOrganization">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Organization" nillable="true" type="tns:Organization" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrganization" nillable="true" type="tns:ArrayOfOrganization" />
+  <xs:complexType name="Organization">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_fb" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_phone" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="org_phone_s" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="org_service_desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_short_desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_web_add" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_working_hours" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="org_working_hours_s" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="point_desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sector" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sector_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="slogan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sub_sector" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sub_sector_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="unit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="unit_score" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Organization" nillable="true" type="tns:Organization" />
+  <xs:complexType name="OrganizationModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q4:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="org_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrganizationModel" nillable="true" type="tns:OrganizationModel" />
+  <xs:complexType name="OrganizationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q5:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="organization" nillable="true" type="tns:Organization" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OrganizationResult" nillable="true" type="tns:OrganizationResult" />
+</xs:schema>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.MakePayment" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.MakePayment" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:complexType name="MakePaymentModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q1:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:double" />
+          <xs:element minOccurs="0" name="batch_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="card" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="device_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="respcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="stan" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tran_date" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MakePaymentModel" nillable="true" type="tns:MakePaymentModel" />
+  <xs:complexType name="MakePaymentResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q2:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="spent_bonus" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MakePaymentResult" nillable="true" type="tns:MakePaymentResult" />
+  <xs:complexType name="BonusAccumulationByUserModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q3:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:double" />
+          <xs:element minOccurs="0" name="batch_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="device_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="product_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="respcode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="stan" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tran_date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BonusAccumulationByUserModel" nillable="true" type="tns:BonusAccumulationByUserModel" />
+  <xs:complexType name="BonusAccumulationByUserResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q4:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accumulate_bonus" type="xs:double" />
+          <xs:element minOccurs="0" name="declined_by_unicard" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BonusAccumulationByUserResult" nillable="true" type="tns:BonusAccumulationByUserResult" />
+</xs:schema>

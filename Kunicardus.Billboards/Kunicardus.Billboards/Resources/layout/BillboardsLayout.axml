@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#C9C62B">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/navigationLayout2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        <ImageButton
+            android:src="@drawable/trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgPreviewMode"
+            android:background="@android:color/transparent"
+            android:scaleType="fitEnd"
+            android:layout_centerVertical="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="10dp" />
+        <Kunicardus.Billboards.BaseButton
+            android:text="@string/startTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPreviewMode"
+            android:textColor="@android:color/white"
+            android:padding="5dp"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imgPreviewMode" />
+    </RelativeLayout>
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nearestBillboardLayout"
+        android:background="#cc727576"
+        android:visibility="gone"
+        tools:visibility="gone"
+        android:padding="5dp">
+        <Kunicardus.Billboards.BaseTextView
+            android:text="@string/nearestBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:id="@+id/kunicardus.Billboards.BaseTextView1" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/relativeLayout1">
+            <Kunicardus.Billboards.BaseTextView
+                android:text="0"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDistance"
+                android:layout_centerVertical="true"
+                android:textColor="@android:color/white" />
+            <Kunicardus.Billboards.BaseTextView
+                android:text="მ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@android:color/white"
+                android:padding="4dp"
+                android:layout_toRightOf="@id/txtDistance"
+                android:id="@+id/txtUnit"
+                android:layout_alignBottom="@id/txtDistance" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <FrameLayout xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:ignore="MissingPrefix"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mapFrame"
+        class="customMapFragment"
+        android:layout_below="@id/nearestBillboardLayout"
+        android:layout_above="@id/navigationLayout2" />
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/login_auth_view_layout"
+    android:background="#EC7046">
+    <include
+        android:id="@+id/reset_password_back_button"
+        layout="@layout/backbuttonlayout" />
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/usernameLayout">
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/user_name_linear_layout"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/email" />
+            <Kunicardus.Billboards.BaseEditText
+                android:id="@+id/txtUsername"
+                android:paddingTop="4dp"
+                android:textCursorDrawable="@drawable/cursor_design"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/user"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp"
+                android:textColorHint="#c8c523"
+                android:singleLine="true"
+                android:background="@null" />
+        </LinearLayout>
+        <View
+            android:layout_below="@id/user_name_linear_layout"
+            android:layout_height="2dp"
+            android:layout_width="match_parent"
+            android:background="#ffffff" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/usernameLayout"
+        android:id="@+id/passwordRelativeLayout">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/password_linear_layout"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:layout_height="25dp"
+                android:layout_width="25dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/lock"
+                android:id="@+id/imageView2" />
+            <Kunicardus.Billboards.BaseEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:textCursorDrawable="@drawable/cursor_design"
+                android:hint="პაროლი"
+                android:textSize="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#c8c523"
+                android:singleLine="true"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:id="@+id/txtPassword" />
+        </LinearLayout>
+        <View
+            android:layout_below="@id/password_linear_layout"
+            android:layout_height="2dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/view1"
+            android:background="#ffffff" />
+    </RelativeLayout>
+    <Kunicardus.Billboards.BaseTextView
+        android:gravity="center"
+        android:background="@drawable/round_button_background"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/passwordRelativeLayout"
+        android:id="@+id/btnAuth"
+        android:text="@string/authorization"
+        android:textSize="16dp" />
+    <Kunicardus.Billboards.BaseTextView
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffe154"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/btnAuth"
+        android:id="@+id/resetPassword"
+        android:text="@string/resetPassword" />
+</RelativeLayout>

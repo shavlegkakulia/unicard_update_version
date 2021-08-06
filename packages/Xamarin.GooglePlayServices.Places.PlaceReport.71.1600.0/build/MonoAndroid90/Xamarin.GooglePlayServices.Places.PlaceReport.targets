@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <XamarinBuildRestoreResources Include="_XbdRestoreItems_googlegps_playservicesplacesplacereport" />
+  </ItemGroup>
+  <Target Name="_XbdRestoreItems_googlegps_playservicesplacesplacereport">
+    <ItemGroup>
+      <XamarinBuildDownload Include="googlegps-16.0.0/playservicesplacesplacereport">
+        <Url>https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-places-placereport/16.0.0/play-services-places-placereport-16.0.0.aar</Url>
+        <ToFile>playservicesplacesplacereport-16.0.0.aar</ToFile>
+        <Kind>Uncompressed</Kind>
+        <Md5>7bb815b58a054fad7d4c51dafa8e3f55</Md5>
+      </XamarinBuildDownload>
+    </ItemGroup>
+    <ItemGroup>
+      <XamarinBuildDownloadRestoreAssemblyAar Include="$(XamarinBuildDownloadDir)googlegps-16.0.0\playservicesplacesplacereport\playservicesplacesplacereport-16.0.0.aar">
+        <LogicalName>__AndroidLibraryProjects__.zip</LogicalName>
+        <AssemblyName>Xamarin.GooglePlayServices.Places.PlaceReport</AssemblyName>
+      </XamarinBuildDownloadRestoreAssemblyAar>
+    </ItemGroup>
+  </Target>
+
+</Project>

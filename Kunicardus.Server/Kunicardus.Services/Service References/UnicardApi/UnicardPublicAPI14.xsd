@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.Products" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://109.238.238.194/UnicardPublicAPI.Service1.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.User" />
+  <xs:complexType name="PrizesModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q1:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="brand_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="category_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="customer_type_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="delivery_method_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="discounted" type="xs:boolean" />
+          <xs:element minOccurs="0" name="latest_prod" type="xs:boolean" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="page_index" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="price_range_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="product_type_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="row_count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="special_offers" type="xs:boolean" />
+          <xs:element minOccurs="0" name="sub_category_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrizesModel" nillable="true" type="tns:PrizesModel" />
+  <xs:complexType name="PrizesResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q2:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="products" nillable="true" type="tns:ArrayOfPrize" />
+          <xs:element minOccurs="0" name="total_count" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrizesResult" nillable="true" type="tns:PrizesResult" />
+  <xs:complexType name="ArrayOfPrize">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Prize" nillable="true" type="tns:Prize" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrize" nillable="true" type="tns:ArrayOfPrize" />
+  <xs:complexType name="Prize">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="brand_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="category_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="customer_type_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="discounted_percent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="discounted_price" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="images" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="out_of_stock" type="xs:boolean" />
+      <xs:element minOccurs="0" name="price" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sub_category_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Prize" nillable="true" type="tns:Prize" />
+  <xs:complexType name="PrizeByIdModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q4:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="product_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrizeByIdModel" nillable="true" type="tns:PrizeByIdModel" />
+  <xs:complexType name="PrizeDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q5:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="brand_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="brand_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="catalog_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="category_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="category_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="customer_type_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="customer_type_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="delivery_methods" nillable="true" type="q5:ArrayOfDeliveryMethod" />
+          <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="discounted_percent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="discounted_price" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="images" nillable="true" type="q6:ArrayOfstring" />
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="out_of_stock" type="xs:boolean" />
+          <xs:element minOccurs="0" name="price" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sub_category_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="sub_category_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="type_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="type_name" nillable="true" type="xs:string" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/UnicardApiLibrary.User" minOccurs="0" name="user_discounts" nillable="true" type="q7:ArrayOfUserDiscount" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrizeDetail" nillable="true" type="tns:PrizeDetail" />
+  <xs:complexType name="BuyPrizeModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q8:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:int" />
+          <xs:element minOccurs="0" name="bonus_amount" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="comment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="delivery_date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="delivery_method_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="discount_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="guid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="online_payment_identifier" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="product_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="product_type" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="quantity" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="recipient_address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="recipient_full_name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="recipient_personal_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="recipient_phone" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="service_center_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="tran_date" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BuyPrizeModel" nillable="true" type="tns:BuyPrizeModel" />
+  <xs:complexType name="PrizePriceRangesModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q9:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="range_id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrizePriceRangesModel" nillable="true" type="tns:PrizePriceRangesModel" />
+  <xs:complexType name="PrizePriceRangesResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q10:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="price_ranges" nillable="true" type="tns:ArrayOfPrizePriceRange" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrizePriceRangesResult" nillable="true" type="tns:PrizePriceRangesResult" />
+  <xs:complexType name="ArrayOfPrizePriceRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrizePriceRange" nillable="true" type="tns:PrizePriceRange" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrizePriceRange" nillable="true" type="tns:ArrayOfPrizePriceRange" />
+  <xs:complexType name="PrizePriceRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="range_description" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PrizePriceRange" nillable="true" type="tns:PrizePriceRange" />
+  <xs:complexType name="PrizeTypesResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q11:Result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="product_types" nillable="true" type="tns:ArrayOfPrizeType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrizeTypesResult" nillable="true" type="tns:PrizeTypesResult" />
+  <xs:complexType name="ArrayOfPrizeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrizeType" nillable="true" type="tns:PrizeType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPrizeType" nillable="true" type="tns:ArrayOfPrizeType" />
+  <xs:complexType name="PrizeType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PrizeType" nillable="true" type="tns:PrizeType" />
+  <xs:complexType name="SimilarProductsModel">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://schemas.datacontract.org/2004/07/UnicardApiLibrary" base="q12:ModelBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="product_id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="rows_count" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SimilarProductsModel" nillable="true" type="tns:SimilarProductsModel" />
+</xs:schema>

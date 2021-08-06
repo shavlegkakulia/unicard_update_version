@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{936CFD9D-C000-4F7D-89F4-E1E3BA565E53}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>iCunOS.BillBoards</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>iCunOSBillBoards</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DefineConstants>__IOS__;</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n>
+    </MtouchI18n>
+    <CodesignProvision>1ddf0458-5200-4aad-84b8-47bfa46cb754</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin-Sidebar-Unified">
+      <HintPath>..\Components\SidebarNavigation-1.8\lib\ios-unified\Xamarin-Sidebar-Unified.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\..\AdditionalReferences\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite">
+      <HintPath>..\Components\sqlite-net-1.0.8.3\lib\ios-unified\SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="RadialProgress.iOS">
+      <HintPath>..\Components\radialprogress-1.0.1.3\lib\ios-unified\RadialProgress.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleMaps">
+      <HintPath>..\Components\googlemapsios-1.9.2\lib\ios-unified\GoogleMaps.dll</HintPath>
+    </Reference>
+    <Reference Include="Connectivity.Plugin">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.1.0.3\lib\Xamarin.iOS10\Connectivity.Plugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Connectivity.Plugin.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.1.0.3\lib\Xamarin.iOS10\Connectivity.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <None Include="PluginsHelp\ConnectivityReadme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Helpers\DateTimeExtensions.cs" />
+    <Compile Include="Helpers\ColorExtensions.cs" />
+    <Compile Include="Helpers\Screen.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\UIButtonExtensions.cs" />
+    <Compile Include="Helpers\Styles.cs" />
+    <Compile Include="VIews\Toast.cs" />
+    <Compile Include="ViewControllers\LoginViewController.cs" />
+    <Compile Include="ViewControllers\AuthViewController.cs" />
+    <Compile Include="ViewControllers\RootViewController.cs" />
+    <Compile Include="ViewControllers\MenuViewController.cs" />
+    <Compile Include="ViewControllers\BaseViewController.cs" />
+    <Compile Include="Providers\SecurityProvider\SecurityProvider.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Plugins\Connectivity\TouchConnectivityPlugin.cs" />
+    <Compile Include="Plugins\Connectivity\NetworkStatus.cs" />
+    <Compile Include="Plugins\Connectivity\Reachability.cs" />
+    <Compile Include="ViewControllers\MainViewController.cs" />
+    <Compile Include="ViewControllers\MapViewController.cs" />
+    <Compile Include="ViewControllers\AdsViewController.cs" />
+    <Compile Include="ViewControllers\AboutViewController.cs" />
+    <Compile Include="ViewControllers\HistoryViewController.cs" />
+    <Compile Include="Plugins\DialogPlugin.cs" />
+    <Compile Include="ViewControllers\LandingViewController.cs" />
+    <Compile Include="ApplicationStrings.Designer.cs">
+      <DependentUpon>ApplicationStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VIews\KuniTextField.cs" />
+    <Compile Include="VIews\KeyboardTopBar.cs" />
+    <Compile Include="Helpers\RangeCalculator.cs" />
+    <Compile Include="ViewControllers\SettingsViewController.cs" />
+    <Compile Include="VIews\Ads\CircularProgressView.cs" />
+    <Compile Include="VIews\TableViewHelpers\HistoryTableCell.cs" />
+    <Compile Include="VIews\TableViewHelpers\HistoryTableSource.cs" />
+    <Compile Include="VIews\TableViewHelpers\MainPageAdTableCell.cs" />
+    <Compile Include="VIews\TableViewHelpers\MainPageAdsTableSource.cs" />
+    <Compile Include="VIews\Ads\AdView.cs" />
+    <Compile Include="VIews\Ads\AdViewCollection.cs" />
+    <Compile Include="VIews\KuniBilboardView.cs" />
+    <Compile Include="VIews\Ads\AdViewWrapper.cs" />
+    <Compile Include="ViewControllers\AdsCarouselItemViewController.cs" />
+    <Compile Include="VIews\Ads\PageDataSource.cs" />
+    <Compile Include="VIews\KuniBadgeBarButtonItem.cs" />
+    <Compile Include="Helpers\Map\LocationManager.cs" />
+    <Compile Include="Helpers\Map\Navigation.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Resources\Fonts\bpg_extrasquare_mtavruli.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\threelines.png" />
+    <BundleResource Include="Resources\threelines%402x.png" />
+    <BundleResource Include="Resources\menu_home.png" />
+    <BundleResource Include="Resources\menu_home%402x.png" />
+    <BundleResource Include="Resources\menu_history.png" />
+    <BundleResource Include="Resources\menu_settings.png" />
+    <BundleResource Include="Resources\menu_settings%402x.png" />
+    <BundleResource Include="Resources\menu_logout.png" />
+    <BundleResource Include="Resources\menu_logout%402x.png" />
+    <BundleResource Include="Resources\menu_logo.png" />
+    <BundleResource Include="Resources\menu_pin.png" />
+    <BundleResource Include="Resources\menu_pin%402x.png" />
+    <BundleResource Include="Resources\menu_billboard.png" />
+    <BundleResource Include="Resources\landing_page.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\startnavigation.png" />
+    <BundleResource Include="Resources\marker_blue.png" />
+    <BundleResource Include="Resources\marker_red.png" />
+    <BundleResource Include="Resources\stopnavigation.png" />
+    <BundleResource Include="Resources\uniboard.png" />
+    <BundleResource Include="Resources\fb_letter.png" />
+    <BundleResource Include="Resources\fb_user.png" />
+    <BundleResource Include="Resources\user_settings.png" />
+    <BundleResource Include="Resources\map_fragment.png" />
+    <BundleResource Include="Resources\mainpage_user.png" />
+    <BundleResource Include="Resources\right_arrow.png" />
+    <BundleResource Include="Resources\tick.png" />
+    <BundleResource Include="Resources\download.png" />
+    <BundleResource Include="Resources\testimage.png" />
+    <BundleResource Include="Resources\adalert.png" />
+    <BundleResource Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="SidebarNavigation">
+      <Version>1.8</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="sqlite-net">
+      <Version>1.0.8.3</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <Version>6.0.8.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="googlemapsios">
+      <Version>1.9.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="ConnectivityPlugin">
+      <Version>1.0.3</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ApplicationStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApplicationStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Raw\" />
+    <Folder Include="Sounds\" />
+    <Folder Include="Helpers\Map\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sounds\bounce_audio.mp3" />
+    <Content Include="Sounds\wheels_audio.mp3" />
+    <Content Include="Sounds\spring_up.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iCunOS-Billboards.Core\iCunOS-Billboards.Core.csproj">
+      <Project>{06E1D96C-2881-4C7E-B518-471F84C5D608}</Project>
+      <Name>iCunOS-Billboards.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kunicardus.Domain", "Kunicardus.Domain\Kunicardus.Domain.csproj", "{FA677206-38AD-46F3-8C15-A06558C7CEAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kunicardus.Services", "Kunicardus.Services\Kunicardus.Services.csproj", "{134F3257-658D-436E-882E-F0B14D0862BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kunicardus.Services.Models", "Kunicardus.Services.Models\Kunicardus.Services.Models.csproj", "{9C418987-F044-47E8-91FE-34C2B4A055E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kunicardus.Api.Web", "Kunicardus.Api.Web\Kunicardus.Api.Web.csproj", "{80E46B33-BDDA-4057-935F-3229D74322ED}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Kunicardus.Azure", "Kunicardus.Azure\Kunicardus.Azure.ccproj", "{C1A3CE05-6D23-4071-B4A6-DA76AE84C966}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA677206-38AD-46F3-8C15-A06558C7CEAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA677206-38AD-46F3-8C15-A06558C7CEAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA677206-38AD-46F3-8C15-A06558C7CEAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA677206-38AD-46F3-8C15-A06558C7CEAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134F3257-658D-436E-882E-F0B14D0862BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134F3257-658D-436E-882E-F0B14D0862BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134F3257-658D-436E-882E-F0B14D0862BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134F3257-658D-436E-882E-F0B14D0862BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C418987-F044-47E8-91FE-34C2B4A055E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C418987-F044-47E8-91FE-34C2B4A055E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C418987-F044-47E8-91FE-34C2B4A055E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C418987-F044-47E8-91FE-34C2B4A055E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E46B33-BDDA-4057-935F-3229D74322ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E46B33-BDDA-4057-935F-3229D74322ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E46B33-BDDA-4057-935F-3229D74322ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E46B33-BDDA-4057-935F-3229D74322ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1A3CE05-6D23-4071-B4A6-DA76AE84C966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A3CE05-6D23-4071-B4A6-DA76AE84C966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1A3CE05-6D23-4071-B4A6-DA76AE84C966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1A3CE05-6D23-4071-B4A6-DA76AE84C966}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
