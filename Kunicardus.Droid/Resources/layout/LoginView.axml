@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#87b931"
+    android:gravity="top">
+    <ImageView
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_line" />
+    <Kunicardus.Droid.BaseTextView
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="22dp"
+        android:textColor="#FFFFFF"
+        android:text="@string/welcome"
+        android:id="@+id/txtWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/back_line"
+        android:paddingTop="15dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/txtWelcome"
+        android:background="@drawable/round_button_backgroundFB"
+        android:layout_height="50dp"
+        android:id="@+id/fbButton"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp">
+        <ImageView
+            android:src="@drawable/fb"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/imgfb"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.3dp" />
+        <Kunicardus.Droid.BaseTextView
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:text="@string/fbAuthorization"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:textSize="15dp" />
+    </RelativeLayout>
+    <Kunicardus.Droid.BaseTextView
+        android:gravity="center"
+        android:background="@drawable/round_button_background"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
+        local:MvxBind="Click AuthCommand"
+        android:layout_below="@id/fbButton"
+        android:id="@+id/button1"
+        android:text="@string/authorization"
+        android:textSize="16dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#97c840"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/relativeLayout1">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:layout_centerInParent="true">
+            <Kunicardus.Droid.BaseTextView
+                android:text="@string/regQuestion"
+                android:textColor="#ffe154"
+                local:MvxBind="Click RegisterCommand"
+                android:id="@+id/textView2"
+                android:typeface="normal"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

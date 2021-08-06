@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:background="#8DBD3B"
+    android:layout_height="fill_parent">
+    <include
+        android:id="@+id/home_page_toolbar"
+        layout="@layout/toolbar" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_page_toolbar">
+        <Kunicardus.Droid.BaseWidgets.BaseScrollView
+            android:layout_below="@id/home_page_toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/homeContentView"
+            android:descendantFocusability="blocksDescendants"
+            android:fillViewport="true"
+            android:focusableInTouchMode="true">
+            <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#8DBD3B"
+                android:weightSum="100">
+                <include
+                    layout="@layout/card"
+                    android:layout_below="@id/home_page_toolbar"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/cardRealativeLayout">
+                    <RelativeLayout
+                        android:background="@android:color/white"
+                        android:id="@+id/toSeeRelativeLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:layout_weight="33"
+                        android:visibility="visible"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="34.0dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:id="@+id/home_page_divider"
+                            android:src="@drawable/devider_new"
+                            android:scaleType="centerCrop" />
+                        <Kunicardus.Droid.BaseTextView
+                            android:text="@string/for_what_to_spend"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#000000"
+                            android:id="@+id/txt_cafe"
+                            android:layout_marginTop="60.3dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="9.8dp" />
+                        <Kunicardus.Droid.BaseTextView
+                            android:id="@+id/txt_catalog"
+                            android:text="@string/catalog"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#8DBD3B"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="60.3dp"
+                            android:textSize="12dp"
+                            android:layout_marginLeft="1.8dp"
+                            android:layout_marginRight="14.0dp" />
+                        <MvvmCross.Platforms.Android.Binding.Views.MvxGridView
+                            android:layout_width="match_parent"
+                            android:layout_height="480dp"
+                            android:id="@+id/catalogGridView"
+                            local:MvxBind="ItemsSource Products;"
+                            android:numColumns="2"
+                            android:layout_below="@id/txt_cafe"
+                            local:MvxItemTemplate="@layout/grid_product_item"
+                            android:layout_marginTop="3.0dp"
+                            android:background="@android:color/white"
+                            android:focusable="false" />
+                        <View
+                            android:id="@+id/transparentV"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center_vertical"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </Kunicardus.Droid.BaseWidgets.BaseScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

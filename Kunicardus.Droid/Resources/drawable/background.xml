@@ -1,0 +1,5 @@
+﻿<bitmap
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/side_line"
+    android:tileMode="repeat"
+    android:dither="true"/>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp">
+    <Kunicardus.Droid.BaseTextView
+        android:gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:textColor="@color/green"
+        android:text="@string/set_pin" />
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:textColor="#ffffff"
+            android:src="@drawable/pin_radiobutton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/set_pin_radiobutton"
+            android:layout_marginRight="5dp" />
+        <Kunicardus.Droid.BaseTextView
+            android:id="@+id/set_pin_textview"
+            android:layout_marginTop="1dp"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_pin"
+            android:textColor="@color/green" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:textColor="#ffffff"
+            android:src="@drawable/pin_radiobutton"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/set_without_pin_radiobutton"
+            android:layout_marginRight="5dp" />
+        <Kunicardus.Droid.BaseTextView
+            android:id="@+id/set_without_pin_textview"
+            android:layout_marginTop="1dp"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_without_pin"
+            android:textColor="@color/green" />
+    </LinearLayout>
+</LinearLayout>

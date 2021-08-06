@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:background="@color/green"
+    android:gravity="center_vertical">
+    <ImageView
+        android:src="@drawable/backbutton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="8dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/menuImg"
+        android:layout_centerVertical="true" />
+    <Kunicardus.Droid.BaseTextView
+        android:textColor="@android:color/white"
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:text="@string/myPage" />
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:src="@drawable/search"
+        android:layout_height="25dp"
+        android:id="@+id/alert"
+        android:baselineAlignBottom="false"
+        android:layout_alignParentRight="true"
+        android:gravity="left"
+        android:layout_width="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true" />
+    <AutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp"
+        android:textColorHint="#b9f050"
+        android:singleLine="true"
+        android:background="@null"
+        android:id="@+id/search"
+        android:inputType="text"
+        android:layout_toRightOf="@id/menuImg"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentLeft="false"
+        android:layout_toLeftOf="@id/alert"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="5dp"
+        android:imeOptions="actionSearch"
+        android:visibility="gone" />
+    <View
+        android:layout_below="@id/search"
+        android:layout_height="2dp"
+        android:layout_width="wrap_content"
+        android:background="#B9F050"
+        android:layout_toRightOf="@id/menuImg"
+        android:layout_toLeftOf="@id/alert"
+        android:id="@+id/view1"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:background="#DEDEDE">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/settings_toolbar"
+        android:background="@color/green"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+        <include
+            layout="@layout/settingstoolbar"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/userLayout"
+        android:layout_below="@id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#f3f3f3">
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/user_settings"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:id="@+id/userinfo"
+            android:layout_toRightOf="@id/user_image">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="17dp">
+                <Kunicardus.Droid.BaseTextView
+                    android:id="@+id/settings_fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="13dp"
+                    android:layout_marginLeft="5dp" />
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/fb_user"
+                    android:id="@+id/fb_icon"
+                    android:layout_toRightOf="@id/userinfo" />
+            </LinearLayout>
+            <Kunicardus.Droid.BaseTextView
+                android:id="@+id/settings_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11dp"
+                android:textColor="@color/green"
+                android:layout_marginLeft="5dp" />
+            <Kunicardus.Droid.BaseButton
+                android:id="@+id/settings_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:text="გამოსვლა"
+                android:textSize="10dp"
+                android:background="@drawable/settings_logut"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/change_password_layout"
+        android:layout_below="@id/userLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white">
+        <Kunicardus.Droid.BaseTextView
+            android:id="@+id/change_password_layout_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/green"
+            android:text="@string/change_password" />
+        <ImageView
+            android:layout_height="15dp"
+            android:layout_width="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="32dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/right_arrow" />
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/set_pin_layout"
+        android:layout_below="@id/change_password_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white">
+        <Kunicardus.Droid.BaseTextView
+            android:id="@+id/set_pin_layout_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/green"
+            android:text="@string/set_pin" />
+        <ImageView
+            android:layout_height="15dp"
+            android:layout_width="15dp"
+            android:layout_marginRight="32dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/right_arrow" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/change_pin_layout"
+        android:layout_below="@id/set_pin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white">
+        <Kunicardus.Droid.BaseTextView
+            android:id="@+id/change_pin_layout_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/green"
+            android:layout_centerVertical="true"
+            android:text="@string/change_pin" />
+        <ImageView
+            android:layout_height="15dp"
+            android:layout_width="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="32dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/right_arrow" />
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/remove_pin_layout"
+        android:layout_below="@id/change_pin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+        <Kunicardus.Droid.BaseTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/green"
+            android:text="@string/remove_pin" />
+        <ImageView
+            android:layout_height="15dp"
+            android:layout_width="15dp"
+            android:layout_marginRight="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/right_arrow" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_below="@id/remove_pin_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="Text"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/version"
+            android:layout_marginBottom="15dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/created"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="შექმნილია"
+                android:textSize="14dp"
+                android:textColor="#000000" />
+            <Button
+                android:id="@+id/by_wandio"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="2.5dp"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="ვანდიოს"
+                android:textSize="14dp"
+                android:textColor="@color/green" />
+            <TextView
+                android:id="@+id/created"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="მიერ"
+                android:textSize="14dp"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

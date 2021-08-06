@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#8DBD3B"
+    android:weightSum="100">
+  <include
+      android:id="@+id/home_page_toolbar"
+      layout="@layout/toolbar" />
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="46"
+      android:id="@+id/cardRealativeLayout"
+      android:background="#8DBD3B"
+      android:layout_below="@id/home_page_toolbar"
+      android:layout_marginTop="20dp">
+    <ImageView
+        android:id="@+id/uniCard"
+        android:layout_centerHorizontal="true"
+        android:layout_width="218.6dp"
+        android:layout_height="150dp"
+        android:src="@drawable/card_new" />
+    <!-- <Kunicardus.Droid.BaseKunicardus.Droid.BaseTextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="222"
+            android:gravity="center"
+            android:id="@+id/txt_unicard_current_remainder"
+            android:textColor="#000000"
+            android:background="@drawable/main_page_circle"
+            android:layout_below="@id/uniCard"
+            android:layout_centerHorizontal="true" /> -->
+    <Kunicardus.Droid.BaseTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clickForCard"
+        android:id="@+id/txt_click_Unicard"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/uniCard"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp" />
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/uniCard"
+        android:layout_alignLeft="@id/uniCard"
+        android:id="@+id/imageView1" />
+  </RelativeLayout>
+  <LinearLayout
+      android:background="@android:color/white"
+      android:id="@+id/toSeeRelativeLayout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:weightSum="100"
+      android:layout_weight="54"
+      android:layout_below="@id/cardRealativeLayout"
+      android:visibility="visible"
+      android:layout_alignParentBottom="true"
+      android:layout_marginTop="34.0dp">
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_weight="50"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout2">
+      <Kunicardus.Droid.BaseTextView
+          android:text="@string/for_what_to_spend"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="#000000"
+          android:id="@+id/txt_cafe"
+          android:layout_marginTop="35.3dp"
+          android:layout_alignParentLeft="true"
+          android:layout_marginRight="10dp"
+          android:layout_marginLeft="9.8dp" />
+      <ImageView
+          android:id="@+id/cafe_imageView"
+          android:src="@drawable/cafe"
+          android:layout_marginLeft="13dp"
+          android:layout_marginRight="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="157dp"
+          android:layout_centerInParent="true"
+          android:layout_below="@id/txt_cafe"
+          android:layout_marginTop="12dp" />
+      <Kunicardus.Droid.BaseTextView
+          android:id="@+id/txt_cafe_score"
+          android:layout_below="@id/txt_cafe"
+          android:text="1 ქულა"
+          android:textSize="12sp"
+          android:gravity="center"
+          android:layout_width="wrap_content"
+          android:background="@drawable/points_circle"
+          android:layout_height="wrap_content"
+          android:textColor="#8dbd3b"
+          android:layout_alignTop="@id/cafe_imageView"
+          android:layout_alignLeft="@id/cafe_imageView" />
+      <Kunicardus.Droid.BaseTextView
+          android:id="@+id/sale_cafe"
+          android:text="@string/testText"
+          android:textColor="#000000"
+          android:layout_marginLeft="13dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/cafe_imageView"
+          android:layout_alignParentLeft="true"
+          android:layout_marginRight="10dp"
+          android:layout_marginTop="5dp"
+          android:textSize="12sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_weight="50"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout3">
+      <Kunicardus.Droid.BaseTextView
+          android:id="@+id/txt_catalog"
+          android:text="@string/catalog"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="#8DBD3B"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="38.3dp"
+          android:textSize="12sp"
+          android:layout_marginLeft="1.8dp"
+          android:layout_marginRight="14.0dp" />
+      <ImageView
+          android:id="@+id/catalog_imageView"
+          android:layout_marginLeft="13dp"
+          android:layout_marginRight="10dp"
+          android:src="@drawable/cafe"
+          android:layout_width="wrap_content"
+          android:layout_height="157dp"
+          android:layout_centerInParent="true"
+          android:layout_marginTop="12dp"
+          android:layout_below="@id/txt_catalog" />
+      <Kunicardus.Droid.BaseTextView
+          android:id="@+id/txt_catalog_score"
+          android:layout_below="@id/txt_catalog"
+          android:text="1 ქულა"
+          android:textSize="12dp"
+          android:gravity="center"
+          android:layout_width="wrap_content"
+          android:background="@drawable/points_circle"
+          android:layout_height="wrap_content"
+          android:textColor="#8dbd3b"
+          android:layout_alignTop="@id/catalog_imageView"
+          android:layout_alignLeft="@id/catalog_imageView" />
+      <Kunicardus.Droid.BaseTextView
+          android:id="@+id/sale_catalog"
+          android:text="@string/testText"
+          android:textColor="#000000"
+          android:layout_marginLeft="13dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/catalog_imageView"
+          android:layout_alignParentLeft="true"
+          android:layout_marginRight="10dp"
+          android:layout_marginTop="5dp"
+          android:textSize="12sp" />
+    </RelativeLayout>
+  </LinearLayout>
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="70.4dp"
+      android:id="@+id/home_page_divider"
+      android:src="@drawable/devider_new"
+      android:layout_marginTop="5dp"
+      android:layout_below="@id/cardRealativeLayout" />
+</RelativeLayout>

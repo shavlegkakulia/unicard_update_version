@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:background="#ffffff"
+    android:clickable="true">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:background="#8DBD3B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout4">
+        <Kunicardus.Droid.BaseTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:gravity="center_horizontal"
+            android:text="@string/currentReminder"
+            android:textColor="@android:color/white"
+            android:id="@+id/header"
+            android:includeFontPadding="false" />
+        <Kunicardus.Droid.BaseTextView
+            android:includeFontPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="45dp"
+            android:layout_below="@id/header"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            local:MvxBind="Text Point"
+            android:id="@+id/txtPoints"
+            android:text="0.0" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_below="@id/txtPoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pointsLinearLayout"
+            android:weightSum="3">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtPoints"
+                android:id="@+id/relativeLayout1">
+                <Kunicardus.Droid.BaseTextView
+                    android:text="@string/blocked"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl_txtBlocked"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="10dp" />
+                <Kunicardus.Droid.BaseTextView
+                    android:text="@string/testText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lbl_txtBlocked"
+                    android:id="@+id/txtBlocked"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:gravity="center"
+                    local:MvxBind="Text Blocked"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/horizontal_devider" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeLayout2"
+                android:layout_weight="1">
+                <Kunicardus.Droid.BaseTextView
+                    android:text="@string/outcome"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl_txtOutcome"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="10dp" />
+                <Kunicardus.Droid.BaseTextView
+                    android:text="@string/testText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lbl_txtOutcome"
+                    android:id="@+id/txtOutcome"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    local:MvxBind="Text Spent"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/horizontal_devider" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeLayout3"
+                android:layout_weight="1">
+                <Kunicardus.Droid.BaseTextView
+                    android:text="@string/collected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl_txtCollected"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="10dp" />
+                <Kunicardus.Droid.BaseTextView
+                    android:text="Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lbl_txtCollected"
+                    android:id="@+id/txtCollected"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    local:MvxBind="Text Total"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:id="@+id/line"
+        android:layout_below="@id/relativeLayout4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/devider_new"
+        android:layout_height="50dp"
+        android:visibility="visible" />
+</RelativeLayout>

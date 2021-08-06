@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#95c740"
+    android:visibility="visible">
+    <include
+        android:id="@+id/backbuttonToolbar"
+        layout="@layout/backbuttonlayout"
+        android:layout_marginTop="3dp"
+        local:MvxBind="Click BackCommand" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backbuttonToolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp">
+            <Kunicardus.Droid.BaseTextView
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:text="@string/haveUnicardPromt"
+                android:id="@+id/txtWelcome"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="15dp" />
+            <Kunicardus.Droid.BaseEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textColorHint="#b9f050"
+                android:singleLine="true"
+                android:id="@+id/name"
+                local:MvxBind="Text Name"
+                android:layout_below="@id/txtWelcome"
+                android:inputType="text"
+                android:background="@null" />
+            <View
+                android:layout_below="@id/name"
+                android:layout_height="2dp"
+                android:layout_width="wrap_content"
+                android:background="#b9f050"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/view1" />
+            <Kunicardus.Droid.BaseEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/surname"
+                android:id="@+id/surname"
+                android:layout_below="@id/view1"
+                android:textColor="#ffffff"
+                local:MvxBind="Text Surname"
+                android:singleLine="true"
+                android:textColorHint="#b9f050"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:background="@null" />
+            <View
+                android:layout_below="@id/surname"
+                android:layout_height="2dp"
+                android:layout_width="wrap_content"
+                android:background="#b9f050"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/view2" />
+            <Kunicardus.Droid.BaseEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/id_number"
+                android:inputType="number"
+                android:id="@+id/idNumber"
+                android:layout_below="@id/view2"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textColorHint="#b9f050"
+                android:singleLine="true"
+                local:MvxBind="Text IdNumber"
+                android:maxLength="11"
+                android:background="@null" />
+            <View
+                android:layout_below="@id/idNumber"
+                android:layout_height="2dp"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:background="#b9f050"
+                android:id="@+id/view3" />
+            <Kunicardus.Droid.BaseEditText
+                android:id="@+id/email_register_date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/date_of_birth"
+                android:layout_below="@id/view3"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textColorHint="#b9f050"
+                android:singleLine="true"
+                android:background="@null"
+                local:MvxBind="Text DateOfBirth,Converter=ApiDateTime" />
+            <View
+                android:layout_below="@id/email_register_date_of_birth"
+                android:layout_height="2dp"
+                android:layout_width="wrap_content"
+                android:background="#b9f050"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/view4" />
+            <Kunicardus.Droid.BaseEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:id="@+id/phonenumber"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textColorHint="#b9f050"
+                android:background="@null"
+                android:singleLine="true"
+                android:layout_below="@id/view4"
+                local:MvxBind="Text PhoneNumber" />
+            <View
+                android:layout_below="@id/phonenumber"
+                android:layout_height="2dp"
+                android:layout_width="wrap_content"
+                android:background="#b9f050"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/view5" />
+            <Kunicardus.Droid.BaseEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                local:MvxBind="Text Email"
+                android:id="@+id/email"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:background="@null"
+                android:textColorHint="#b9f050"
+                android:singleLine="true"
+                android:layout_below="@id/view5"
+                android:inputType="textEmailAddress" />
+            <View
+                android:layout_below="@id/email"
+                android:layout_height="2dp"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:background="#b9f050"
+                android:id="@+id/view6" />
+            <Kunicardus.Droid.BaseEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:id="@+id/password"
+                android:layout_below="@id/view6"
+                local:MvxBind="Text Password"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:background="@null"
+                android:textColorHint="#b9f050"
+                android:singleLine="true" />
+            <View
+                android:layout_below="@id/password"
+                android:layout_height="2dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:background="#b9f050"
+                android:id="@+id/view7" />
+            <Kunicardus.Droid.BaseEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/confirm_password"
+                android:id="@+id/confirmPassword"
+                android:background="@null"
+                android:layout_below="@id/view7"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textColorHint="#b9f050"
+                android:singleLine="true"
+                local:MvxBind="Text ConfirmPassword" />
+            <View
+                android:layout_below="@id/confirmPassword"
+                android:layout_height="2dp"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:background="#b9f050"
+                android:id="@+id/view8" />
+            <ImageView
+                android:src="@drawable/next"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:id="@+id/finish_registering_user"
+                android:layout_centerHorizontal="true"
+                local:MvxBind="Click RegisterUserCommand"
+                android:layout_marginBottom="50dp"
+                android:layout_below="@id/confirmPassword"
+                android:layout_marginTop="50dp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/delivery_view_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:actionBarNavMode="list">
+    <include
+        android:id="@+id/BuyProductHeader"
+        layout="@layout/BuyProductHeader" />
+    <View
+        android:background="@color/graydivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+    <Kunicardus.Droid.BaseTextView
+        android:text="@string/choosePartnerComp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTitle"
+        android:textSize="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="10dp" />
+    <MvvmCross.Platforms.Android.Binding.Views.MvxSpinner
+        android:id="@+id/serviceCenterSpinner"
+        android:prompt="@string/spinnerhint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        local:MvxDropDownItemTemplate="@layout/spinner_dropdown"
+        local:MvxItemTemplate="@layout/spinner_item"
+        local:MvxBind="ItemsSource Organizations; SelectedItem SelectedOrg;"
+        android:layout_marginRight="14dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp" />
+    <View
+        android:background="@color/graydivider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+    <Kunicardus.Droid.BaseTextView
+        android:text="@string/authorized_person"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTitle"
+        android:textSize="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp" />
+    <Kunicardus.Droid.BaseTextView
+        android:text="@string/authorized_person_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTitle"
+        android:textSize="14dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="12dp" />
+    <Kunicardus.Droid.BaseTextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtName"
+        android:hint="@string/firstName"
+        android:background="@drawable/rounded_background"
+        android:textSize="11dp"
+        android:padding="9dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="7dp"
+        local:MvxBind="Text FirstName" />
+    <Kunicardus.Droid.BaseTextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLastName"
+        android:hint="@string/lastName"
+        android:background="@drawable/rounded_background"
+        android:padding="9dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="7dp"
+        local:MvxBind="Text LastName" />
+    <Kunicardus.Droid.BaseTextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPersonalN"
+        android:hint="@string/personalN"
+        android:background="@drawable/rounded_background"
+        android:padding="9dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        local:MvxBind="Text PersonalN" />
+    <include
+        android:id="@+id/discountHeader"
+        local:MvxBind="Visibility Visibility(HasDiscount)"
+        layout="@layout/payment_discount_header" />
+    <MvvmCross.Platforms.Android.Binding.Views.MvxListView
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/discountList"
+        local:MvxBind="ItemsSource UserDiscounts;"
+        local:MvxItemTemplate="@layout/payment_discount_item"
+        android:visibility="visible" />
+</LinearLayout>

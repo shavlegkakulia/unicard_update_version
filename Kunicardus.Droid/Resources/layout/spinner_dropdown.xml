@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Kunicardus.Droid.BaseTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:singleLine="true"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    local:MvxBind="Text Name" />

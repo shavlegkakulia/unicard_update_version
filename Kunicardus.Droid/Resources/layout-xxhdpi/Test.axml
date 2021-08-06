@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sideRelativeLayout"
+        android:layout_centerVertical="true">
+        <LinearLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+            <View
+                android:layout_height="40dp"
+                android:layout_width="2dp"
+                android:background="#d4dedf"
+                android:scaleType="fitXY"
+                android:id="@+id/imgTopLine"
+                android:layout_centerHorizontal="true"
+                android:includeFontPadding="false"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal" />
+            <ImageView
+                android:src="@drawable/circle"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:id="@+id/imgCircle"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+            <View
+                android:layout_width="2dp"
+                android:background="#d4dedf"
+                android:layout_height="40dp"
+                android:scaleType="fitXY"
+                android:id="@+id/imgBottomLine"
+                android:includeFontPadding="false"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/imgCircle"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/centerRelativeLayout"
+        android:layout_toRightOf="@id/sideRelativeLayout"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="40.4dp">
+        <TextView
+            android:text="Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtShopName"
+            android:textColor="#444444"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="8dp"
+            local:MvxBind="Text OrganizationName"
+            android:textSize="15dp"
+            android:paddingBottom="5dp" />
+        <TextView
+            android:text="5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAmount"
+            android:textColor="#444444"
+            local:MvxBind="Text PaymentAmount"
+            android:textSize="13dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/txtShopName"
+            android:layout_marginLeft="6dp" />
+        <ImageView
+            android:src="@drawable/gel"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_toRightOf="@id/txtAmount"
+            android:id="@+id/imgAmount"
+            android:layout_marginLeft="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txtShopName"
+            android:layout_marginTop="3dp" />
+        <TextView
+            android:text="Small Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imgAmount"
+            android:id="@+id/txtDate"
+            android:layout_below="@id/txtShopName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="3dp"
+            android:textColor="#444444"
+            local:MvxBind="Text Date, Converter=Date"
+            android:textSize="13dp" />
+        <ImageView
+            android:src="@drawable/clock"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_below="@id/txtShopName"
+            android:id="@+id/imgDate"
+            android:layout_toRightOf="@id/txtDate" />
+        <ImageView
+            android:src="@drawable/marker"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/imgAddress"
+            android:layout_below="@id/imgDate"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="3dp" />
+        <TextView
+            android:text="კახეთის გზატკეცილი"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imgAddress"
+            android:id="@+id/txtAddress"
+            android:layout_below="@id/imgDate"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:gravity="center_vertical"
+            android:textColor="#aaaaaa"
+            android:layout_marginTop="7dp"
+            local:MvxBind="Text Address"
+            android:textSize="11dp"
+            android:layout_marginRight="20.4dp" />
+    </RelativeLayout>
+    <TextView
+        android:text="+520"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPoints"
+        android:layout_alignParentRight="true"
+        local:MvxBind="Text Score, Converter=Points"
+        android:textSize="16dp"
+        android:layout_marginRight="6.1dp"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

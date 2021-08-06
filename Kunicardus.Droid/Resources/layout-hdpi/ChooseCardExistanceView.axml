@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#95c740">
+    <include
+        android:id="@+id/backbuttonToolbar"
+        layout="@layout/backbuttonlayout"
+        local:MvxBind="Click BackCommand" />
+    <Kunicardus.Droid.BaseTextView
+        android:gravity="center"
+        android:textSize="17dp"
+        android:textColor="#b9f050"
+        android:text="@string/haveUnicardPromt"
+        android:id="@+id/txtWelcomeSub"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_below="@id/backbuttonToolbar"
+        android:layout_centerHorizontal="true" />
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/linearLayout1"
+        android:weightSum="3"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="45dp"
+        android:layout_marginLeft="45dp">
+        <Kunicardus.Droid.BaseTextView
+            android:id="@+id/unicard_available"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="24dp"
+            android:text="@string/yes"
+            local:MvxBind="Click UnicardAvailableCommand"
+            android:background="@drawable/round_btnPromt"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentLeft="true" />
+        <Kunicardus.Droid.BaseTextView
+            android:id="@+id/unicard_not_available"
+            android:layout_width="100dp"
+            android:textSize="24dp"
+            android:text="@string/no"
+            local:MvxBind="Click UnicartNotAvailableCommand"
+            android:background="@drawable/round_btnPromt"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:layout_alignParentRight="true"
+            android:layout_height="100dp" />
+    </RelativeLayout>
+</RelativeLayout>

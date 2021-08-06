@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <style name="UnicardTheme" parent="UnicardTheme.Base">
+    </style>
+    <style name="UnicardTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:colorPrimary">#8DBD3B</item>
+        <item name="android:colorPrimaryDark">#95BA56</item>
+        <item name="android:colorAccent">#A5C470</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonStyle</item>
+    </style>
+    <style name="ImageButtonStyle">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+     <style name="SplashTheme" parent="SplashTheme.Base">
+        <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="android:colorPrimary">#8DBD3B</item>
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="android:colorPrimaryDark">#95BA56</item>
+        <!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets -->
+        <item name="android:colorAccent">#A5C470</item>
+    </style>
+    
+    <style name="SplashTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+</resources>

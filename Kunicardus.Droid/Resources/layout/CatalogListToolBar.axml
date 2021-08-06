@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:background="@color/green">
+    <ImageButton
+        android:layout_centerVertical="true"
+        android:src="@drawable/drawer"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/catalog_list_toolbar_menu"
+        android:baselineAlignBottom="false"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitCenter"
+        android:padding="10dp" />
+    <Kunicardus.Droid.BaseTextView
+        android:textColor="@android:color/white"
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:text="@string/cataloge" />
+    <ImageButton
+        android:layout_marginTop="12dp"
+        android:src="@drawable/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/catalog_list_filter"
+        android:baselineAlignBottom="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="left" />
+</RelativeLayout>
